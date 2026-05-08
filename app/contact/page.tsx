@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Fahad Khan — academic inquiries, collaboration, and media.',
+  description: 'Get in touch with Fahad Bin Islam Khan — academic inquiries, collaboration, and media.',
 }
 
 const contactMethods = [
@@ -29,7 +29,7 @@ const contactMethods = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'Fahad Khan',
+    value: 'Fahad Bin Islam Khan',
     href: 'https://linkedin.com',
     description: 'Professional network and academic background.',
     cta: 'Connect',
@@ -139,7 +139,7 @@ export default function ContactPage() {
 
               {/* Institution */}
               <div className="text-sm text-slate-500 text-center">
-                <p className="font-medium text-slate-700">Fahad Khan</p>
+                <p className="font-medium text-slate-700">Fahad Bin Islam Khan</p>
                 <p>University of Mississippi</p>
                 <p>Department of Criminal Justice</p>
               </div>

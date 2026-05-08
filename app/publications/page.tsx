@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 export const metadata: Metadata = {
   title: 'Publications',
   description:
-    'Academic publications, working papers, and research by Fahad Khan on U.S. drug policy and criminal justice.',
+    'Academic publications, working papers, and research by Fahad Bin Islam Khan on U.S. drug policy and criminal justice.',
 }
 
 const publications = [

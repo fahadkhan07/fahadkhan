@@ -9,7 +9,7 @@ import { getAllBlogPosts } from '@/lib/mdx'
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Commentary and analysis on U.S. drug policy, criminal justice reform, and sentencing by Fahad Khan.',
+    'Commentary and analysis on U.S. drug policy, criminal justice reform, and sentencing by Fahad Bin Islam Khan.',
 }
 
 export default function BlogPage() {

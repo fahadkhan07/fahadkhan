@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge'
 
 export const metadata: Metadata = {
   title: 'Teaching',
-  description: 'Teaching experience and philosophy of Fahad Khan — criminal justice educator.',
+  description: 'Teaching experience and philosophy of Fahad Bin Islam Khan — criminal justice educator.',
 }
 
 const courses = [

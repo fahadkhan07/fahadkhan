@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Fahad Khan — criminal justice scholar, incoming PhD student, and drug policy researcher.',
+    'Learn about Fahad Bin Islam Khan — criminal justice scholar, incoming PhD student, and drug policy researcher.',
 }
 
 const education = [
@@ -72,7 +72,7 @@ export default function AboutPage() {
                 <h2 className="heading-md text-navy-900 mb-6">Biography</h2>
                 <div className="prose prose-slate max-w-none space-y-5 text-slate-600 leading-relaxed">
                   <p>
-                    Fahad Khan is a criminal justice scholar whose research sits at the intersection of
+                    Fahad Bin Islam Khan is a criminal justice scholar whose research sits at the intersection of
                     drug policy, law, and social inequality. He holds a Master of Arts in Criminal
                     Justice from the{' '}
                     <strong className="text-navy-800">University of Mississippi</strong>, where he

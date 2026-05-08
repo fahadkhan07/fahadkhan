@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge'
 export const metadata: Metadata = {
   title: 'Research',
   description:
-    'Research agenda of Fahad Khan — examining U.S. drug policy, sentencing disparities, and criminal justice reform.',
+    'Research agenda of Fahad Bin Islam Khan — examining U.S. drug policy, sentencing disparities, and criminal justice reform.',
 }
 
 const researchProjects = [

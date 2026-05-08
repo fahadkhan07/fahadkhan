@@ -49,7 +49,7 @@ export function Navbar() {
               scrolled ? 'text-navy-900' : 'text-white'
             )}
           >
-            Fahad Khan
+            Fahad Bin Islam Khan
           </Link>
 
           {/* Desktop Links */}

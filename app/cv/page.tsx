@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Curriculum Vitae',
-  description: 'Full academic CV of Fahad Khan — criminal justice scholar and drug policy researcher.',
+  description: 'Full academic CV of Fahad Bin Islam Khan — criminal justice scholar and drug policy researcher.',
 }
 
 const cvSections = [
@@ -177,7 +177,7 @@ export default function CVPage() {
           <div className="max-w-3xl">
             {/* Header */}
             <AnimatedSection className="mb-12 pb-8 border-b border-slate-200">
-              <h1 className="font-serif text-3xl font-bold text-navy-950 mb-1">Fahad Khan</h1>
+              <h1 className="font-serif text-3xl font-bold text-navy-950 mb-1">Fahad Bin Islam Khan</h1>
               <p className="text-gold-600 font-medium mb-4">Criminal Justice Scholar | Drug Policy Researcher</p>
               <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-500">
                 <span>fbkhan137@gmail.com</span>

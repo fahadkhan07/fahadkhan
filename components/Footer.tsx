@@ -26,7 +26,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <h3 className="font-serif text-xl font-bold mb-3">Fahad Khan</h3>
+            <h3 className="font-serif text-xl font-bold mb-3">Fahad Bin Islam Khan</h3>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
               M.A. Criminal Justice, University of Mississippi. Incoming PhD student researching
               U.S. drug policy, sentencing reform, and criminal justice equity.
@@ -84,7 +84,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-slate-500 text-xs">
-            © {new Date().getFullYear()} Fahad Khan. All rights reserved.
+            © {new Date().getFullYear()} Fahad Bin Islam Khan. All rights reserved.
           </p>
           <p className="text-slate-600 text-xs">
             Criminal Justice Scholar · Drug Policy Researcher

@@ -73,7 +73,7 @@ export default async function BlogPostPage({ params }: Props) {
               <div className="w-7 h-7 rounded-full bg-gold-400 flex items-center justify-center text-navy-950 font-bold text-xs">
                 FK
               </div>
-              {frontmatter.author ?? 'Fahad Khan'}
+              {frontmatter.author ?? 'Fahad Bin Islam Khan'}
             </span>
             <span className="flex items-center gap-1.5">
               <Calendar size={13} />
@@ -119,7 +119,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
           <div>
             <p className="font-semibold text-navy-900 mb-1">
-              {frontmatter.author ?? 'Fahad Khan'}
+              {frontmatter.author ?? 'Fahad Bin Islam Khan'}
             </p>
             <p className="text-sm text-slate-500 leading-relaxed">
               Criminal justice scholar and drug policy researcher. M.A. University of Mississippi.

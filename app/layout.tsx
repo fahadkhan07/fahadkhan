@@ -19,13 +19,13 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://fahadkhanresearch.com'),
   title: {
-    default: 'Fahad Khan | Criminal Justice Scholar & Drug Policy Researcher',
-    template: '%s | Fahad Khan',
+    default: 'Fahad Bin Islam Khan | Criminal Justice Scholar & Drug Policy Researcher',
+    template: '%s | Fahad Bin Islam Khan',
   },
   description:
-    'Academic portfolio of Fahad Khan — M.A. Criminal Justice, University of Mississippi. Incoming PhD student focused on U.S. drug policy, sentencing reform, and criminal justice equity.',
+    'Academic portfolio of Fahad Bin Islam Khan — M.A. Criminal Justice, University of Mississippi. Incoming PhD student focused on U.S. drug policy, sentencing reform, and criminal justice equity.',
   keywords: [
-    'Fahad Khan',
+    'Fahad Bin Islam Khan',
     'criminal justice',
     'drug policy',
     'sentencing reform',
@@ -35,20 +35,20 @@ export const metadata: Metadata = {
     'drug policy research',
     'criminal justice scholar',
   ],
-  authors: [{ name: 'Fahad Khan' }],
-  creator: 'Fahad Khan',
+  authors: [{ name: 'Fahad Bin Islam Khan' }],
+  creator: 'Fahad Bin Islam Khan',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://fahadkhanresearch.com',
-    siteName: 'Fahad Khan — Academic Portfolio',
-    title: 'Fahad Khan | Criminal Justice Scholar & Drug Policy Researcher',
+    siteName: 'Fahad Bin Islam Khan — Academic Portfolio',
+    title: 'Fahad Bin Islam Khan | Criminal Justice Scholar & Drug Policy Researcher',
     description:
       'Incoming PhD student researching U.S. drug policy, sentencing disparities, and criminal justice reform.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fahad Khan | Criminal Justice Scholar',
+    title: 'Fahad Bin Islam Khan | Criminal Justice Scholar',
     description: 'Researching U.S. drug policy and criminal justice reform.',
   },
   robots: {

@@ -96,7 +96,7 @@ export default async function HomePage() {
 
             <AnimatedSection delay={0.2}>
               <h1 className="heading-xl text-white mb-6 text-balance">
-                Fahad Khan
+                Fahad Bin Islam Khan
               </h1>
             </AnimatedSection>
 
