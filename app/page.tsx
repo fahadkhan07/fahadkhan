@@ -89,114 +89,93 @@ export default async function HomePage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────── */}
-      <section className="relative bg-navy-950 overflow-hidden">
+      <section className="relative min-h-screen overflow-hidden bg-navy-950">
         {/* Gold accent line */}
         <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 z-20" />
 
-        {/* Portrait image — full-width on mobile, right 56% on desktop */}
-        <div className="absolute z-0 inset-0 lg:left-[44%]">
+        {/* Full-width portrait — upper half completely clear so the face is fully visible */}
+        <div className="absolute inset-0 z-0">
           <Image
             src="/images/about/criminal-justice-portrait.jpg"
             alt="Fahad Bin Islam Khan, criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice"
             fill
-            sizes="(max-width: 1024px) 100vw, 56vw"
+            sizes="100vw"
             className="object-cover object-top"
             priority
           />
-          {/* Mobile: top nav area vignette */}
-          <div className="lg:hidden absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-navy-950/95 to-transparent" />
-          {/* Mobile: deep bottom fade — covers light wall areas below the subject */}
-          <div className="lg:hidden absolute inset-x-0 bottom-0 h-[78%] bg-gradient-to-t from-navy-950 via-navy-950/97 via-[40%] to-navy-950/20" />
-          {/* Desktop: wider left-edge blend into the solid navy section background */}
-          <div className="hidden lg:block absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-navy-950 to-transparent" />
+          {/* Subtle bottom vignette only — upper image is untouched */}
+          <div className="absolute inset-x-0 bottom-0 h-[32%] bg-gradient-to-t from-navy-950/80 to-transparent" />
         </div>
 
-        {/* Content */}
-        <div className="section-container relative z-10 min-h-screen flex flex-col justify-end lg:justify-center pb-10 lg:pb-0 lg:py-20">
-          {/*
-            Mobile: dark glass panel so text stays readable regardless of image brightness.
-            Desktop: transparent — background is already solid navy-950.
-          */}
-          <div className="
-            max-w-xl lg:max-w-[48%]
-            rounded-2xl border border-white/[0.07] p-5 sm:p-7 mb-6
-            bg-navy-950/90 backdrop-blur-sm shadow-2xl
-            lg:bg-transparent lg:backdrop-blur-none lg:border-transparent lg:p-0 lg:mb-0 lg:rounded-none lg:shadow-none
-          ">
+        {/* Floating bio card — anchored to bottom so the face area is never covered */}
+        <div className="absolute z-10
+          bottom-6 left-4 right-4
+          sm:bottom-10 sm:left-8 sm:right-8
+          lg:bottom-14 lg:left-12 lg:right-auto lg:max-w-[430px]
+        ">
+          <div className="bg-navy-950/90 backdrop-blur-md rounded-2xl border border-white/10 p-5 sm:p-7 shadow-2xl">
 
-            <AnimatedSection delay={0.1}>
-              <div className="flex items-center gap-3 mb-7">
-                <div className="gold-rule" />
-                <span className="text-gold-400 text-xs font-medium tracking-widest uppercase">
-                  John Jay College of Criminal Justice · CUNY
-                </span>
-              </div>
-            </AnimatedSection>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="gold-rule" />
+              <span className="text-gold-400 text-xs font-medium tracking-widest uppercase">
+                John Jay College of Criminal Justice · CUNY
+              </span>
+            </div>
 
-            <AnimatedSection delay={0.2}>
-              <h1 className="heading-xl text-white mb-4 text-balance">
-                Fahad Bin Islam Khan
-              </h1>
-            </AnimatedSection>
+            <h1 className="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight mb-3">
+              Fahad Bin Islam Khan
+            </h1>
 
-            <AnimatedSection delay={0.27}>
-              <div className="mb-7 space-y-1.5">
-                <p className="text-xl text-gold-400 font-serif font-semibold">
-                  Ph.D. Student in Criminal Justice
-                </p>
-                <p className="text-slate-300 text-sm leading-snug">
-                  John Jay College of Criminal Justice, City University of New York (CUNY)
-                </p>
-                <p className="text-slate-200 text-sm font-semibold pt-0.5">
-                  Drug Policy and Criminal Justice Researcher
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.34}>
-              <p className="text-slate-200 text-base leading-relaxed max-w-lg mb-9">
-                His work examines U.S. drug policy, criminal justice systems, marijuana
-                legalization, drug law enforcement, sentencing disparities, and comparative
-                criminology.
+            <div className="space-y-1 mb-5">
+              <p className="text-base sm:text-lg text-gold-400 font-serif font-semibold">
+                Ph.D. Student in Criminal Justice
               </p>
-            </AnimatedSection>
+              <p className="text-slate-300 text-xs leading-snug">
+                John Jay College of Criminal Justice, City University of New York (CUNY)
+              </p>
+              <p className="text-slate-200 text-sm font-semibold">
+                Drug Policy and Criminal Justice Researcher
+              </p>
+            </div>
 
-            <AnimatedSection delay={0.41}>
-              <div className="flex flex-wrap gap-3">
-                <Button asChild size="lg" variant="gold">
-                  <Link href="/research">
-                    <BookOpen size={18} />
-                    View Research
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline"
-                  className="border-white/30 text-white hover:bg-white hover:text-navy-950">
-                  <Link href="/cv">
-                    <FileText size={18} />
-                    Curriculum Vitae
-                  </Link>
-                </Button>
-              </div>
-            </AnimatedSection>
+            <p className="text-slate-300 text-sm leading-relaxed mb-5">
+              His work examines U.S. drug policy, criminal justice systems, marijuana
+              legalization, drug law enforcement, sentencing disparities, and comparative
+              criminology.
+            </p>
 
-            <AnimatedSection delay={0.5}>
-              <div className="mt-9 flex flex-wrap gap-2">
-                {['U.S. Drug Policy', 'Sentencing Disparities', 'Comparative Criminology', 'Criminal Justice', 'Marijuana Legalization'].map((tag) => (
-                  <span key={tag}
-                    className="text-xs text-slate-300 border border-white/[0.15] rounded-full px-3 py-1">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </AnimatedSection>
+            <div className="flex flex-wrap gap-2.5 mb-4">
+              <Button asChild size="sm" variant="gold">
+                <Link href="/research">
+                  <BookOpen size={15} />
+                  View Research
+                </Link>
+              </Button>
+              <Button asChild size="sm" variant="outline"
+                className="border-white/30 text-white hover:bg-white hover:text-navy-950">
+                <Link href="/cv">
+                  <FileText size={15} />
+                  Curriculum Vitae
+                </Link>
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap gap-1.5">
+              {['U.S. Drug Policy', 'Sentencing Disparities', 'Comparative Criminology', 'Criminal Justice', 'Marijuana Legalization'].map((tag) => (
+                <span key={tag}
+                  className="text-xs text-slate-300 border border-white/[0.15] rounded-full px-2.5 py-0.5">
+                  {tag}
+                </span>
+              ))}
+            </div>
 
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600 z-10">
+        {/* Scroll indicator — desktop only, right side away from card */}
+        <div className="absolute bottom-14 right-10 z-10 hidden lg:flex flex-col items-center gap-2 text-slate-400">
           <span className="text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-slate-600 to-transparent" />
+          <div className="w-px h-10 bg-gradient-to-b from-slate-400 to-transparent" />
         </div>
       </section>
 
