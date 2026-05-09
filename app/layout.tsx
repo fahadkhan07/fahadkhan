@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: '%s | Fahad Bin Islam Khan',
   },
   description:
-    'Academic portfolio of Fahad Bin Islam Khan — Ph.D. Student in Criminal Justice at John Jay College of Criminal Justice, City University of New York (CUNY). M.Sc., University of Mississippi. Researching drug policy, institutional inequality, and comparative criminal justice.',
+    'Academic portfolio of Fahad Bin Islam Khan. Ph.D. Student in Criminal Justice at John Jay College of Criminal Justice, City University of New York (CUNY). M.Sc., University of Mississippi. Researching drug policy, institutional inequality, and comparative criminal justice.',
   keywords: [
     'Fahad Bin Islam Khan',
     'criminal justice',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://fahadkhanresearch.com',
-    siteName: 'Fahad Bin Islam Khan — Academic Portfolio',
+    siteName: 'Fahad Bin Islam Khan | Academic Portfolio',
     title: 'Fahad Bin Islam Khan | Ph.D. Student in Criminal Justice',
     description:
       'Ph.D. Student at John Jay College of Criminal Justice, CUNY. Researching drug policy, institutional inequality, and comparative criminal justice systems.',

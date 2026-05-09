@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Curriculum Vitae',
-  description: 'Full academic CV of Fahad Bin Islam Khan — criminal justice scholar and drug policy researcher.',
+  description: 'Full academic CV of Fahad Bin Islam Khan, criminal justice scholar and drug policy researcher.',
 }
 
 const cvSections = [
@@ -52,13 +52,13 @@ const cvSections = [
     title: 'Teaching Experience',
     items: [
       {
-        primary: 'Graduate Teaching Assistant — Introduction to Criminal Justice',
+        primary: 'Graduate Teaching Assistant: Introduction to Criminal Justice',
         secondary: 'University of Mississippi · Fall 2022, Fall 2023',
         detail:
           'Led discussion sections, graded assignments, held office hours, and developed course materials.',
       },
       {
-        primary: 'Graduate Teaching Assistant — Research Methods in Criminal Justice',
+        primary: 'Graduate Teaching Assistant: Research Methods in Criminal Justice',
         secondary: 'University of Mississippi · Spring 2023, Spring 2024',
         detail:
           'Assisted with lab sections on quantitative and qualitative research methods.',

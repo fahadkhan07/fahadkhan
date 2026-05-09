@@ -82,7 +82,7 @@ export default function AboutPage() {
               M.Sc. in Criminal Justice · University of Mississippi
             </p>
             <p className="text-slate-300 leading-relaxed mb-8 max-w-2xl text-lg">
-              My research sits at the intersection of drug policy, law, and social inequality —
+              My research sits at the intersection of drug policy, law, and social inequality,
               with a commitment to scholarship that informs reform and centers the experiences
               of those most affected by the criminal justice system.
             </p>
@@ -122,7 +122,7 @@ export default function AboutPage() {
                   <span className="text-navy-800 font-medium">U.S. drug policy</span>,{' '}
                   <span className="text-navy-800 font-medium">institutional inequality</span>,{' '}
                   <span className="text-navy-800 font-medium">comparative criminology</span>,
-                  and the criminal justice system — with a particular focus on how legal
+                  and the criminal justice system, with a particular focus on how legal
                   structures, law enforcement practices, and policy implementation shape
                   unequal outcomes across communities and jurisdictions.
                 </p>
@@ -138,7 +138,7 @@ export default function AboutPage() {
                     graduate research explored institutional strain, racial discrimination,
                     adolescent substance use, and the{' '}
                     <span className="text-navy-800 font-medium">socio-legal dimensions</span> of
-                    criminal justice policy. His doctoral research builds on this foundation —
+                    criminal justice policy. His doctoral research builds on this foundation,
                     developing a comparative analysis of how{' '}
                     <span className="text-navy-800 font-medium">drug policy</span> intersects with
                     race, institutional structure, and legal inequality across jurisdictions.
@@ -158,7 +158,7 @@ export default function AboutPage() {
                     <span className="text-navy-800 font-medium">criminological theory</span>,
                     socio-legal analysis, and policy-oriented research, he is particularly
                     interested in how criminal justice reforms are translated into institutional
-                    practice — and why structural inequalities persist despite policy change.
+                    practice, and why structural inequalities persist despite policy change.
                   </p>
                 </div>
 
@@ -168,9 +168,9 @@ export default function AboutPage() {
                   <div className="w-8 h-0.5 bg-gold-400 rounded mb-5" />
                   <p className="text-slate-600 leading-relaxed">
                     In addition to academic research, he has presented scholarly work at
-                    professional conferences — including the 80th Annual Meeting of the{' '}
+                    professional conferences, including the 80th Annual Meeting of the{' '}
                     <strong className="text-navy-800">American Society of Criminology</strong>{' '}
-                    in Washington D.C. — and contributed to interdisciplinary research
+                    in Washington D.C., and contributed to interdisciplinary research
                     examining victimization,{' '}
                     <span className="text-navy-800 font-medium">policing</span>, and
                     transnational justice issues. He is an active member of the American
@@ -301,7 +301,7 @@ export default function AboutPage() {
                 <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
                   <Image
                     src="/images/about/graduation-celebration.jpg"
-                    alt="Fahad Bin Islam Khan at graduation — MSc in Criminal Justice, University of Mississippi"
+                    alt="Fahad Bin Islam Khan at graduation, MSc in Criminal Justice, University of Mississippi"
                     fill
                     sizes="(max-width: 1024px) 90vw, 45vw"
                     className="object-cover object-top"
@@ -356,11 +356,11 @@ export default function AboutPage() {
                 <p>
                   His public-facing work extends to academic workshops and professional settings
                   where he communicates complex questions of drug policy, sentencing equity, and
-                  criminal justice reform to diverse audiences — translating scholarship into
+                  criminal justice reform to diverse audiences, translating scholarship into
                   conversations that matter.
                 </p>
                 <p className="text-slate-400 text-sm">
-                  Presenter — American Society of Criminology Annual Meeting,
+                  Presenter, American Society of Criminology Annual Meeting,
                   Washington D.C., November 2025
                 </p>
               </div>
@@ -380,12 +380,12 @@ export default function AboutPage() {
               <h2 className="heading-md text-navy-900 mb-6">Thesis Research</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  Fahad&rsquo;s master&rsquo;s thesis —{' '}
+                  Fahad&rsquo;s master&rsquo;s thesis,{' '}
                   <em className="text-navy-700 font-medium">
                     &ldquo;Institutional Strain and Substance Coping: Analyzing Perceived Racial
-                    Discrimination as a Predictor of Adolescent Marijuana Use&rdquo;
+                    Discrimination as a Predictor of Adolescent Marijuana Use,&rdquo;
                   </em>{' '}
-                  — applies institutional anomie and strain theories to examine how perceived
+                  applies institutional anomie and strain theories to examine how perceived
                   racial discrimination shapes substance use behaviors among adolescents.
                 </p>
                 <p>
@@ -405,7 +405,7 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="/images/about/thesis.jpg"
-                    alt="Fahad Bin Islam Khan after thesis defense with committee members — University of Mississippi"
+                    alt="Fahad Bin Islam Khan after thesis defense with committee members, University of Mississippi"
                     fill
                     sizes="(max-width: 1024px) 90vw, 45vw"
                     className="object-cover object-center"

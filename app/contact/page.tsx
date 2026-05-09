@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Fahad Bin Islam Khan — academic inquiries, collaboration, and media.',
+  description: 'Get in touch with Fahad Bin Islam Khan: academic inquiries, collaboration, and media.',
 }
 
 const contactMethods = [

@@ -37,7 +37,7 @@ const publications = [
     year: '2024',
     monthYear: 'February 2024',
     abstract:
-      'Examines the Savar BSCIC Tannery Industrial Estate — the only tannery industrial estate in Bangladesh — focusing on waste management practices and legal compliance. Findings show that lack of effective waste management regulations, substandard technology, and inadequate treatment facilities are causing significant environmental harm.',
+      'Examines the Savar BSCIC Tannery Industrial Estate, the only tannery industrial estate in Bangladesh, focusing on waste management practices and legal compliance. Findings show that lack of effective waste management regulations, substandard technology, and inadequate treatment facilities are causing significant environmental harm.',
     tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance'],
     status: 'Published',
     available: true,

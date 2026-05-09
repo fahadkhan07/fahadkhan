@@ -26,7 +26,7 @@ const researchAreas = [
     icon: '🏛️',
     title: 'Criminal Justice Reform',
     description:
-      'Analyzing systemic reform initiatives — from policing to reentry — and evaluating policy interventions that reduce recidivism and address over-incarceration.',
+      'Analyzing systemic reform initiatives, from policing to reentry, and evaluating policy interventions that reduce recidivism and address over-incarceration.',
     tags: ['Justice Reform', 'Reentry', 'Policing'],
   },
 ]
@@ -203,7 +203,7 @@ export default async function HomePage() {
                 <p>
                   As a doctoral student at{' '}
                   <strong className="text-navy-800">John Jay College of Criminal Justice, CUNY</strong>,
-                  my work centers on the intersection of drug policy, race, and punishment —
+                  my work centers on the intersection of drug policy, race, and punishment,
                   interrogating how prohibition regimes produce systematic inequalities across
                   institutions, law, and society.
                 </p>
@@ -227,7 +227,7 @@ export default async function HomePage() {
                 {[
                   { icon: GraduationCap, label: 'Current Program', value: 'Ph.D. in Criminal Justice' },
                   { icon: BookOpen,       label: 'Institution', value: 'John Jay College of Criminal Justice, CUNY' },
-                  { icon: FileText,       label: 'M.Sc.', value: 'Criminal Justice — University of Mississippi' },
+                  { icon: FileText,       label: 'M.Sc.', value: 'Criminal Justice, University of Mississippi' },
                   { icon: ArrowRight,     label: 'Research Focus', value: 'Drug Policy & Institutional Inequality' },
                 ].map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex items-start gap-4">
@@ -299,7 +299,7 @@ export default async function HomePage() {
             <div className="gold-rule mb-6" />
             <h2 className="heading-lg text-navy-900 mb-3">Scholarship in Action</h2>
             <p className="text-slate-500 max-w-xl">
-              Presenting criminology research at national venues — translating scholarly inquiry
+              Presenting criminology research at national venues, translating scholarly inquiry
               into active disciplinary exchange.
             </p>
           </AnimatedSection>
@@ -341,7 +341,7 @@ export default async function HomePage() {
                 </div>
               </div>
               <p className="text-slate-400 text-xs mt-3 leading-relaxed">
-                80th Annual Meeting of the American Society of Criminology — one of the most prestigious venues in the discipline.
+                80th Annual Meeting of the American Society of Criminology, one of the most prestigious venues in the discipline.
               </p>
             </AnimatedSection>
 

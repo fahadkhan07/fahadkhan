@@ -16,7 +16,7 @@ import {
 export const metadata: Metadata = {
   title: 'Research',
   description:
-    'Research agenda and publications of Fahad Bin Islam Khan — criminology, drug policy, environmental crime, capital punishment, and criminal justice reform.',
+    'Research agenda and publications of Fahad Bin Islam Khan: criminology, drug policy, environmental crime, capital punishment, and criminal justice reform.',
 }
 
 const statusColors: Record<string, 'default' | 'gold' | 'secondary' | 'outline'> = {
@@ -31,7 +31,7 @@ export default function ResearchPage() {
     <>
       <PageHeader
         title="Research"
-        subtitle="Investigating the causes, mechanisms, and consequences of U.S. drug policy and global criminal justice — with a commitment to scholarship that matters."
+        subtitle="Investigating the causes, mechanisms, and consequences of U.S. drug policy and global criminal justice, with a commitment to scholarship that matters."
       />
 
       {/* ── RESEARCH METRICS ──────────────────────────────────── */}
@@ -219,8 +219,8 @@ export default function ResearchPage() {
               reflects and reinforces existing power relations.
             </p>
             <p className="text-slate-400 leading-relaxed">
-              I am committed to interdisciplinary scholarship — drawing on sociology, law, public
-              health, and political science — to produce research that is theoretically rich,
+              I am committed to interdisciplinary scholarship, drawing on sociology, law, public
+              health, and political science, to produce research that is theoretically rich,
               empirically rigorous, and practically relevant to ongoing reform debates.
             </p>
           </AnimatedSection>

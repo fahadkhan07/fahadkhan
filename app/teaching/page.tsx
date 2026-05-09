@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge'
 
 export const metadata: Metadata = {
   title: 'Teaching',
-  description: 'Teaching experience and philosophy of Fahad Bin Islam Khan — criminal justice educator.',
+  description: 'Teaching experience and philosophy of Fahad Bin Islam Khan, criminal justice educator.',
 }
 
 const courses = [
@@ -20,7 +20,7 @@ const courses = [
     level: 'Undergraduate',
     enrollment: '~120 students',
     description:
-      'Survey course covering the history, structure, and function of the American criminal justice system — including law enforcement, courts, and corrections. As GTA, I led weekly discussion sections, developed supplementary materials on drug policy, held office hours, and graded examinations and written assignments.',
+      'Survey course covering the history, structure, and function of the American criminal justice system, including law enforcement, courts, and corrections. As GTA, I led weekly discussion sections, developed supplementary materials on drug policy, held office hours, and graded examinations and written assignments.',
     topics: [
       'History of American Policing',
       'Courts and Prosecution',
@@ -74,7 +74,7 @@ const philosophy = [
     icon: MessageSquare,
     title: 'Mentorship and Accessibility',
     description:
-      'I maintain generous office hours and am committed to being accessible to students — particularly those navigating first-generation college challenges or considering graduate school in criminal justice.',
+      'I maintain generous office hours and am committed to being accessible to students, particularly those navigating first-generation college challenges or considering graduate school in criminal justice.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function TeachingPage() {
             <h2 className="heading-md text-navy-900 mb-3">Teaching Philosophy</h2>
             <p className="text-slate-500 max-w-2xl leading-relaxed">
               I approach teaching as an act of intellectual and civic responsibility. Criminal justice
-              education has high stakes — it shapes how future practitioners, policymakers, and citizens
+              education carries high stakes; it shapes how future practitioners, policymakers, and citizens
               understand crime, punishment, and justice.
             </p>
           </AnimatedSection>
