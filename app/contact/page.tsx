@@ -82,7 +82,7 @@ export default function ContactPage() {
       {/* ── MAIN CONTACT SECTION ──────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="section-container">
-          <div className="grid lg:grid-cols-[3fr_2fr] gap-16 items-start">
+          <div className="grid lg:grid-cols-[3fr_2fr] gap-8 lg:gap-16 items-start">
 
             {/* Left: Direct contact + correspondence types */}
             <AnimatedSection direction="left">
@@ -108,7 +108,7 @@ export default function ContactPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-slate-400 uppercase tracking-wide mb-0.5">{label}</p>
-                      <p className="font-medium text-navy-900 text-sm truncate">{value}</p>
+                      <p className="font-medium text-navy-900 text-sm break-all">{value}</p>
                       <p className="text-xs text-slate-400 mt-0.5 leading-snug">{note}</p>
                     </div>
                     <ExternalLink

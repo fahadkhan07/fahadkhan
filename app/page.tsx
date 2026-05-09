@@ -89,110 +89,95 @@ export default async function HomePage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────── */}
-      <section className="relative min-h-screen bg-navy-950 flex items-center overflow-hidden">
-        {/* Background texture */}
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
+      <section className="relative bg-navy-950 overflow-hidden">
         {/* Gold accent line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500" />
+        <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 z-20" />
 
-        <div className="section-container relative z-10 py-24 pt-36 lg:pt-32">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        {/* Portrait image — full-width on mobile, right 56% on desktop */}
+        <div className="absolute z-0 inset-0 lg:left-[44%]">
+          <Image
+            src="/images/about/criminal-justice-portrait.jpg"
+            alt="Fahad Bin Islam Khan, criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice"
+            fill
+            sizes="(max-width: 1024px) 100vw, 56vw"
+            className="object-cover object-top"
+            priority
+          />
+          {/* Mobile: top nav area vignette */}
+          <div className="lg:hidden absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-navy-950/80 to-transparent" />
+          {/* Mobile: bottom two-thirds fade to navy for text legibility */}
+          <div className="lg:hidden absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-navy-950 via-navy-950/92 via-[55%] to-transparent" />
+          {/* Desktop: left edge blend into the navy panel */}
+          <div className="hidden lg:block absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-navy-950 to-transparent" />
+        </div>
 
-            {/* Text content */}
-            <div>
-              <AnimatedSection delay={0.1}>
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="gold-rule" />
-                  <span className="text-gold-400 text-xs font-medium tracking-widest uppercase">
-                    John Jay College of Criminal Justice · CUNY
-                  </span>
-                </div>
-              </AnimatedSection>
+        {/* Content */}
+        <div className="section-container relative z-10 min-h-screen flex flex-col justify-end lg:justify-center pb-16 lg:pb-0 lg:py-20">
+          <div className="max-w-xl lg:max-w-[48%]">
 
-              <AnimatedSection delay={0.2}>
-                <h1 className="heading-xl text-white mb-3 text-balance">
-                  Fahad Bin Islam Khan
-                </h1>
-              </AnimatedSection>
+            <AnimatedSection delay={0.1}>
+              <div className="flex items-center gap-3 mb-7">
+                <div className="gold-rule" />
+                <span className="text-gold-400 text-xs font-medium tracking-widest uppercase">
+                  John Jay College of Criminal Justice · CUNY
+                </span>
+              </div>
+            </AnimatedSection>
 
-              <AnimatedSection delay={0.28}>
-                <p className="text-xl sm:text-2xl text-gold-400 font-serif mb-1">
+            <AnimatedSection delay={0.2}>
+              <h1 className="heading-xl text-white mb-4 text-balance">
+                Fahad Bin Islam Khan
+              </h1>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.27}>
+              <div className="mb-7 space-y-1.5">
+                <p className="text-xl text-gold-400 font-serif font-semibold">
                   Ph.D. Student in Criminal Justice
                 </p>
-                <p className="text-slate-400 text-sm mb-8">
-                  Drug Policy and Comparative Criminology Researcher
+                <p className="text-slate-400 text-sm leading-snug">
+                  John Jay College of Criminal Justice, City University of New York (CUNY)
                 </p>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.36}>
-                <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl mb-10">
-                  His work examines marijuana legalization, drug law enforcement, sentencing
-                  disparities, and the institutional effects of criminal justice policy across
-                  different legal and social contexts.
+                <p className="text-slate-200 text-sm font-medium pt-0.5">
+                  Drug Policy and Criminal Justice Researcher
                 </p>
-              </AnimatedSection>
+              </div>
+            </AnimatedSection>
 
-              <AnimatedSection delay={0.44}>
-                <div className="flex flex-wrap gap-4">
-                  <Button asChild size="lg" variant="gold">
-                    <Link href="/research">
-                      <BookOpen size={18} />
-                      View Research
-                    </Link>
-                  </Button>
-                  <Button asChild size="lg" variant="outline"
-                    className="border-white/30 text-white hover:bg-white hover:text-navy-950">
-                    <Link href="/cv">
-                      <FileText size={18} />
-                      Download CV
-                    </Link>
-                  </Button>
-                  <Button asChild size="lg" variant="ghost"
-                    className="text-slate-300 hover:text-white hover:bg-white/10">
-                    <Link href="/publications">
-                      Publications
-                      <ArrowRight size={16} />
-                    </Link>
-                  </Button>
-                </div>
-              </AnimatedSection>
+            <AnimatedSection delay={0.34}>
+              <p className="text-slate-300 text-base leading-relaxed max-w-lg mb-9">
+                His work examines U.S. drug policy, criminal justice systems, marijuana
+                legalization, drug law enforcement, sentencing disparities, and comparative
+                criminology.
+              </p>
+            </AnimatedSection>
 
-              <AnimatedSection delay={0.56}>
-                <div className="mt-12 flex flex-wrap gap-3">
-                  {['U.S. Drug Policy', 'Sentencing Disparities', 'Comparative Criminology', 'Criminal Justice', 'Marijuana Legalization'].map((tag) => (
-                    <span key={tag}
-                      className="text-xs text-slate-500 border border-white/10 rounded-full px-3 py-1">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </AnimatedSection>
-            </div>
+            <AnimatedSection delay={0.41}>
+              <div className="flex flex-wrap gap-3">
+                <Button asChild size="lg" variant="gold">
+                  <Link href="/research">
+                    <BookOpen size={18} />
+                    View Research
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline"
+                  className="border-white/30 text-white hover:bg-white hover:text-navy-950">
+                  <Link href="/cv">
+                    <FileText size={18} />
+                    Curriculum Vitae
+                  </Link>
+                </Button>
+              </div>
+            </AnimatedSection>
 
-            {/* Portrait photo — desktop only */}
-            <AnimatedSection direction="right" delay={0.2} className="hidden lg:flex justify-center">
-              <div className="relative max-w-sm w-full">
-                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/images/about/criminal-justice-portrait.jpg"
-                    alt="Fahad Bin Islam Khan at the Department of Criminal Justice and Legal Studies, University of Mississippi"
-                    fill
-                    sizes="35vw"
-                    className="object-cover object-top"
-                    priority
-                  />
-                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy-950/80 to-transparent" />
-                  <div className="absolute bottom-5 left-5 right-5">
-                    <p className="text-white text-sm font-serif font-medium">Criminal Justice & Legal Studies</p>
-                    <p className="text-gold-300 text-xs mt-0.5">University of Mississippi</p>
-                  </div>
-                </div>
-                <div className="absolute -bottom-3 -right-3 w-full h-full border border-gold-400/40 rounded-2xl pointer-events-none" />
+            <AnimatedSection delay={0.5}>
+              <div className="mt-9 flex flex-wrap gap-2">
+                {['U.S. Drug Policy', 'Sentencing Disparities', 'Comparative Criminology', 'Criminal Justice', 'Marijuana Legalization'].map((tag) => (
+                  <span key={tag}
+                    className="text-xs text-slate-400 border border-white/10 rounded-full px-3 py-1">
+                    {tag}
+                  </span>
+                ))}
               </div>
             </AnimatedSection>
 
@@ -200,7 +185,7 @@ export default async function HomePage() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600 z-10">
           <span className="text-xs tracking-widest uppercase">Scroll</span>
           <div className="w-px h-12 bg-gradient-to-b from-slate-600 to-transparent" />
         </div>
@@ -209,27 +194,27 @@ export default async function HomePage() {
       {/* ── ABOUT PREVIEW ─────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="section-container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <AnimatedSection direction="left">
               <div className="gold-rule mb-6" />
               <h2 className="heading-lg text-navy-900 mb-6">About</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  I am a criminal justice scholar with a master&rsquo;s degree from the{' '}
-                  <strong className="text-navy-800">University of Mississippi</strong>, where my
-                  research examined the structural and policy dimensions of America&rsquo;s approach
-                  to drug control.
+                  <strong className="text-navy-800">Fahad Bin Islam Khan</strong> is a criminal
+                  justice researcher and Ph.D. student at{' '}
+                  <strong className="text-navy-800">John Jay College of Criminal Justice,
+                  City University of New York (CUNY)</strong>.
                 </p>
                 <p>
-                  As a doctoral student at{' '}
-                  <strong className="text-navy-800">John Jay College of Criminal Justice, CUNY</strong>,
-                  my work centers on the intersection of drug policy, race, and punishment,
-                  interrogating how prohibition regimes produce systematic inequalities across
-                  institutions, law, and society.
+                  His research examines U.S. drug policy, criminal justice systems, marijuana
+                  legalization, sentencing disparities, and comparative criminology, with attention
+                  to how law and enforcement shape social inequality across jurisdictions.
                 </p>
                 <p>
-                  My research draws on criminological theory, legal analysis, and policy evaluation
-                  to understand and propose alternatives to punitive drug enforcement.
+                  He completed his M.S. in Criminal Justice at the{' '}
+                  <strong className="text-navy-800">University of Mississippi</strong>, where his
+                  thesis analyzed perceived racial discrimination as a predictor of adolescent
+                  marijuana use.
                 </p>
               </div>
               <div className="mt-8">
@@ -245,10 +230,10 @@ export default async function HomePage() {
             <AnimatedSection direction="right">
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200 space-y-6">
                 {[
-                  { icon: GraduationCap, label: 'Current Program', value: 'Ph.D. in Criminal Justice' },
-                  { icon: BookOpen,       label: 'Institution', value: 'John Jay College of Criminal Justice, CUNY' },
-                  { icon: FileText,       label: 'M.Sc.', value: 'Criminal Justice, University of Mississippi' },
-                  { icon: ArrowRight,     label: 'Research Focus', value: 'Drug Policy & Institutional Inequality' },
+                  { icon: GraduationCap, label: 'Ph.D. Program',   value: 'Criminal Justice' },
+                  { icon: BookOpen,       label: 'Institution',     value: 'John Jay College of Criminal Justice, CUNY' },
+                  { icon: FileText,       label: 'M.S. (2026)',     value: 'Criminal Justice, University of Mississippi' },
+                  { icon: ArrowRight,     label: 'Research Focus',  value: 'U.S. Drug Policy and Comparative Criminology' },
                 ].map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-navy-950 flex items-center justify-center flex-shrink-0">

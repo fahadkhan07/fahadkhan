@@ -44,23 +44,23 @@ export default function ResearchPage() {
       <section className="py-12 bg-navy-950 border-b border-white/10">
         <div className="section-container">
           <AnimatedSection>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10">
               <div className="text-center">
-                <p className="text-4xl font-serif font-bold text-gold-400 mb-1">{publications.length}</p>
+                <p className="text-3xl sm:text-4xl font-serif font-bold text-gold-400 mb-1">{publications.length}</p>
                 <p className="text-xs text-slate-400 uppercase tracking-wider">Research Works</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-serif font-bold text-gold-400 mb-1">
+                <p className="text-3xl sm:text-4xl font-serif font-bold text-gold-400 mb-1">
                   {publications.filter(p => p.category === 'Journal Publication').length}
                 </p>
                 <p className="text-xs text-slate-400 uppercase tracking-wider">Published Articles</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-serif font-bold text-gold-400 mb-1">{researchAreas.length}</p>
+                <p className="text-3xl sm:text-4xl font-serif font-bold text-gold-400 mb-1">{researchAreas.length}</p>
                 <p className="text-xs text-slate-400 uppercase tracking-wider">Research Areas</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-serif font-bold text-gold-400 mb-1">{softwareTools.length}+</p>
+                <p className="text-3xl sm:text-4xl font-serif font-bold text-gold-400 mb-1">{softwareTools.length}+</p>
                 <p className="text-xs text-slate-400 uppercase tracking-wider">Software & Tools</p>
               </div>
             </div>

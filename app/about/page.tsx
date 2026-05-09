@@ -184,7 +184,7 @@ export default function AboutPage() {
       {/* ── BIOGRAPHY ──────────────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="section-container">
-          <div className="grid lg:grid-cols-3 gap-16">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-16">
 
             {/* Main bio */}
             <div className="lg:col-span-2">
@@ -424,7 +424,7 @@ export default function AboutPage() {
             <h2 className="heading-md text-navy-900">Education</h2>
           </AnimatedSection>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Timeline */}
             <AnimatedStagger className="space-y-6">
               {education.map((edu) => (
@@ -472,7 +472,7 @@ export default function AboutPage() {
       {/* ── TEACHING & PUBLIC SCHOLARSHIP ─────────────────────── */}
       <section className="section-padding bg-navy-950 text-white">
         <div className="section-container">
-          <div className="grid lg:grid-cols-2 gap-14 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
 
             {/* Workshop photo */}
             <AnimatedSection>
@@ -522,7 +522,7 @@ export default function AboutPage() {
       {/* ── THESIS DEFENSE ─────────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="section-container">
-          <div className="grid lg:grid-cols-2 gap-14 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
 
             {/* Text */}
             <AnimatedSection className="order-2 lg:order-1">
