@@ -13,23 +13,52 @@ export const metadata: Metadata = {
 
 const publications = [
   {
+    type: 'Journal Article',
+    title:
+      'Legal Compliance of Waste Management in Tannery Industrial Estate in Bangladesh: An Assessment from Environmental Criminological Perspective',
+    authors: 'Khan, F. B. I., & Akond, M. A.',
+    venue: 'TWIST',
+    year: '2024',
+    abstract:
+      'This study examines the Savar BSCIC Tannery Industrial Estate in Bangladesh, finding that inadequate waste management regulations, substandard technology, and insufficient industrial waste treatment are causing significant environmental harm. Data were collected through qualitative methods including focus group discussions, in-depth interviews, and direct observation. The study demonstrates how failures in waste management infringe upon human rights and environmental law, and offers policy recommendations for improved regulatory standards.',
+    tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance', 'Human Rights'],
+    status: 'Published',
+    available: true,
+    researchGateUrl: 'https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective',
+  },
+  {
+    type: 'Working Paper',
+    title:
+      'Examining Disparities in Capital Punishment: An Evaluation of Sentencing Outcomes and Policy Responses in the United States',
+    authors: 'Khan, F. B. I., & Brown, K. L.',
+    venue: 'Preprint',
+    year: '2025',
+    abstract:
+      'This paper examines systemic disparities in capital punishment sentencing in the United States across racial, geographic, economic, and gender dimensions. Findings indicate that defendants whose victims were White faced persistent structural bias despite state-level safeguards, that Southern states account for roughly 35% of all post-1976 executions, and that underfunded public defender systems disadvantage economically marginalized defendants.',
+    tags: ['Capital Punishment', 'Sentencing Disparities', 'Racial Bias', 'Death Penalty', 'Policy Reform'],
+    status: 'Preprint',
+    available: true,
+    researchGateUrl: 'https://www.researchgate.net/publication/396973193_Examining_Disparities_in_Capital_Punishment_An_Evaluation_of_Sentencing_Outcomes_and_Policy_Responses_in_the_United_States',
+  },
+  {
     type: 'Thesis',
     title:
       'Punishing Poverty: Drug Sentencing Disparities and the Reproduction of Inequality in the American Criminal Justice System',
-    authors: 'Khan, F.',
-    venue: 'Master\'s Thesis, University of Mississippi',
+    authors: 'Khan, F. B. I.',
+    venue: "Master's Thesis, University of Mississippi",
     year: '2024',
     abstract:
       'This thesis examines how drug sentencing laws — particularly mandatory minimum statutes — operate to reproduce socioeconomic and racial inequality. Through analysis of federal sentencing commission data and legislative history, I argue that drug sentencing is not a neutral response to criminal conduct but a mechanism of social stratification.',
     tags: ['Drug Sentencing', 'Inequality', 'Criminal Justice', 'Mandatory Minimums'],
     status: 'Completed',
     available: true,
+    researchGateUrl: undefined,
   },
   {
     type: 'Working Paper',
     title:
       'Harm Reduction or Harm Displacement? Evaluating the Efficacy of Public Health Approaches to Drug Policy',
-    authors: 'Khan, F.',
+    authors: 'Khan, F. B. I.',
     venue: 'Working Paper',
     year: '2024',
     abstract:
@@ -37,19 +66,21 @@ const publications = [
     tags: ['Harm Reduction', 'Drug Policy', 'Public Health', 'Evidence-Based Policy'],
     status: 'Under Review',
     available: false,
+    researchGateUrl: undefined,
   },
   {
     type: 'Conference Paper',
     title:
       'The Racial Politics of the War on Drugs: From Nixon to the Present',
-    authors: 'Khan, F.',
+    authors: 'Khan, F. B. I.',
     venue: 'American Society of Criminology Annual Meeting',
     year: '2023',
     abstract:
-      'This paper traces the racialized origins and execution of the War on Drugs from the Nixon administration\'s explicit targeting of Black communities to contemporary patterns of disparate enforcement.',
+      "This paper traces the racialized origins and execution of the War on Drugs from the Nixon administration's explicit targeting of Black communities to contemporary patterns of disparate enforcement.",
     tags: ['War on Drugs', 'Race', 'History', 'Criminal Justice'],
     status: 'Presented',
     available: true,
+    researchGateUrl: undefined,
   },
 ]
 
@@ -65,7 +96,7 @@ const academicProfiles = [
   {
     name: 'ResearchGate',
     description: 'Download papers and follow my research',
-    href: 'https://researchgate.net',
+    href: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan',
     bg: 'bg-teal-50 border-teal-200',
     icon: '🔬',
     cta: 'View Profile',
@@ -89,10 +120,10 @@ const academicProfiles = [
 ]
 
 const typeColors: Record<string, 'default' | 'gold' | 'secondary' | 'outline'> = {
-  Thesis:           'default',
-  'Working Paper':  'gold',
+  'Journal Article':  'default',
+  Thesis:             'outline',
+  'Working Paper':    'gold',
   'Conference Paper': 'secondary',
-  'Journal Article': 'outline',
 }
 
 export default function PublicationsPage() {
@@ -150,8 +181,10 @@ export default function PublicationsPage() {
                     <span className="text-xs text-slate-400">{pub.year}</span>
                     <span
                       className={`ml-auto text-xs font-medium px-2.5 py-0.5 rounded-full ${
-                        pub.status === 'Completed' || pub.status === 'Presented'
+                        pub.status === 'Completed' || pub.status === 'Presented' || pub.status === 'Published'
                           ? 'bg-green-100 text-green-700'
+                          : pub.status === 'Preprint'
+                          ? 'bg-blue-100 text-blue-700'
                           : 'bg-amber-100 text-amber-700'
                       }`}
                     >
@@ -177,12 +210,25 @@ export default function PublicationsPage() {
                         <Badge key={tag} variant="secondary">{tag}</Badge>
                       ))}
                     </div>
-                    {pub.available && (
-                      <Button size="sm" variant="outline">
-                        <Download size={13} />
-                        Request PDF
-                      </Button>
-                    )}
+                    <div className="flex flex-wrap gap-2">
+                      {pub.researchGateUrl && (
+                        <a
+                          href={pub.researchGateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-medium text-teal-700 hover:text-teal-900 border border-teal-200 hover:border-teal-400 rounded-full px-3 py-1.5 bg-teal-50 transition-all"
+                        >
+                          <ExternalLink size={11} />
+                          ResearchGate
+                        </a>
+                      )}
+                      {pub.available && (
+                        <Button size="sm" variant="outline">
+                          <Download size={13} />
+                          Request PDF
+                        </Button>
+                      )}
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>
