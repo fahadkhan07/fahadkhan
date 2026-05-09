@@ -104,16 +104,25 @@ export default async function HomePage() {
             priority
           />
           {/* Mobile: top nav area vignette */}
-          <div className="lg:hidden absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-navy-950/80 to-transparent" />
-          {/* Mobile: bottom two-thirds fade to navy for text legibility */}
-          <div className="lg:hidden absolute inset-x-0 bottom-0 h-[62%] bg-gradient-to-t from-navy-950 via-navy-950/92 via-[55%] to-transparent" />
-          {/* Desktop: left edge blend into the navy panel */}
-          <div className="hidden lg:block absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-navy-950 to-transparent" />
+          <div className="lg:hidden absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-navy-950/95 to-transparent" />
+          {/* Mobile: deep bottom fade — covers light wall areas below the subject */}
+          <div className="lg:hidden absolute inset-x-0 bottom-0 h-[78%] bg-gradient-to-t from-navy-950 via-navy-950/97 via-[40%] to-navy-950/20" />
+          {/* Desktop: wider left-edge blend into the solid navy section background */}
+          <div className="hidden lg:block absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-navy-950 to-transparent" />
         </div>
 
         {/* Content */}
-        <div className="section-container relative z-10 min-h-screen flex flex-col justify-end lg:justify-center pb-16 lg:pb-0 lg:py-20">
-          <div className="max-w-xl lg:max-w-[48%]">
+        <div className="section-container relative z-10 min-h-screen flex flex-col justify-end lg:justify-center pb-10 lg:pb-0 lg:py-20">
+          {/*
+            Mobile: dark glass panel so text stays readable regardless of image brightness.
+            Desktop: transparent — background is already solid navy-950.
+          */}
+          <div className="
+            max-w-xl lg:max-w-[48%]
+            rounded-2xl border border-white/[0.07] p-5 sm:p-7 mb-6
+            bg-navy-950/90 backdrop-blur-sm shadow-2xl
+            lg:bg-transparent lg:backdrop-blur-none lg:border-transparent lg:p-0 lg:mb-0 lg:rounded-none lg:shadow-none
+          ">
 
             <AnimatedSection delay={0.1}>
               <div className="flex items-center gap-3 mb-7">
@@ -135,17 +144,17 @@ export default async function HomePage() {
                 <p className="text-xl text-gold-400 font-serif font-semibold">
                   Ph.D. Student in Criminal Justice
                 </p>
-                <p className="text-slate-400 text-sm leading-snug">
+                <p className="text-slate-300 text-sm leading-snug">
                   John Jay College of Criminal Justice, City University of New York (CUNY)
                 </p>
-                <p className="text-slate-200 text-sm font-medium pt-0.5">
+                <p className="text-slate-200 text-sm font-semibold pt-0.5">
                   Drug Policy and Criminal Justice Researcher
                 </p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.34}>
-              <p className="text-slate-300 text-base leading-relaxed max-w-lg mb-9">
+              <p className="text-slate-200 text-base leading-relaxed max-w-lg mb-9">
                 His work examines U.S. drug policy, criminal justice systems, marijuana
                 legalization, drug law enforcement, sentencing disparities, and comparative
                 criminology.
@@ -174,7 +183,7 @@ export default async function HomePage() {
               <div className="mt-9 flex flex-wrap gap-2">
                 {['U.S. Drug Policy', 'Sentencing Disparities', 'Comparative Criminology', 'Criminal Justice', 'Marijuana Legalization'].map((tag) => (
                   <span key={tag}
-                    className="text-xs text-slate-400 border border-white/10 rounded-full px-3 py-1">
+                    className="text-xs text-slate-300 border border-white/[0.15] rounded-full px-3 py-1">
                     {tag}
                   </span>
                 ))}
