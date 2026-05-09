@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Fahad Bin Islam Khan — Ph.D. Student in Criminal Justice at John Jay College of Criminal Justice, CUNY. M.Sc. in Criminal Justice, University of Mississippi. Drug policy, institutional inequality, and comparative criminology researcher.',
+    'Fahad Bin Islam Khan is an incoming Ph.D. student in Criminal Justice at John Jay College of Criminal Justice, CUNY. Researching U.S. drug policy, institutional inequality, comparative criminology, race and justice, policing and punishment, and socio-legal systems.',
 }
 
 const education = [
@@ -109,46 +109,93 @@ export default function AboutPage() {
             <div className="lg:col-span-2">
               <AnimatedSection>
                 <div className="gold-rule mb-6" />
-                <h2 className="heading-md text-navy-900 mb-6">Biography</h2>
-                <div className="prose prose-slate max-w-none space-y-5 text-slate-600 leading-relaxed">
-                  <p>
-                    Fahad Bin Islam Khan is a criminal justice scholar whose work examines the
-                    intersection of drug policy, law, and structural inequality. He holds a{' '}
-                    <strong className="text-navy-800">Master of Science in Criminal Justice</strong>{' '}
-                    from the <strong className="text-navy-800">University of Mississippi</strong>,
-                    where he completed a thesis on perceived racial discrimination as a predictor
-                    of adolescent marijuana use — applying institutional strain theory to
-                    understand substance coping among youth.
+                <h2 className="heading-md text-navy-900 mb-8">Biography</h2>
+
+                {/* Opening */}
+                <p className="text-slate-700 text-base leading-relaxed mb-10">
+                  Fahad Bin Islam Khan is an incoming{' '}
+                  <strong className="text-navy-900 font-semibold">Ph.D. student in Criminal Justice</strong>{' '}
+                  at{' '}
+                  <strong className="text-navy-900 font-semibold">John Jay College of Criminal Justice,
+                  City University of New York (CUNY)</strong>.
+                  His research examines the intersection of{' '}
+                  <span className="text-navy-800 font-medium">U.S. drug policy</span>,{' '}
+                  <span className="text-navy-800 font-medium">institutional inequality</span>,{' '}
+                  <span className="text-navy-800 font-medium">comparative criminology</span>,
+                  and the criminal justice system — with a particular focus on how legal
+                  structures, law enforcement practices, and policy implementation shape
+                  unequal outcomes across communities and jurisdictions.
+                </p>
+
+                {/* Research Focus */}
+                <div className="mb-10">
+                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-widest mb-2">Research Focus</p>
+                  <div className="w-8 h-0.5 bg-gold-400 rounded mb-5" />
+                  <p className="text-slate-600 leading-relaxed">
+                    He completed his{' '}
+                    <strong className="text-navy-800">M.Sc. in Criminal Justice</strong> at the{' '}
+                    <strong className="text-navy-800">University of Mississippi</strong>, where his
+                    graduate research explored institutional strain, racial discrimination,
+                    adolescent substance use, and the{' '}
+                    <span className="text-navy-800 font-medium">socio-legal dimensions</span> of
+                    criminal justice policy. His doctoral research builds on this foundation —
+                    developing a comparative analysis of how{' '}
+                    <span className="text-navy-800 font-medium">drug policy</span> intersects with
+                    race, institutional structure, and legal inequality across jurisdictions.
                   </p>
-                  <p>
-                    He is pursuing doctoral studies in criminal justice at{' '}
-                    <strong className="text-navy-800">John Jay College of Criminal Justice,
-                    City University of New York (CUNY)</strong> — an institution recognized
-                    globally for its scholarship in criminology, law, and public policy. His
-                    doctoral research expands on his master&rsquo;s work, developing a
-                    comparative and socio-legal analysis of how drug policy intersects with
-                    race, institutional structure, and legal inequality.
+                </div>
+
+                {/* Scholarly Interests */}
+                <div className="mb-10">
+                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-widest mb-2">Scholarly Interests</p>
+                  <div className="w-8 h-0.5 bg-gold-400 rounded mb-5" />
+                  <p className="text-slate-600 leading-relaxed">
+                    His work engages questions surrounding marijuana legalization, drug tourism,{' '}
+                    <span className="text-navy-800 font-medium">sentencing disparities</span>,
+                    institutional decision-making, and{' '}
+                    <span className="text-navy-800 font-medium">comparative criminal justice systems</span>{' '}
+                    across different national and political contexts. Drawing from{' '}
+                    <span className="text-navy-800 font-medium">criminological theory</span>,
+                    socio-legal analysis, and policy-oriented research, he is particularly
+                    interested in how criminal justice reforms are translated into institutional
+                    practice — and why structural inequalities persist despite policy change.
                   </p>
-                  <p>
-                    Fahad&rsquo;s broader scholarly interests encompass drug tourism, capital
-                    punishment disparities, environmental criminology, tourist victimization,
-                    and comparative criminal justice. His research spans domestic U.S. contexts
-                    and international settings, including Bangladesh, Nigeria, and cross-national
-                    comparative frameworks.
-                  </p>
-                  <p>
-                    Drawing on quantitative and qualitative methods, his work interrogates how
-                    sentencing structures, prosecutorial discretion, and enforcement priorities
-                    produce disparate outcomes across race, class, and geography. He is
-                    committed to scholarship that is theoretically rigorous, empirically grounded,
-                    and policy-relevant.
-                  </p>
-                  <p>
-                    Fahad has served as a graduate teaching assistant at Ole Miss and presented
-                    his research at the 80th Annual Meeting of the American Society of
-                    Criminology in Washington D.C. He is an active member of ASC, ACJS, and
+                </div>
+
+                {/* Academic Engagement */}
+                <div className="mb-10">
+                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-widest mb-2">Academic Engagement</p>
+                  <div className="w-8 h-0.5 bg-gold-400 rounded mb-5" />
+                  <p className="text-slate-600 leading-relaxed">
+                    In addition to academic research, he has presented scholarly work at
+                    professional conferences — including the 80th Annual Meeting of the{' '}
+                    <strong className="text-navy-800">American Society of Criminology</strong>{' '}
+                    in Washington D.C. — and contributed to interdisciplinary research
+                    examining victimization,{' '}
+                    <span className="text-navy-800 font-medium">policing</span>, and
+                    transnational justice issues. He is an active member of the American
+                    Society of Criminology, the Academy of Criminal Justice Sciences, and
                     the Southern Criminal Justice Association.
                   </p>
+                </div>
+
+                {/* Keyword chips */}
+                <div className="pt-6 border-t border-slate-100">
+                  <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">Research Areas</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      'U.S. Drug Policy', 'Comparative Criminology', 'Institutional Inequality',
+                      'Socio-Legal Analysis', 'Race & Justice', 'Policing & Punishment',
+                      'Sentencing Reform', 'Criminological Theory',
+                    ].map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs text-navy-700 bg-slate-50 border border-slate-200 rounded-full px-3 py-1 font-medium"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </AnimatedSection>
             </div>
