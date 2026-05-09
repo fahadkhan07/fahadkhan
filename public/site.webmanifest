@@ -1,0 +1,21 @@
+{
+  "name": "Fahad Bin Islam Khan",
+  "short_name": "Fahad Khan",
+  "description": "Ph.D. Student in Criminal Justice at John Jay College of Criminal Justice, CUNY. Drug policy and comparative criminology researcher.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f2e",
+  "theme_color": "#0a0f2e",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
