@@ -6,7 +6,13 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Curriculum Vitae',
-  description: 'Full academic CV of Fahad Bin Islam Khan, criminal justice scholar and drug policy researcher.',
+  description:
+    'Full academic curriculum vitae of Fahad Bin Islam Khan, criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY. Includes education, publications, research projects, employment, and fellowships.',
+  openGraph: {
+    title: 'Curriculum Vitae | Fahad Bin Islam Khan',
+    description:
+      'Academic CV of Fahad Bin Islam Khan, criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY.',
+  },
 }
 
 export default function CVPage() {

@@ -6,17 +6,15 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Research communication and academic correspondence with Fahad Bin Islam Khan, Ph.D. student in criminal justice at John Jay College of Criminal Justice, CUNY. Drug policy researcher and comparative criminology scholar.',
-  keywords: [
-    'Fahad Bin Islam Khan',
-    'criminal justice researcher',
-    'drug policy researcher',
-    'comparative criminology',
-    'John Jay College of Criminal Justice',
-    'CUNY',
-    'contact',
-    'academic collaboration',
-  ],
+    'Contact Fahad Bin Islam Khan, criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY. Available for academic collaboration, research communication, and conference engagement.',
+  openGraph: {
+    title: 'Contact Fahad Bin Islam Khan | Criminal Justice Researcher',
+    description:
+      'Contact Fahad Bin Islam Khan for academic collaboration, research communication, and professional correspondence.',
+  },
+  alternates: {
+    canonical: 'https://fahadkhanresearch.com/contact',
+  },
 }
 
 const directContact = [

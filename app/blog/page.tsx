@@ -9,7 +9,12 @@ import { getAllBlogPosts } from '@/lib/mdx'
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Commentary and analysis on U.S. drug policy, criminal justice reform, and sentencing by Fahad Bin Islam Khan.',
+    'Academic commentary and analysis on U.S. drug policy, criminal justice reform, marijuana legalization, and sentencing disparities by Fahad Bin Islam Khan.',
+  openGraph: {
+    title: 'Blog | Fahad Bin Islam Khan',
+    description:
+      'Academic commentary on U.S. drug policy, criminal justice reform, and criminological research by Fahad Bin Islam Khan.',
+  },
 }
 
 export default function BlogPage() {

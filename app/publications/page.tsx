@@ -8,7 +8,12 @@ import { Button } from '@/components/ui/button'
 export const metadata: Metadata = {
   title: 'Publications',
   description:
-    'Academic publications and conference presentations by Fahad Bin Islam Khan on criminal justice, drug policy, and environmental criminology.',
+    'Peer-reviewed publications and conference presentations by Fahad Bin Islam Khan on U.S. drug policy, criminal justice systems, tourist victimization, environmental criminology, and comparative criminology.',
+  openGraph: {
+    title: 'Publications | Fahad Bin Islam Khan',
+    description:
+      'Peer-reviewed publications and conference presentations by Fahad Bin Islam Khan on drug policy, criminal justice, and criminology.',
+  },
 }
 
 const peerReviewed = [

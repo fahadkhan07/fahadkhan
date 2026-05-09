@@ -1,6 +1,22 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, BookOpen, FileText, GraduationCap, Mail, ExternalLink, Calendar, Clock } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Fahad Bin Islam Khan | Drug Policy and Criminal Justice Researcher',
+  description:
+    'Fahad Bin Islam Khan is a criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY. His research examines U.S. drug policy, criminal justice systems, marijuana legalization, sentencing disparities, and comparative criminology.',
+  alternates: {
+    canonical: 'https://fahadkhanresearch.com',
+  },
+  openGraph: {
+    title: 'Fahad Bin Islam Khan | Drug Policy and Criminal Justice Researcher',
+    description:
+      'Criminal justice researcher at John Jay College of Criminal Justice, CUNY. Specializes in U.S. drug policy, marijuana legalization, sentencing disparities, and comparative criminology.',
+    url: 'https://fahadkhanresearch.com',
+  },
+}
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'

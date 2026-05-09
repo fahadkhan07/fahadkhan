@@ -12,10 +12,10 @@ const footerLinks = {
     { href: '/contact',      label: 'Contact' },
   ],
   Academic: [
-    { href: 'https://scholar.google.com',  label: 'Google Scholar',  external: true },
-    { href: 'https://researchgate.net',    label: 'ResearchGate',    external: true },
-    { href: 'https://orcid.org',           label: 'ORCID',           external: true },
-    { href: 'https://academia.edu',        label: 'Academia.edu',    external: true },
+    { href: 'https://scholar.google.com/citations?user=wRjP_1wAAAAJ&hl=en',  label: 'Google Scholar',  external: true },
+    { href: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan',      label: 'ResearchGate',    external: true },
+    { href: 'https://orcid.org/my-orcid?orcid=0009-0009-0629-9473',          label: 'ORCID',           external: true },
+    { href: 'https://www.linkedin.com/in/fahad-bin-islam-khan-b64282211/',    label: 'LinkedIn',        external: true },
   ],
 }
 
@@ -28,9 +28,9 @@ export function Footer() {
           <div className="lg:col-span-2">
             <h3 className="font-serif text-xl font-bold mb-3">Fahad Bin Islam Khan</h3>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              Ph.D. Student in Criminal Justice, John Jay College of Criminal Justice (CUNY).
-              M.Sc., University of Mississippi. Researching drug policy, institutional inequality,
-              and criminal justice equity.
+              Criminal justice researcher and Ph.D. student at John Jay College of Criminal
+              Justice, City University of New York (CUNY). Research covers U.S. drug policy,
+              criminal justice systems, and comparative criminology.
             </p>
             <a
               href="mailto:khan.fbi7@gmail.com"
@@ -63,7 +63,7 @@ export function Footer() {
           {/* Academic */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4">
-              Academic Profiles
+              Research Profiles
             </h4>
             <ul className="space-y-2">
               {footerLinks.Academic.map(({ href, label }) => (

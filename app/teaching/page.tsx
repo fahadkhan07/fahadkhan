@@ -7,7 +7,13 @@ import { Badge } from '@/components/ui/badge'
 
 export const metadata: Metadata = {
   title: 'Teaching',
-  description: 'Teaching experience and philosophy of Fahad Bin Islam Khan, criminal justice educator.',
+  description:
+    'Teaching experience and philosophy of Fahad Bin Islam Khan, Ph.D. student and criminal justice researcher at John Jay College of Criminal Justice, CUNY. Graduate teaching assistant at the University of Mississippi.',
+  openGraph: {
+    title: 'Teaching | Fahad Bin Islam Khan',
+    description:
+      'Teaching philosophy and course experience of Fahad Bin Islam Khan, criminal justice researcher and educator.',
+  },
 }
 
 const courses = [

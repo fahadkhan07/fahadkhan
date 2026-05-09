@@ -16,7 +16,12 @@ import {
 export const metadata: Metadata = {
   title: 'Research',
   description:
-    'Research agenda and publications of Fahad Bin Islam Khan: criminology, drug policy, environmental crime, capital punishment, and criminal justice reform.',
+    'Research agenda of Fahad Bin Islam Khan: U.S. drug policy, criminal justice systems, comparative criminology, sentencing disparities, environmental criminology, and policing.',
+  openGraph: {
+    title: 'Research | Fahad Bin Islam Khan',
+    description:
+      'Research agenda of Fahad Bin Islam Khan: U.S. drug policy, criminal justice systems, comparative criminology, and sentencing disparities.',
+  },
 }
 
 const statusColors: Record<string, 'default' | 'gold' | 'secondary' | 'outline'> = {
