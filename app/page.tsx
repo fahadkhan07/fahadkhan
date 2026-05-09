@@ -92,31 +92,36 @@ export default async function HomePage() {
               <AnimatedSection delay={0.1}>
                 <div className="flex items-center gap-3 mb-8">
                   <div className="gold-rule" />
-                  <span className="text-gold-400 text-sm font-medium tracking-widest uppercase">
-                    Academic Portfolio
+                  <span className="text-gold-400 text-xs font-medium tracking-widest uppercase">
+                    John Jay College of Criminal Justice · CUNY
                   </span>
                 </div>
               </AnimatedSection>
 
               <AnimatedSection delay={0.2}>
-                <h1 className="heading-xl text-white mb-6 text-balance">
+                <h1 className="heading-xl text-white mb-3 text-balance">
                   Fahad Bin Islam Khan
                 </h1>
               </AnimatedSection>
 
-              <AnimatedSection delay={0.3}>
-                <p className="text-xl sm:text-2xl text-gold-400 font-serif mb-4">
+              <AnimatedSection delay={0.28}>
+                <p className="text-xl sm:text-2xl text-gold-400 font-serif mb-1">
                   Ph.D. Student in Criminal Justice
                 </p>
-                <p className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl mb-10">
-                  John Jay College of Criminal Justice, City University of New York<br />
-                  <span className="text-slate-300">
-                    My research examines U.S. drug policy, criminal justice systems, comparative criminology, race and crime, policing, prison, and environmental criminology, with a focus on how law, enforcement, and policy implementation shape social inequality across jurisdictions.
-                  </span>
+                <p className="text-slate-400 text-sm mb-8">
+                  Drug Policy and Comparative Criminology Researcher
                 </p>
               </AnimatedSection>
 
-              <AnimatedSection delay={0.4}>
+              <AnimatedSection delay={0.36}>
+                <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl mb-10">
+                  His work examines marijuana legalization, drug law enforcement, sentencing
+                  disparities, and the institutional effects of criminal justice policy across
+                  different legal and social contexts.
+                </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.44}>
                 <div className="flex flex-wrap gap-4">
                   <Button asChild size="lg" variant="gold">
                     <Link href="/research">
@@ -141,11 +146,11 @@ export default async function HomePage() {
                 </div>
               </AnimatedSection>
 
-              <AnimatedSection delay={0.55}>
+              <AnimatedSection delay={0.56}>
                 <div className="mt-12 flex flex-wrap gap-3">
-                  {['Drug Policy', 'Comparative Criminology', 'Criminal Justice', 'Race and Crime', 'Environmental Criminology'].map((tag) => (
+                  {['U.S. Drug Policy', 'Sentencing Disparities', 'Comparative Criminology', 'Criminal Justice', 'Marijuana Legalization'].map((tag) => (
                     <span key={tag}
-                      className="text-xs text-slate-400 border border-white/10 rounded-full px-3 py-1">
+                      className="text-xs text-slate-500 border border-white/10 rounded-full px-3 py-1">
                       {tag}
                     </span>
                   ))}
