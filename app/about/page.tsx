@@ -328,18 +328,23 @@ export default function AboutPage() {
 
             {/* Thesis defense photo */}
             <AnimatedSection direction="right" className="order-1 lg:order-2">
-              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/about/thesis.jpg"
-                  alt="Master's Thesis Defense — Institutional Strain and Substance Coping"
-                  fill
-                  sizes="(max-width: 1024px) 90vw, 45vw"
-                  className="object-cover object-center"
-                />
+              <div className="relative">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/about/thesis.jpg"
+                    alt="Fahad Bin Islam Khan after thesis defense with committee members — University of Mississippi"
+                    fill
+                    sizes="(max-width: 1024px) 90vw, 45vw"
+                    className="object-cover object-center"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy-950/80 to-transparent" />
+                  <div className="absolute bottom-5 left-5 right-5">
+                    <p className="text-xs text-gold-300 uppercase tracking-wider font-medium mb-1">Master's Thesis Defense</p>
+                    <p className="text-white text-sm font-serif leading-snug">University of Mississippi · May 2026</p>
+                  </div>
+                </div>
+                <div className="absolute -bottom-3 -right-3 w-full h-full border border-gold-400/40 rounded-2xl pointer-events-none" />
               </div>
-              <p className="text-slate-400 text-xs mt-3 text-center italic">
-                Master&rsquo;s thesis defense · University of Mississippi · 2026
-              </p>
             </AnimatedSection>
           </div>
         </div>

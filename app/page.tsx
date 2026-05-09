@@ -244,60 +244,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── RESEARCH ENGAGEMENT ──────────────────────────── */}
-      <section className="section-padding bg-slate-50">
-        <div className="section-container">
-          <AnimatedSection className="mb-12">
-            <div className="gold-rule mb-6" />
-            <h2 className="heading-lg text-navy-900 mb-3">Scholarship in Action</h2>
-            <p className="text-slate-500 max-w-xl">
-              Engaged in national criminology scholarship through conference presentations, academic workshops, and scholarly exchange.
-            </p>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 gap-6 items-start max-w-4xl">
-            <AnimatedSection>
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/about/conference.jpg"
-                  alt="Fahad Bin Islam Khan at the American Society of Criminology Annual Meeting, Washington D.C."
-                  fill
-                  sizes="(max-width: 768px) 90vw, 40vw"
-                  className="object-cover object-center"
-                />
-                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy-950/85 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5">
-                  <p className="text-xs text-gold-300 font-medium uppercase tracking-wider mb-1">ASC Annual Meeting</p>
-                  <p className="text-white text-sm font-serif font-medium">Washington D.C. · November 2025</p>
-                </div>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection direction="right" delay={0.15} className="md:mt-12">
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/about/conference-presentation.jpg"
-                  alt="Fahad Bin Islam Khan presenting criminal justice research"
-                  fill
-                  sizes="(max-width: 768px) 90vw, 40vw"
-                  className="object-cover object-center"
-                />
-                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy-950/85 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5">
-                  <p className="text-xs text-gold-300 font-medium uppercase tracking-wider mb-1">Research Presentation</p>
-                  <p className="text-white text-sm font-serif font-medium">Drug Policy & Criminal Justice</p>
-                </div>
-              </div>
-              <p className="text-slate-500 text-sm mt-4 leading-relaxed">
-                Presenting research on drug policy and sentencing disparities at the 80th Annual Meeting of the American Society of Criminology — one of the most prestigious venues in the discipline.
-              </p>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
       {/* ── RESEARCH AREAS ────────────────────────────────── */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-slate-50">
         <div className="section-container">
           <AnimatedSection className="text-center mb-16">
             <div className="gold-rule mx-auto mb-6" />
@@ -339,6 +287,63 @@ export default async function HomePage() {
               </Link>
             </Button>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── SCHOLARSHIP IN ACTION ─────────────────────────── */}
+      <section className="section-padding bg-white">
+        <div className="section-container">
+          <AnimatedSection className="mb-12">
+            <div className="gold-rule mb-6" />
+            <h2 className="heading-lg text-navy-900 mb-3">Scholarship in Action</h2>
+            <p className="text-slate-500 max-w-xl">
+              Presenting criminology research at national venues — translating scholarly inquiry
+              into active disciplinary exchange.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid lg:grid-cols-[3fr_2fr] gap-6 items-end max-w-4xl">
+
+            {/* Dominant: active research presentation */}
+            <AnimatedSection>
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/about/conference-presentation.jpg"
+                  alt="Fahad Bin Islam Khan presenting criminal justice research"
+                  fill
+                  sizes="(max-width: 768px) 90vw, 55vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy-950/85 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5">
+                  <p className="text-xs text-gold-300 font-medium uppercase tracking-wider mb-1">Research Presentation</p>
+                  <p className="text-white text-sm font-serif font-medium leading-snug">Drug Policy & Criminal Justice Reform</p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* Supporting: conference credibility */}
+            <AnimatedSection direction="right" delay={0.15}>
+              <div className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-md">
+                <Image
+                  src="/images/about/conference.jpg"
+                  alt="Fahad Bin Islam Khan at the American Society of Criminology Annual Meeting, Washington D.C."
+                  fill
+                  sizes="(max-width: 768px) 90vw, 30vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy-950/80 to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-xs text-gold-300 font-medium uppercase tracking-wider mb-0.5">ASC Annual Meeting</p>
+                  <p className="text-white text-xs font-serif">Washington D.C. · 2025</p>
+                </div>
+              </div>
+              <p className="text-slate-400 text-xs mt-3 leading-relaxed">
+                80th Annual Meeting of the American Society of Criminology — one of the most prestigious venues in the discipline.
+              </p>
+            </AnimatedSection>
+
+          </div>
         </div>
       </section>
 
