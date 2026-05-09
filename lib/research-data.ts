@@ -1,7 +1,7 @@
 export type PubCategory =
-  | 'Peer-Reviewed Publication'
-  | 'Working Paper'
-  | 'Conference Paper'
+  | 'Published Article'
+  | 'Preprint'
+  | 'Research Proposal'
   | 'Thesis'
 
 export interface Publication {
@@ -10,14 +10,14 @@ export interface Publication {
   title: string
   authors: string
   year: string
-  venue: string
-  status: string
-  abstract: string
+  monthYear: string
+  venue: string | null
+  status: 'Full-text available' | 'File available'
+  abstract: string | null
   tags: string[]
-  researchGateUrl?: string
-  doi?: string
-  available: boolean
-  apa: string
+  researchGateUrl: string
+  doi: string | null
+  apa: string | null
 }
 
 export interface ResearchProject {
@@ -35,85 +35,187 @@ export interface ResearchArea {
   description: string
 }
 
+// ─── VERIFIED: Exactly 8 items from ResearchGate profile/research ──────────
+// Source: https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research
+// Counts: Articles × 4, Thesis × 1, Preprints × 2, Research Proposal × 1
 export const publications: Publication[] = [
+
+  // ── PUBLISHED ARTICLES (4) ─────────────────────────────────────────────
+
   {
-    id: 'tourist-victimization-bangladesh',
-    category: 'Peer-Reviewed Publication',
+    id: 'bordered-justice',
+    category: 'Published Article',
     title:
-      'Nature of Crime Victimization among Tourists in Bangladesh: An Analysis',
-    authors: 'Khan, F. B. I., & Akter, M.',
-    year: '2023',
-    venue: 'International Journal of Law Management & Humanities (IJLMH), 6(3), 2711–2726',
-    status: 'Published',
-    abstract:
-      'This study examines how tourism growth in Bangladesh correlates with increased criminal threats targeting visitors. Using opportunity theory, routine activity theory, and Butler\'s TALC model, the study identifies victimization patterns across tourist destinations. Key crimes include theft, robbery, sexual assault, and terrorism. Contributing factors include economic disadvantage, tourist vulnerability, underreported incidents, security gaps, and inadequate governance. The paper recommends coordinated government and law enforcement action to protect tourists.',
-    tags: ['Tourist Victimization', 'Crime', 'Bangladesh', 'Tourism', 'Routine Activity Theory'],
-    researchGateUrl:
-      'https://www.researchgate.net/publication/340055853_Tourism_and_Crime_The_Case_of_Bangladesh',
-    doi: '10.10000/IJLMH.115097',
-    available: true,
-    apa: 'Khan, F. B. I., & Akter, M. (2023). Nature of crime victimization among tourists in Bangladesh: An analysis. International Journal of Law Management & Humanities, 6(3), 2711–2726. https://doij.org/10.10000/IJLMH.115097',
+      'Bordered Justice: A Conflict Theory Analysis of Drug Tourism, Law Enforcement, and Sentencing Disparities in the United States',
+    authors: 'Khan, F. B. I.',
+    year: '2025',
+    monthYear: 'May 2025',
+    venue: null,
+    status: 'Full-text available',
+    abstract: null,
+    tags: ['Drug Tourism', 'Conflict Theory', 'Law Enforcement', 'Sentencing Disparities', 'Drug Policy'],
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    doi: null,
+    apa: null,
   },
+
   {
     id: 'legal-compliance-tannery',
-    category: 'Peer-Reviewed Publication',
+    category: 'Published Article',
     title:
       'Legal Compliance of Waste Management in Tannery Industrial Estate in Bangladesh: An Assessment from Environmental Criminological Perspective',
     authors: 'Khan, F. B. I., & Akond, M. A.',
     year: '2024',
-    venue: 'TWIST, 19(1), 306–320',
-    status: 'Published',
+    monthYear: 'February 2024',
+    venue: 'TWIST',
+    status: 'Full-text available',
     abstract:
-      'This study examines the Savar BSCIC Tannery Industrial Estate — the only tannery industrial estate in Bangladesh — focusing on waste management practices and legal compliance. Findings show that lack of effective waste management regulations, use of substandard technology, and inadequate treatment facilities are causing significant environmental harm. Data were collected through qualitative methods including focus group discussions, in-depth interviews, and direct observation.',
+      'Examines the Savar BSCIC Tannery Industrial Estate — the only tannery industrial estate in Bangladesh — focusing on waste management practices and legal compliance. Findings show that lack of effective waste management regulations, substandard technology, and inadequate treatment facilities are causing significant environmental harm. Data were collected through qualitative methods including focus group discussions, in-depth interviews, and direct observation.',
     tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance', 'Human Rights'],
     researchGateUrl:
       'https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective',
     doi: '10.5281/zenodo.10049652',
-    available: true,
-    apa: 'Khan, F. B. I., & Akond, M. A. (2024). Legal compliance of waste management in tannery industrial estate in Bangladesh: An assessment from environmental criminological perspective. TWIST, 19(1), 306–320. https://doi.org/10.5281/zenodo.10049652',
+    apa: 'Khan, F. B. I., & Akond, M. A. (2024). Legal compliance of waste management in tannery industrial estate in Bangladesh: An assessment from environmental criminological perspective. TWIST. https://doi.org/10.5281/zenodo.10049652',
   },
+
+  {
+    id: 'food-victimization',
+    category: 'Published Article',
+    title:
+      'From Victimless Crime to Habitual Victim: An Empirical Study on Food Victimization',
+    authors: 'Khan, F. B. I., & Tauhid, K.',
+    year: '2023',
+    monthYear: 'November 2023',
+    venue: 'International Journal of Research and Innovation in Social Science',
+    status: 'Full-text available',
+    abstract: null,
+    tags: ['Food Victimization', 'Victimology', 'Empirical Study', 'Social Science', 'Criminology'],
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    doi: null,
+    apa: 'Khan, F. B. I., & Tauhid, K. (2023). From victimless crime to habitual victim: An empirical study on food victimization. International Journal of Research and Innovation in Social Science.',
+  },
+
+  {
+    id: 'tourist-victimization-bangladesh',
+    category: 'Published Article',
+    title:
+      'Nature of Crime Victimization Among Tourists in Bangladesh: An Analysis',
+    authors: 'Khan, F. B. I., & Akter, M.',
+    year: '2023',
+    monthYear: 'July 2023',
+    venue: 'International Journal of Law Management & Humanities',
+    status: 'Full-text available',
+    abstract:
+      'Examines how tourism growth in Bangladesh correlates with increased criminal threats targeting visitors. Using opportunity theory, routine activity theory, and Butler\'s TALC model, the study identifies victimization patterns across tourist destinations. Key crimes include theft, robbery, sexual assault, and terrorism. Contributing factors include economic disadvantage, tourist vulnerability, underreported incidents, security gaps, and inadequate governance.',
+    tags: ['Tourist Victimization', 'Crime', 'Bangladesh', 'Tourism', 'Routine Activity Theory'],
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    doi: '10.10000/IJLMH.115097',
+    apa: 'Khan, F. B. I., & Akter, M. (2023). Nature of crime victimization among tourists in Bangladesh: An analysis. International Journal of Law Management & Humanities. https://doij.org/10.10000/IJLMH.115097',
+  },
+
+  // ── PREPRINTS (2) ──────────────────────────────────────────────────────
+
+  {
+    id: 'drug-tourism-youth',
+    category: 'Preprint',
+    title:
+      'Drug Tourism and Youth: Legal Awareness, Attitudes, and Policy Implications for Mississippi',
+    authors: 'Khan, F. B. I., & Greenspan, R.',
+    year: '2025',
+    monthYear: 'April 2025',
+    venue: null,
+    status: 'File available',
+    abstract: null,
+    tags: ['Drug Tourism', 'Youth', 'Legal Awareness', 'Drug Policy', 'Mississippi'],
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    doi: null,
+    apa: null,
+  },
+
   {
     id: 'capital-punishment-disparities',
-    category: 'Working Paper',
+    category: 'Preprint',
     title:
       'Examining Disparities in Capital Punishment: An Evaluation of Sentencing Outcomes and Policy Responses in the United States',
     authors: 'Khan, F. B. I., & Brown, K. L.',
     year: '2024',
-    venue: 'ResearchGate Preprint',
-    status: 'Preprint',
+    monthYear: 'December 2024',
+    venue: null,
+    status: 'File available',
     abstract:
-      'This paper critically examines racial, socioeconomic, and geographic disparities in capital punishment sentencing in the United States. Findings indicate that around 35% of all capital punishment cases after 1976 were declared in Texas alone, that defendants whose victims were White faced persistent structural bias despite state-level reforms, and that the Supreme Court has confirmed such structural bias in death sentencing. The paper calls for an intersectional analysis of overlapping disparities in capital sentencing.',
+      'Critically examines racial, socioeconomic, and geographic disparities in capital punishment sentencing in the United States. Findings indicate that around 35% of all capital punishment cases after 1976 were declared in Texas alone, and that defendants whose victims were White faced persistent structural bias despite state-level reforms. The paper calls for an intersectional analysis of overlapping disparities in capital sentencing.',
     tags: ['Capital Punishment', 'Sentencing Disparities', 'Racial Bias', 'Death Penalty', 'Policy Reform'],
     researchGateUrl:
       'https://www.researchgate.net/publication/396973193_Examining_Disparities_in_Capital_Punishment_An_Evaluation_of_Sentencing_Outcomes_and_Policy_Responses_in_the_United_States',
     doi: '10.13140/RG.2.2.13556.62080',
-    available: true,
-    apa: 'Khan, F. B. I., & Brown, K. L. (2024). Examining disparities in capital punishment: An evaluation of sentencing outcomes and policy responses in the United States. ResearchGate. https://doi.org/10.13140/RG.2.2.13556.62080',
+    apa: 'Khan, F. B. I., & Brown, K. L. (2024). Examining disparities in capital punishment: An evaluation of sentencing outcomes and policy responses in the United States. https://doi.org/10.13140/RG.2.2.13556.62080',
+  },
+
+  // ── RESEARCH PROPOSAL (1) ──────────────────────────────────────────────
+
+  {
+    id: 'police-brutality-comparative',
+    category: 'Research Proposal',
+    title:
+      'Victimization and Police Brutality: A Comparative Study of Nigeria and Bangladesh',
+    authors: 'Khan, F. B. I. (Principal Investigator)',
+    year: '2024',
+    monthYear: 'December 2024',
+    venue: null,
+    status: 'File available',
+    abstract: null,
+    tags: ['Police Brutality', 'Victimization', 'Nigeria', 'Bangladesh', 'Comparative Study', 'Policing'],
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    doi: null,
+    apa: null,
+  },
+
+  // ── THESIS (1) ────────────────────────────────────────────────────────
+
+  {
+    id: 'institutional-strain-marijuana',
+    category: 'Thesis',
+    title:
+      'Institutional Strain and Substance Coping: Analyzing Perceived Racial Discrimination as a Predictor of Adolescent Marijuana Use',
+    authors: 'Khan, F. B. I., & Walker, D.',
+    year: '2026',
+    monthYear: 'May 2026',
+    venue: null,
+    status: 'Full-text available',
+    abstract: null,
+    tags: ['Adolescent Substance Use', 'Racial Discrimination', 'Strain Theory', 'Marijuana', 'Youth Justice'],
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    doi: null,
+    apa: null,
   },
 ]
 
+// ─── SECTION CONFIG ────────────────────────────────────────────────────────
+
 export const pubCategories: PubCategory[] = [
-  'Peer-Reviewed Publication',
-  'Working Paper',
-  'Conference Paper',
+  'Published Article',
+  'Preprint',
+  'Research Proposal',
   'Thesis',
 ]
 
 export const categoryLabels: Record<PubCategory, string> = {
-  'Peer-Reviewed Publication': 'Peer-Reviewed Journal Articles',
-  'Working Paper': 'Working Papers & Preprints',
-  'Conference Paper': 'Conference Papers & Presentations',
-  'Thesis': 'Thesis & Academic Research',
+  'Published Article':  'Published Research',
+  'Preprint':           'Working Papers & Preprints',
+  'Research Proposal':  'Research Projects & Proposals',
+  'Thesis':             'Thesis Research',
 }
 
 export const categoryDescriptions: Record<PubCategory, string> = {
-  'Peer-Reviewed Publication': 'Articles published in peer-reviewed academic journals.',
-  'Working Paper': 'Manuscripts under review, in preparation, or available as preprints.',
-  'Conference Paper': 'Papers presented at academic conferences and symposia.',
-  'Thesis': 'Graduate thesis research submitted in partial fulfillment of degree requirements.',
+  'Published Article':  'Peer-reviewed articles published in academic journals.',
+  'Preprint':           'Manuscripts available as preprints or currently under review.',
+  'Research Proposal':  'Formal research proposals and in-progress research designs.',
+  'Thesis':             'Graduate thesis research submitted for academic degree requirements.',
 }
 
-export const researchProjects: ResearchProject[] = [
+// ─── RESEARCH PROJECTS ────────────────────────────────────────────────────
+
+export const researchProjects = [
   {
     title: 'The Racial Architecture of Drug Sentencing',
     status: 'In Progress',
@@ -152,7 +254,9 @@ export const researchProjects: ResearchProject[] = [
   },
 ]
 
-export const researchAreas: ResearchArea[] = [
+// ─── RESEARCH AREAS ───────────────────────────────────────────────────────
+
+export const researchAreas = [
   {
     area: 'Criminology and Criminal Justice',
     icon: '⚖️',

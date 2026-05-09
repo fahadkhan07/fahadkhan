@@ -11,51 +11,69 @@ export const metadata: Metadata = {
     'Academic publications, working papers, and research by Fahad Bin Islam Khan on U.S. drug policy and criminal justice.',
 }
 
+// Published articles only — matches ResearchGate profile/research (4 articles)
 const publications = [
   {
     type: 'Journal Article',
     title:
-      'Nature of Crime Victimization among Tourists in Bangladesh: An Analysis',
-    authors: 'Khan, F. B. I., & Akter, M.',
-    venue: 'International Journal of Law Management & Humanities (IJLMH), 6(3), 2711–2726',
-    year: '2023',
-    abstract:
-      "This study examines how tourism growth in Bangladesh correlates with increased criminal threats targeting visitors. Using opportunity theory, routine activity theory, and Butler's TALC model, the study identifies victimization patterns across tourist destinations. Key crimes include theft, robbery, sexual assault, and terrorism. Contributing factors include economic disadvantage, tourist vulnerability, underreported incidents, security gaps, and inadequate governance.",
-    tags: ['Tourist Victimization', 'Crime', 'Bangladesh', 'Tourism', 'Routine Activity Theory'],
+      'Bordered Justice: A Conflict Theory Analysis of Drug Tourism, Law Enforcement, and Sentencing Disparities in the United States',
+    authors: 'Khan, F. B. I.',
+    venue: null,
+    year: '2025',
+    monthYear: 'May 2025',
+    abstract: null,
+    tags: ['Drug Tourism', 'Conflict Theory', 'Law Enforcement', 'Sentencing Disparities'],
     status: 'Published',
     available: true,
-    researchGateUrl: 'https://www.researchgate.net/publication/340055853_Tourism_and_Crime_The_Case_of_Bangladesh',
-    doi: 'https://doij.org/10.10000/IJLMH.115097',
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    doi: null,
   },
   {
     type: 'Journal Article',
     title:
       'Legal Compliance of Waste Management in Tannery Industrial Estate in Bangladesh: An Assessment from Environmental Criminological Perspective',
     authors: 'Khan, F. B. I., & Akond, M. A.',
-    venue: 'TWIST, 19(1), 306–320',
+    venue: 'TWIST',
     year: '2024',
+    monthYear: 'February 2024',
     abstract:
-      'This study examines the Savar BSCIC Tannery Industrial Estate — the only tannery industrial estate in Bangladesh — focusing on waste management practices and legal compliance. Findings show that lack of effective waste management regulations, substandard technology, and inadequate treatment facilities are causing significant environmental harm. Data were collected through qualitative methods including focus group discussions, in-depth interviews, and direct observation.',
-    tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance', 'Human Rights'],
+      'Examines the Savar BSCIC Tannery Industrial Estate — the only tannery industrial estate in Bangladesh — focusing on waste management practices and legal compliance. Findings show that lack of effective waste management regulations, substandard technology, and inadequate treatment facilities are causing significant environmental harm.',
+    tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance'],
     status: 'Published',
     available: true,
     researchGateUrl: 'https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective',
     doi: 'https://doi.org/10.5281/zenodo.10049652',
   },
   {
-    type: 'Working Paper',
+    type: 'Journal Article',
     title:
-      'Examining Disparities in Capital Punishment: An Evaluation of Sentencing Outcomes and Policy Responses in the United States',
-    authors: 'Khan, F. B. I., & Brown, K. L.',
-    venue: 'ResearchGate Preprint',
-    year: '2024',
-    abstract:
-      'This paper critically examines racial, socioeconomic, and geographic disparities in capital punishment sentencing in the United States. Findings indicate that around 35% of all capital punishment cases after 1976 were declared in Texas alone, that defendants whose victims were White faced persistent structural bias despite state-level reforms, and that the Supreme Court has confirmed such structural bias in death sentencing.',
-    tags: ['Capital Punishment', 'Sentencing Disparities', 'Racial Bias', 'Death Penalty', 'Policy Reform'],
-    status: 'Preprint',
+      'From Victimless Crime to Habitual Victim: An Empirical Study on Food Victimization',
+    authors: 'Khan, F. B. I., & Tauhid, K.',
+    venue: 'International Journal of Research and Innovation in Social Science',
+    year: '2023',
+    monthYear: 'November 2023',
+    abstract: null,
+    tags: ['Food Victimization', 'Victimology', 'Empirical Study', 'Social Science'],
+    status: 'Published',
     available: true,
-    researchGateUrl: 'https://www.researchgate.net/publication/396973193_Examining_Disparities_in_Capital_Punishment_An_Evaluation_of_Sentencing_Outcomes_and_Policy_Responses_in_the_United_States',
-    doi: 'https://doi.org/10.13140/RG.2.2.13556.62080',
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    doi: null,
+  },
+  {
+    type: 'Journal Article',
+    title:
+      'Nature of Crime Victimization Among Tourists in Bangladesh: An Analysis',
+    authors: 'Khan, F. B. I., & Akter, M.',
+    venue: 'International Journal of Law Management & Humanities',
+    year: '2023',
+    monthYear: 'July 2023',
+    abstract:
+      "Examines how tourism growth in Bangladesh correlates with increased criminal threats targeting visitors. Using opportunity theory, routine activity theory, and Butler's TALC model, the study identifies victimization patterns across tourist destinations including theft, robbery, sexual assault, and terrorism.",
+    tags: ['Tourist Victimization', 'Crime', 'Bangladesh', 'Tourism', 'Routine Activity Theory'],
+    status: 'Published',
+    available: true,
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    doi: 'https://doij.org/10.10000/IJLMH.115097',
   },
 ]
 
@@ -153,7 +171,7 @@ export default function PublicationsPage() {
                 <div className="border border-slate-200 rounded-xl p-7 bg-white hover:border-navy-300 hover:shadow-sm transition-all duration-200">
                   <div className="flex flex-wrap items-center gap-2 mb-4">
                     <Badge variant={typeColors[pub.type] ?? 'secondary'}>{pub.type}</Badge>
-                    <span className="text-xs text-slate-400">{pub.year}</span>
+                    <span className="text-xs text-slate-400">{pub.monthYear ?? pub.year}</span>
                     <span
                       className={`ml-auto text-xs font-medium px-2.5 py-0.5 rounded-full ${
                         pub.status === 'Completed' || pub.status === 'Presented' || pub.status === 'Published'
@@ -170,14 +188,16 @@ export default function PublicationsPage() {
                   <h3 className="font-serif text-lg font-semibold text-navy-900 mb-1 leading-snug">
                     {pub.title}
                   </h3>
-                  <p className="text-sm text-slate-500 mb-1">{pub.authors}</p>
-                  <p className="text-sm text-gold-600 font-medium mb-4">
-                    {pub.venue}
-                  </p>
+                  <p className="text-sm text-slate-500 mb-0.5">{pub.authors}</p>
+                  {pub.venue && (
+                    <p className="text-sm text-gold-600 font-medium mb-4">{pub.venue}</p>
+                  )}
 
-                  <p className="text-sm text-slate-600 leading-relaxed mb-5">
-                    {pub.abstract}
-                  </p>
+                  {pub.abstract ? (
+                    <p className="text-sm text-slate-600 leading-relaxed mb-5 mt-3">{pub.abstract}</p>
+                  ) : (
+                    <p className="text-sm text-slate-400 italic mb-5 mt-3">Full text available on ResearchGate.</p>
+                  )}
 
                   <div className="flex flex-wrap items-center justify-between gap-4">
                     <div className="flex flex-wrap gap-2">

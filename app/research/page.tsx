@@ -44,12 +44,14 @@ export default function ResearchPage() {
                 <p className="text-xs text-slate-400 uppercase tracking-wider">Research Works</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-serif font-bold text-gold-400 mb-1">{researchAreas.length}</p>
-                <p className="text-xs text-slate-400 uppercase tracking-wider">Research Areas</p>
+                <p className="text-4xl font-serif font-bold text-gold-400 mb-1">
+                  {publications.filter(p => p.category === 'Published Article').length}
+                </p>
+                <p className="text-xs text-slate-400 uppercase tracking-wider">Published Articles</p>
               </div>
               <div className="text-center">
-                <p className="text-4xl font-serif font-bold text-gold-400 mb-1">{methodsExpertise.length}</p>
-                <p className="text-xs text-slate-400 uppercase tracking-wider">Methods Expertise</p>
+                <p className="text-4xl font-serif font-bold text-gold-400 mb-1">{researchAreas.length}</p>
+                <p className="text-xs text-slate-400 uppercase tracking-wider">Research Areas</p>
               </div>
               <div className="text-center">
                 <p className="text-4xl font-serif font-bold text-gold-400 mb-1">{softwareTools.length}+</p>
