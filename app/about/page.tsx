@@ -1,13 +1,39 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Image from 'next/image'
 import { GraduationCap, MapPin, BookOpen, Award, Users, Globe } from 'lucide-react'
 import { AnimatedSection, AnimatedStagger, AnimatedItem } from '@/components/AnimatedSection'
 import { Badge } from '@/components/ui/badge'
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'Criminal Justice Researcher',
   description:
-    'Fahad Bin Islam Khan is an incoming Ph.D. student in Criminal Justice at John Jay College of Criminal Justice, CUNY. Researching U.S. drug policy, institutional inequality, comparative criminology, race and justice, policing and punishment, and socio-legal systems.',
+    'Fahad Bin Islam Khan is an incoming Ph.D. student in Criminal Justice at John Jay College of Criminal Justice (CUNY) whose research focuses on U.S. drug policy, criminal justice systems, comparative criminology, race and justice, policing and punishment, and socio-legal systems.',
+  keywords: [
+    'criminal justice researcher',
+    'criminology scholar',
+    'U.S. drug policy',
+    'criminal justice systems',
+    'comparative criminology',
+    'drug policy research',
+    'race and justice',
+    'policing and punishment',
+    'socio-legal research',
+    'John Jay College of Criminal Justice',
+    'CUNY criminal justice',
+    'criminological theory',
+    'institutional inequality',
+    'sentencing disparities',
+    'criminal justice reform',
+    'drug law enforcement',
+    'environmental criminology',
+    'marijuana legalization',
+  ],
+  openGraph: {
+    title: 'Fahad Bin Islam Khan | Criminal Justice Researcher & Ph.D. Student',
+    description:
+      'Ph.D. student at John Jay College of Criminal Justice, CUNY. Research focuses on U.S. drug policy, criminal justice systems, comparative criminology, and socio-legal analysis.',
+  },
 }
 
 const education = [
@@ -64,6 +90,41 @@ const memberships = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Fahad Bin Islam Khan',
+            jobTitle: 'Ph.D. Student in Criminal Justice',
+            affiliation: {
+              '@type': 'CollegeOrUniversity',
+              name: 'John Jay College of Criminal Justice, City University of New York',
+            },
+            alumniOf: {
+              '@type': 'CollegeOrUniversity',
+              name: 'University of Mississippi',
+            },
+            url: 'https://fahadkhanresearch.com/about',
+            sameAs: ['https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan'],
+            knowsAbout: [
+              'U.S. Drug Policy',
+              'Criminal Justice Systems',
+              'Comparative Criminology',
+              'Drug Law Enforcement',
+              'Sentencing Disparities',
+              'Race and Justice',
+              'Institutional Inequality',
+              'Policing and Punishment',
+              'Socio-Legal Research',
+              'Environmental Criminology',
+              'Criminological Theory',
+            ],
+          }),
+        }}
+      />
+
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="bg-navy-950 text-white overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500" />
@@ -110,20 +171,21 @@ export default function AboutPage() {
                 <div className="gold-rule mb-6" />
                 <h2 className="heading-md text-navy-900 mb-8">Biography</h2>
 
-                {/* Opening */}
+                {/* Opening: entity-based SEO positioning statement */}
                 <p className="text-slate-700 text-base leading-relaxed mb-10">
                   Fahad Bin Islam Khan is an incoming{' '}
                   <strong className="text-navy-900 font-semibold">Ph.D. student in Criminal Justice</strong>{' '}
                   at{' '}
                   <strong className="text-navy-900 font-semibold">John Jay College of Criminal Justice,
-                  City University of New York (CUNY)</strong>.
-                  His research examines the intersection of{' '}
-                  <span className="text-navy-800 font-medium">U.S. drug policy</span>,{' '}
-                  <span className="text-navy-800 font-medium">institutional inequality</span>,{' '}
-                  <span className="text-navy-800 font-medium">comparative criminology</span>,
-                  and the criminal justice system, with a particular focus on how legal
-                  structures, law enforcement practices, and policy implementation shape
-                  unequal outcomes across communities and jurisdictions.
+                  City University of New York (CUNY)</strong>{' '}
+                  whose research focuses on{' '}
+                  <strong className="text-navy-900 font-semibold">U.S. drug policy</strong>,{' '}
+                  <strong className="text-navy-900 font-semibold">criminal justice systems</strong>,
+                  and{' '}
+                  <strong className="text-navy-900 font-semibold">comparative criminology</strong>.
+                  His work examines how legal structures, law enforcement practices, and policy
+                  implementation produce and perpetuate unequal outcomes across communities,
+                  institutions, and jurisdictions.
                 </p>
 
                 {/* Research Focus */}
@@ -131,60 +193,129 @@ export default function AboutPage() {
                   <p className="text-xs font-semibold text-gold-600 uppercase tracking-widest mb-2">Research Focus</p>
                   <div className="w-8 h-0.5 bg-gold-400 rounded mb-5" />
                   <p className="text-slate-600 leading-relaxed">
+                    His primary research examines{' '}
+                    <span className="text-navy-800 font-medium">U.S. drug policy</span>{' '}
+                    as a site of institutional inequality, analyzing how{' '}
+                    <span className="text-navy-800 font-medium">drug law enforcement</span>,{' '}
+                    <span className="text-navy-800 font-medium">sentencing disparities</span>,
+                    and prosecutorial discretion reproduce structural disadvantages along
+                    lines of race, class, and geography. He approaches criminal justice
+                    systems not as neutral institutions, but as politically constructed
+                    mechanisms that reflect and reinforce existing power relations. His
+                    analysis draws from{' '}
+                    <span className="text-navy-800 font-medium">criminological theory</span>{' '}
+                    and{' '}
+                    <span className="text-navy-800 font-medium">socio-legal research</span>{' '}
+                    to interrogate how policy decisions translate into institutional practice.
+                  </p>
+                </div>
+
+                {/* Academic Background */}
+                <div className="mb-10">
+                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-widest mb-2">Academic Background</p>
+                  <div className="w-8 h-0.5 bg-gold-400 rounded mb-5" />
+                  <p className="text-slate-600 leading-relaxed">
                     He completed his{' '}
                     <strong className="text-navy-800">M.Sc. in Criminal Justice</strong> at the{' '}
-                    <strong className="text-navy-800">University of Mississippi</strong>, where his
-                    graduate research explored institutional strain, racial discrimination,
-                    adolescent substance use, and the{' '}
-                    <span className="text-navy-800 font-medium">socio-legal dimensions</span> of
-                    criminal justice policy. His doctoral research builds on this foundation,
-                    developing a comparative analysis of how{' '}
-                    <span className="text-navy-800 font-medium">drug policy</span> intersects with
-                    race, institutional structure, and legal inequality across jurisdictions.
+                    <strong className="text-navy-800">University of Mississippi</strong>, where
+                    his graduate research applied institutional strain theory to examine how
+                    perceived racial discrimination shapes adolescent marijuana use. That work
+                    established his analytical framework for connecting{' '}
+                    <span className="text-navy-800 font-medium">race and justice</span>,{' '}
+                    <span className="text-navy-800 font-medium">institutional inequality</span>,
+                    and drug-related behavior within the broader context of{' '}
+                    <span className="text-navy-800 font-medium">criminal justice policy</span>.
+                    He continues this trajectory at John Jay, an institution internationally
+                    recognized for scholarship in criminology, law, and public policy.
                   </p>
                 </div>
 
-                {/* Scholarly Interests */}
+                {/* Current Research Agenda */}
                 <div className="mb-10">
-                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-widest mb-2">Scholarly Interests</p>
+                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-widest mb-2">Current Research Agenda</p>
                   <div className="w-8 h-0.5 bg-gold-400 rounded mb-5" />
                   <p className="text-slate-600 leading-relaxed">
-                    His work engages questions surrounding marijuana legalization, drug tourism,{' '}
-                    <span className="text-navy-800 font-medium">sentencing disparities</span>,
-                    institutional decision-making, and{' '}
-                    <span className="text-navy-800 font-medium">comparative criminal justice systems</span>{' '}
-                    across different national and political contexts. Drawing from{' '}
-                    <span className="text-navy-800 font-medium">criminological theory</span>,
-                    socio-legal analysis, and policy-oriented research, he is particularly
-                    interested in how criminal justice reforms are translated into institutional
-                    practice, and why structural inequalities persist despite policy change.
+                    His research agenda encompasses{' '}
+                    <span className="text-navy-800 font-medium">marijuana legalization</span>{' '}
+                    and its institutional consequences, drug tourism as a criminological
+                    phenomenon, capital punishment disparities,{' '}
+                    <span className="text-navy-800 font-medium">policing and punishment</span>{' '}
+                    under prohibition regimes, and{' '}
+                    <span className="text-navy-800 font-medium">criminal justice reform</span>{' '}
+                    as both policy and practice. He is particularly interested in the
+                    disjuncture between formal reform and persistent structural inequality:
+                    why drug policy changes frequently fail to disrupt entrenched patterns
+                    of{' '}
+                    <span className="text-navy-800 font-medium">race and justice</span>{' '}
+                    across U.S. institutions. View the full{' '}
+                    <Link
+                      href="/research"
+                      className="text-navy-700 underline underline-offset-2 hover:text-gold-600 transition-colors"
+                    >
+                      research agenda
+                    </Link>{' '}
+                    and{' '}
+                    <Link
+                      href="/publications"
+                      className="text-navy-700 underline underline-offset-2 hover:text-gold-600 transition-colors"
+                    >
+                      publications
+                    </Link>.
                   </p>
                 </div>
 
-                {/* Academic Engagement */}
+                {/* Comparative & Global Perspective */}
                 <div className="mb-10">
-                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-widest mb-2">Academic Engagement</p>
+                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-widest mb-2">Comparative &amp; Global Perspective</p>
                   <div className="w-8 h-0.5 bg-gold-400 rounded mb-5" />
                   <p className="text-slate-600 leading-relaxed">
-                    In addition to academic research, he has presented scholarly work at
-                    professional conferences, including the 80th Annual Meeting of the{' '}
-                    <strong className="text-navy-800">American Society of Criminology</strong>{' '}
-                    in Washington D.C., and contributed to interdisciplinary research
-                    examining victimization,{' '}
-                    <span className="text-navy-800 font-medium">policing</span>, and
-                    transnational justice issues. He is an active member of the American
-                    American Society of Criminology and the Bangladesh Society of Criminology.
+                    Beyond the U.S. context, his work engages{' '}
+                    <span className="text-navy-800 font-medium">comparative criminology</span>{' '}
+                    and{' '}
+                    <span className="text-navy-800 font-medium">environmental criminology</span>,
+                    with research spanning Bangladesh, Nigeria, and cross-national comparative
+                    frameworks. This dimension situates American drug policy and criminal
+                    justice systems within a broader global landscape, identifying both the
+                    particularity of U.S. prohibition regimes and the structural parallels
+                    that connect criminal justice systems across different national and
+                    political contexts.
                   </p>
                 </div>
 
-                {/* Keyword chips */}
+                {/* Future Research Direction */}
+                <div className="mb-10">
+                  <p className="text-xs font-semibold text-gold-600 uppercase tracking-widest mb-2">Future Research Direction</p>
+                  <div className="w-8 h-0.5 bg-gold-400 rounded mb-5" />
+                  <p className="text-slate-600 leading-relaxed">
+                    His doctoral work at John Jay will deepen his engagement with{' '}
+                    <span className="text-navy-800 font-medium">socio-legal systems</span>,
+                    comparative criminal justice policy, and the political sociology of
+                    punishment. He intends to produce scholarship that is theoretically
+                    rigorous, empirically grounded, and directly relevant to ongoing debates
+                    in{' '}
+                    <span className="text-navy-800 font-medium">criminal justice reform</span>{' '}
+                    and drug policy analysis. This website serves as a platform for research,
+                    academic writing, and ongoing scholarly development in criminology and
+                    criminal justice.
+                  </p>
+                </div>
+
+                {/* Research Areas chips */}
                 <div className="pt-6 border-t border-slate-100">
-                  <p className="text-xs text-slate-400 uppercase tracking-widest mb-3">Research Areas</p>
+                  <p className="text-xs text-slate-400 uppercase tracking-widest mb-4">Research Areas</p>
                   <div className="flex flex-wrap gap-2">
                     {[
-                      'U.S. Drug Policy', 'Comparative Criminology', 'Institutional Inequality',
-                      'Socio-Legal Analysis', 'Race & Justice', 'Policing & Punishment',
-                      'Sentencing Reform', 'Criminological Theory',
+                      'U.S. Drug Policy',
+                      'Criminal Justice Systems',
+                      'Comparative Criminology',
+                      'Drug Law Enforcement',
+                      'Marijuana Legalization',
+                      'Race and Justice',
+                      'Institutional Inequality',
+                      'Policing and Punishment',
+                      'Socio-Legal Research',
+                      'Criminal Justice Reform',
+                      'Environmental Criminology',
                     ].map((tag) => (
                       <span
                         key={tag}
@@ -233,10 +364,10 @@ export default function AboutPage() {
                 <h3 className="font-serif text-lg font-semibold text-white mb-4">Research Keywords</h3>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    'Drug Policy', 'Capital Punishment', 'Tourist Victimization',
-                    'Environmental Criminology', 'Sentencing Disparities',
-                    'Racial Equity', 'Harm Reduction', 'Adolescent Substance Use',
-                    'Comparative Justice', 'Institutional Inequality',
+                    'U.S. Drug Policy', 'Criminal Justice Systems', 'Comparative Criminology',
+                    'Drug Law Enforcement', 'Sentencing Disparities', 'Race and Justice',
+                    'Institutional Inequality', 'Policing and Punishment',
+                    'Socio-Legal Research', 'Environmental Criminology',
                   ].map((kw) => (
                     <span
                       key={kw}
