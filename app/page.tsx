@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, BookOpen, FileText, GraduationCap, Mail, ExternalLink, Calendar, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
@@ -83,71 +84,98 @@ export default async function HomePage() {
         {/* Gold accent line */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500" />
 
-        <div className="section-container relative z-10 py-32 pt-40">
-          <div className="max-w-4xl">
-            <AnimatedSection delay={0.1}>
-              <div className="flex items-center gap-3 mb-8">
-                <div className="gold-rule" />
-                <span className="text-gold-400 text-sm font-medium tracking-widest uppercase">
-                  Academic Portfolio
-                </span>
-              </div>
-            </AnimatedSection>
+        <div className="section-container relative z-10 py-24 pt-36 lg:pt-32">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-            <AnimatedSection delay={0.2}>
-              <h1 className="heading-xl text-white mb-6 text-balance">
-                Fahad Bin Islam Khan
-              </h1>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3}>
-              <p className="text-xl sm:text-2xl text-gold-400 font-serif mb-4">
-                Criminal Justice Scholar & Drug Policy Researcher
-              </p>
-              <p className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mb-10">
-                MSc in Criminal Justice · University of Mississippi<br />
-                <span className="text-slate-300">
-                  Incoming PhD Student · Researching U.S. drug policy, sentencing reform,
-                  and the social consequences of drug prohibition.
-                </span>
-              </p>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.4}>
-              <div className="flex flex-wrap gap-4">
-                <Button asChild size="lg" variant="gold">
-                  <Link href="/research">
-                    <BookOpen size={18} />
-                    View Research
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline"
-                  className="border-white/30 text-white hover:bg-white hover:text-navy-950">
-                  <Link href="/cv">
-                    <FileText size={18} />
-                    Download CV
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="ghost"
-                  className="text-slate-300 hover:text-white hover:bg-white/10">
-                  <Link href="/publications">
-                    Publications
-                    <ArrowRight size={16} />
-                  </Link>
-                </Button>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.55}>
-              <div className="mt-16 flex flex-wrap gap-3">
-                {['Drug Policy', 'Sentencing Reform', 'Criminal Justice', 'Racial Equity', 'Harm Reduction'].map((tag) => (
-                  <span key={tag}
-                    className="text-xs text-slate-400 border border-white/10 rounded-full px-3 py-1">
-                    {tag}
+            {/* Text content */}
+            <div>
+              <AnimatedSection delay={0.1}>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="gold-rule" />
+                  <span className="text-gold-400 text-sm font-medium tracking-widest uppercase">
+                    Academic Portfolio
                   </span>
-                ))}
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.2}>
+                <h1 className="heading-xl text-white mb-6 text-balance">
+                  Fahad Bin Islam Khan
+                </h1>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.3}>
+                <p className="text-xl sm:text-2xl text-gold-400 font-serif mb-4">
+                  Criminal Justice Scholar & Drug Policy Researcher
+                </p>
+                <p className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl mb-10">
+                  MSc in Criminal Justice · University of Mississippi<br />
+                  <span className="text-slate-300">
+                    Incoming PhD Student · Researching U.S. drug policy, sentencing reform,
+                    and the social consequences of drug prohibition.
+                  </span>
+                </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.4}>
+                <div className="flex flex-wrap gap-4">
+                  <Button asChild size="lg" variant="gold">
+                    <Link href="/research">
+                      <BookOpen size={18} />
+                      View Research
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" variant="outline"
+                    className="border-white/30 text-white hover:bg-white hover:text-navy-950">
+                    <Link href="/cv">
+                      <FileText size={18} />
+                      Download CV
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" variant="ghost"
+                    className="text-slate-300 hover:text-white hover:bg-white/10">
+                    <Link href="/publications">
+                      Publications
+                      <ArrowRight size={16} />
+                    </Link>
+                  </Button>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.55}>
+                <div className="mt-12 flex flex-wrap gap-3">
+                  {['Drug Policy', 'Sentencing Reform', 'Criminal Justice', 'Racial Equity', 'Harm Reduction'].map((tag) => (
+                    <span key={tag}
+                      className="text-xs text-slate-400 border border-white/10 rounded-full px-3 py-1">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </AnimatedSection>
+            </div>
+
+            {/* Portrait photo — desktop only */}
+            <AnimatedSection direction="right" delay={0.2} className="hidden lg:flex justify-center">
+              <div className="relative max-w-sm w-full">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/about/criminal-justice-portrait.jpg"
+                    alt="Fahad Bin Islam Khan at the Department of Criminal Justice and Legal Studies, University of Mississippi"
+                    fill
+                    sizes="35vw"
+                    className="object-cover object-top"
+                    priority
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy-950/80 to-transparent" />
+                  <div className="absolute bottom-5 left-5 right-5">
+                    <p className="text-white text-sm font-serif font-medium">Criminal Justice & Legal Studies</p>
+                    <p className="text-gold-300 text-xs mt-0.5">University of Mississippi</p>
+                  </div>
+                </div>
+                <div className="absolute -bottom-3 -right-3 w-full h-full border border-gold-400/40 rounded-2xl pointer-events-none" />
               </div>
             </AnimatedSection>
+
           </div>
         </div>
 
@@ -216,8 +244,60 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── RESEARCH AREAS ────────────────────────────────── */}
+      {/* ── RESEARCH ENGAGEMENT ──────────────────────────── */}
       <section className="section-padding bg-slate-50">
+        <div className="section-container">
+          <AnimatedSection className="mb-12">
+            <div className="gold-rule mb-6" />
+            <h2 className="heading-lg text-navy-900 mb-3">Scholarship in Action</h2>
+            <p className="text-slate-500 max-w-xl">
+              Engaged in national criminology scholarship through conference presentations, academic workshops, and scholarly exchange.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-2 gap-6 items-start max-w-4xl">
+            <AnimatedSection>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/about/conference.jpg"
+                  alt="Fahad Bin Islam Khan at the American Society of Criminology Annual Meeting, Washington D.C."
+                  fill
+                  sizes="(max-width: 768px) 90vw, 40vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy-950/85 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5">
+                  <p className="text-xs text-gold-300 font-medium uppercase tracking-wider mb-1">ASC Annual Meeting</p>
+                  <p className="text-white text-sm font-serif font-medium">Washington D.C. · November 2025</p>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection direction="right" delay={0.15} className="md:mt-12">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/about/conference-presentation.jpg"
+                  alt="Fahad Bin Islam Khan presenting criminal justice research"
+                  fill
+                  sizes="(max-width: 768px) 90vw, 40vw"
+                  className="object-cover object-center"
+                />
+                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-navy-950/85 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5">
+                  <p className="text-xs text-gold-300 font-medium uppercase tracking-wider mb-1">Research Presentation</p>
+                  <p className="text-white text-sm font-serif font-medium">Drug Policy & Criminal Justice</p>
+                </div>
+              </div>
+              <p className="text-slate-500 text-sm mt-4 leading-relaxed">
+                Presenting research on drug policy and sentencing disparities at the 80th Annual Meeting of the American Society of Criminology — one of the most prestigious venues in the discipline.
+              </p>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* ── RESEARCH AREAS ────────────────────────────────── */}
+      <section className="section-padding bg-white">
         <div className="section-container">
           <AnimatedSection className="text-center mb-16">
             <div className="gold-rule mx-auto mb-6" />
@@ -264,7 +344,7 @@ export default async function HomePage() {
 
       {/* ── RECENT BLOG POSTS ─────────────────────────────── */}
       {recentPosts.length > 0 && (
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-slate-50">
           <div className="section-container">
             <AnimatedSection className="flex items-end justify-between mb-12">
               <div>
