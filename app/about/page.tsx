@@ -40,7 +40,7 @@ const quickFacts = [
   { icon: BookOpen,      text: 'M.Sc. in Criminal Justice, University of Mississippi' },
   { icon: MapPin,        text: 'New York City, New York' },
   { icon: Award,         text: 'Graduate Teaching Assistant, Ole Miss' },
-  { icon: Users,         text: 'ASC · ACJS · SCJA Member' },
+  { icon: Users,         text: 'ASC · Bangladesh Society of Criminology' },
   { icon: Globe,         text: 'ASC Annual Meeting 2025, Washington D.C.' },
 ]
 
@@ -58,8 +58,7 @@ const skills = [
 
 const memberships = [
   'American Society of Criminology (ASC)',
-  'Academy of Criminal Justice Sciences (ACJS)',
-  'Southern Criminal Justice Association (SCJA)',
+  'Bangladesh Society of Criminology',
 ]
 
 export default function AboutPage() {
@@ -174,8 +173,7 @@ export default function AboutPage() {
                     examining victimization,{' '}
                     <span className="text-navy-800 font-medium">policing</span>, and
                     transnational justice issues. He is an active member of the American
-                    Society of Criminology, the Academy of Criminal Justice Sciences, and
-                    the Southern Criminal Justice Association.
+                    American Society of Criminology and the Bangladesh Society of Criminology.
                   </p>
                 </div>
 

@@ -94,12 +94,7 @@ const cvSections = [
         detail: '',
       },
       {
-        primary: 'Academy of Criminal Justice Sciences (ACJS)',
-        secondary: 'Member · 2022–Present',
-        detail: '',
-      },
-      {
-        primary: 'Southern Criminal Justice Association (SCJA)',
+        primary: 'Bangladesh Society of Criminology',
         secondary: 'Member · 2022–Present',
         detail: '',
       },
