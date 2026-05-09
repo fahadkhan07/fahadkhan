@@ -37,21 +37,40 @@ export interface ResearchArea {
 
 export const publications: Publication[] = [
   {
+    id: 'tourist-victimization-bangladesh',
+    category: 'Peer-Reviewed Publication',
+    title:
+      'Nature of Crime Victimization among Tourists in Bangladesh: An Analysis',
+    authors: 'Khan, F. B. I., & Akter, M.',
+    year: '2023',
+    venue: 'International Journal of Law Management & Humanities (IJLMH), 6(3), 2711–2726',
+    status: 'Published',
+    abstract:
+      'This study examines how tourism growth in Bangladesh correlates with increased criminal threats targeting visitors. Using opportunity theory, routine activity theory, and Butler\'s TALC model, the study identifies victimization patterns across tourist destinations. Key crimes include theft, robbery, sexual assault, and terrorism. Contributing factors include economic disadvantage, tourist vulnerability, underreported incidents, security gaps, and inadequate governance. The paper recommends coordinated government and law enforcement action to protect tourists.',
+    tags: ['Tourist Victimization', 'Crime', 'Bangladesh', 'Tourism', 'Routine Activity Theory'],
+    researchGateUrl:
+      'https://www.researchgate.net/publication/340055853_Tourism_and_Crime_The_Case_of_Bangladesh',
+    doi: '10.10000/IJLMH.115097',
+    available: true,
+    apa: 'Khan, F. B. I., & Akter, M. (2023). Nature of crime victimization among tourists in Bangladesh: An analysis. International Journal of Law Management & Humanities, 6(3), 2711–2726. https://doij.org/10.10000/IJLMH.115097',
+  },
+  {
     id: 'legal-compliance-tannery',
     category: 'Peer-Reviewed Publication',
     title:
       'Legal Compliance of Waste Management in Tannery Industrial Estate in Bangladesh: An Assessment from Environmental Criminological Perspective',
     authors: 'Khan, F. B. I., & Akond, M. A.',
     year: '2024',
-    venue: 'TWIST',
+    venue: 'TWIST, 19(1), 306–320',
     status: 'Published',
     abstract:
-      'This study examines the Savar BSCIC Tannery Industrial Estate in Bangladesh, finding that inadequate waste management regulations, substandard technology, and insufficient industrial waste treatment are causing significant environmental harm. Data were collected through qualitative methods including focus group discussions, in-depth interviews, and direct observation. The study demonstrates how failures in waste management infringe upon human rights and environmental law, and offers policy recommendations for improved regulatory standards.',
-    tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance', 'Human Rights', 'Wildlife Crime'],
+      'This study examines the Savar BSCIC Tannery Industrial Estate — the only tannery industrial estate in Bangladesh — focusing on waste management practices and legal compliance. Findings show that lack of effective waste management regulations, use of substandard technology, and inadequate treatment facilities are causing significant environmental harm. Data were collected through qualitative methods including focus group discussions, in-depth interviews, and direct observation.',
+    tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance', 'Human Rights'],
     researchGateUrl:
       'https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective',
+    doi: '10.5281/zenodo.10049652',
     available: true,
-    apa: 'Khan, F. B. I., & Akond, M. A. (2024). Legal compliance of waste management in tannery industrial estate in Bangladesh: An assessment from environmental criminological perspective. TWIST.',
+    apa: 'Khan, F. B. I., & Akond, M. A. (2024). Legal compliance of waste management in tannery industrial estate in Bangladesh: An assessment from environmental criminological perspective. TWIST, 19(1), 306–320. https://doi.org/10.5281/zenodo.10049652',
   },
   {
     id: 'capital-punishment-disparities',
@@ -59,60 +78,17 @@ export const publications: Publication[] = [
     title:
       'Examining Disparities in Capital Punishment: An Evaluation of Sentencing Outcomes and Policy Responses in the United States',
     authors: 'Khan, F. B. I., & Brown, K. L.',
-    year: '2025',
-    venue: 'Preprint',
+    year: '2024',
+    venue: 'ResearchGate Preprint',
     status: 'Preprint',
     abstract:
-      'This paper examines systemic disparities in capital punishment sentencing in the United States across racial, geographic, economic, and gender dimensions. Findings indicate that defendants whose victims were White faced persistent structural bias despite state-level safeguards, that Southern states account for roughly 35% of all post-1976 executions, and that underfunded public defender systems disadvantage economically marginalized defendants. The study identifies a gap in intersectional analysis and discusses landmark cases including Furman v. Georgia and Gregg v. Georgia.',
+      'This paper critically examines racial, socioeconomic, and geographic disparities in capital punishment sentencing in the United States. Findings indicate that around 35% of all capital punishment cases after 1976 were declared in Texas alone, that defendants whose victims were White faced persistent structural bias despite state-level reforms, and that the Supreme Court has confirmed such structural bias in death sentencing. The paper calls for an intersectional analysis of overlapping disparities in capital sentencing.',
     tags: ['Capital Punishment', 'Sentencing Disparities', 'Racial Bias', 'Death Penalty', 'Policy Reform'],
     researchGateUrl:
       'https://www.researchgate.net/publication/396973193_Examining_Disparities_in_Capital_Punishment_An_Evaluation_of_Sentencing_Outcomes_and_Policy_Responses_in_the_United_States',
+    doi: '10.13140/RG.2.2.13556.62080',
     available: true,
-    apa: 'Khan, F. B. I., & Brown, K. L. (2025). Examining disparities in capital punishment: An evaluation of sentencing outcomes and policy responses in the United States. ResearchGate Preprint.',
-  },
-  {
-    id: 'harm-reduction',
-    category: 'Working Paper',
-    title:
-      'Harm Reduction or Harm Displacement? Evaluating the Efficacy of Public Health Approaches to Drug Policy',
-    authors: 'Khan, F. B. I.',
-    year: '2024',
-    venue: 'Working Paper',
-    status: 'Under Review',
-    abstract:
-      'This paper evaluates the empirical evidence for harm reduction interventions — including naloxone distribution, supervised consumption facilities, and needle exchange programs — as alternatives to enforcement-centered drug policy.',
-    tags: ['Harm Reduction', 'Drug Policy', 'Public Health', 'Evidence-Based Policy'],
-    available: false,
-    apa: 'Khan, F. B. I. (2024). Harm reduction or harm displacement? Evaluating the efficacy of public health approaches to drug policy. Manuscript under review.',
-  },
-  {
-    id: 'racial-politics-war-on-drugs',
-    category: 'Conference Paper',
-    title: 'The Racial Politics of the War on Drugs: From Nixon to the Present',
-    authors: 'Khan, F. B. I.',
-    year: '2023',
-    venue: 'American Society of Criminology Annual Meeting',
-    status: 'Presented',
-    abstract:
-      "This paper traces the racialized origins and execution of the War on Drugs from the Nixon administration's explicit targeting of Black communities to contemporary patterns of disparate enforcement.",
-    tags: ['War on Drugs', 'Race', 'History', 'Criminal Justice'],
-    available: true,
-    apa: 'Khan, F. B. I. (2023, November). The racial politics of the war on drugs: From Nixon to the present. Paper presented at the American Society of Criminology Annual Meeting.',
-  },
-  {
-    id: 'punishing-poverty',
-    category: 'Thesis',
-    title:
-      'Punishing Poverty: Drug Sentencing Disparities and the Reproduction of Inequality in the American Criminal Justice System',
-    authors: 'Khan, F. B. I.',
-    year: '2024',
-    venue: "Master's Thesis, University of Mississippi",
-    status: 'Completed',
-    abstract:
-      'This thesis examines how drug sentencing laws — particularly mandatory minimum statutes — operate to reproduce socioeconomic and racial inequality. Through analysis of federal sentencing commission data and legislative history, the author argues that drug sentencing is not a neutral response to criminal conduct but a mechanism of social stratification.',
-    tags: ['Drug Sentencing', 'Inequality', 'Mandatory Minimums', 'Criminal Justice', 'Drug Policy'],
-    available: true,
-    apa: "Khan, F. B. I. (2024). Punishing poverty: Drug sentencing disparities and the reproduction of inequality in the American criminal justice system [Master's thesis, University of Mississippi].",
+    apa: 'Khan, F. B. I., & Brown, K. L. (2024). Examining disparities in capital punishment: An evaluation of sentencing outcomes and policy responses in the United States. ResearchGate. https://doi.org/10.13140/RG.2.2.13556.62080',
   },
 ]
 
@@ -124,7 +100,7 @@ export const pubCategories: PubCategory[] = [
 ]
 
 export const categoryLabels: Record<PubCategory, string> = {
-  'Peer-Reviewed Publication': 'Peer-Reviewed Publications',
+  'Peer-Reviewed Publication': 'Peer-Reviewed Journal Articles',
   'Working Paper': 'Working Papers & Preprints',
   'Conference Paper': 'Conference Papers & Presentations',
   'Thesis': 'Thesis & Academic Research',

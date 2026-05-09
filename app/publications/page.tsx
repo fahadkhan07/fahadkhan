@@ -15,72 +15,47 @@ const publications = [
   {
     type: 'Journal Article',
     title:
+      'Nature of Crime Victimization among Tourists in Bangladesh: An Analysis',
+    authors: 'Khan, F. B. I., & Akter, M.',
+    venue: 'International Journal of Law Management & Humanities (IJLMH), 6(3), 2711–2726',
+    year: '2023',
+    abstract:
+      "This study examines how tourism growth in Bangladesh correlates with increased criminal threats targeting visitors. Using opportunity theory, routine activity theory, and Butler's TALC model, the study identifies victimization patterns across tourist destinations. Key crimes include theft, robbery, sexual assault, and terrorism. Contributing factors include economic disadvantage, tourist vulnerability, underreported incidents, security gaps, and inadequate governance.",
+    tags: ['Tourist Victimization', 'Crime', 'Bangladesh', 'Tourism', 'Routine Activity Theory'],
+    status: 'Published',
+    available: true,
+    researchGateUrl: 'https://www.researchgate.net/publication/340055853_Tourism_and_Crime_The_Case_of_Bangladesh',
+    doi: 'https://doij.org/10.10000/IJLMH.115097',
+  },
+  {
+    type: 'Journal Article',
+    title:
       'Legal Compliance of Waste Management in Tannery Industrial Estate in Bangladesh: An Assessment from Environmental Criminological Perspective',
     authors: 'Khan, F. B. I., & Akond, M. A.',
-    venue: 'TWIST',
+    venue: 'TWIST, 19(1), 306–320',
     year: '2024',
     abstract:
-      'This study examines the Savar BSCIC Tannery Industrial Estate in Bangladesh, finding that inadequate waste management regulations, substandard technology, and insufficient industrial waste treatment are causing significant environmental harm. Data were collected through qualitative methods including focus group discussions, in-depth interviews, and direct observation. The study demonstrates how failures in waste management infringe upon human rights and environmental law, and offers policy recommendations for improved regulatory standards.',
+      'This study examines the Savar BSCIC Tannery Industrial Estate — the only tannery industrial estate in Bangladesh — focusing on waste management practices and legal compliance. Findings show that lack of effective waste management regulations, substandard technology, and inadequate treatment facilities are causing significant environmental harm. Data were collected through qualitative methods including focus group discussions, in-depth interviews, and direct observation.',
     tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance', 'Human Rights'],
     status: 'Published',
     available: true,
     researchGateUrl: 'https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective',
+    doi: 'https://doi.org/10.5281/zenodo.10049652',
   },
   {
     type: 'Working Paper',
     title:
       'Examining Disparities in Capital Punishment: An Evaluation of Sentencing Outcomes and Policy Responses in the United States',
     authors: 'Khan, F. B. I., & Brown, K. L.',
-    venue: 'Preprint',
-    year: '2025',
+    venue: 'ResearchGate Preprint',
+    year: '2024',
     abstract:
-      'This paper examines systemic disparities in capital punishment sentencing in the United States across racial, geographic, economic, and gender dimensions. Findings indicate that defendants whose victims were White faced persistent structural bias despite state-level safeguards, that Southern states account for roughly 35% of all post-1976 executions, and that underfunded public defender systems disadvantage economically marginalized defendants.',
+      'This paper critically examines racial, socioeconomic, and geographic disparities in capital punishment sentencing in the United States. Findings indicate that around 35% of all capital punishment cases after 1976 were declared in Texas alone, that defendants whose victims were White faced persistent structural bias despite state-level reforms, and that the Supreme Court has confirmed such structural bias in death sentencing.',
     tags: ['Capital Punishment', 'Sentencing Disparities', 'Racial Bias', 'Death Penalty', 'Policy Reform'],
     status: 'Preprint',
     available: true,
     researchGateUrl: 'https://www.researchgate.net/publication/396973193_Examining_Disparities_in_Capital_Punishment_An_Evaluation_of_Sentencing_Outcomes_and_Policy_Responses_in_the_United_States',
-  },
-  {
-    type: 'Thesis',
-    title:
-      'Punishing Poverty: Drug Sentencing Disparities and the Reproduction of Inequality in the American Criminal Justice System',
-    authors: 'Khan, F. B. I.',
-    venue: "Master's Thesis, University of Mississippi",
-    year: '2024',
-    abstract:
-      'This thesis examines how drug sentencing laws — particularly mandatory minimum statutes — operate to reproduce socioeconomic and racial inequality. Through analysis of federal sentencing commission data and legislative history, I argue that drug sentencing is not a neutral response to criminal conduct but a mechanism of social stratification.',
-    tags: ['Drug Sentencing', 'Inequality', 'Criminal Justice', 'Mandatory Minimums'],
-    status: 'Completed',
-    available: true,
-    researchGateUrl: undefined,
-  },
-  {
-    type: 'Working Paper',
-    title:
-      'Harm Reduction or Harm Displacement? Evaluating the Efficacy of Public Health Approaches to Drug Policy',
-    authors: 'Khan, F. B. I.',
-    venue: 'Working Paper',
-    year: '2024',
-    abstract:
-      'This paper evaluates the empirical evidence for harm reduction interventions — including naloxone distribution, supervised consumption facilities, and needle exchange programs — as alternatives to enforcement-centered drug policy.',
-    tags: ['Harm Reduction', 'Drug Policy', 'Public Health', 'Evidence-Based Policy'],
-    status: 'Under Review',
-    available: false,
-    researchGateUrl: undefined,
-  },
-  {
-    type: 'Conference Paper',
-    title:
-      'The Racial Politics of the War on Drugs: From Nixon to the Present',
-    authors: 'Khan, F. B. I.',
-    venue: 'American Society of Criminology Annual Meeting',
-    year: '2023',
-    abstract:
-      "This paper traces the racialized origins and execution of the War on Drugs from the Nixon administration's explicit targeting of Black communities to contemporary patterns of disparate enforcement.",
-    tags: ['War on Drugs', 'Race', 'History', 'Criminal Justice'],
-    status: 'Presented',
-    available: true,
-    researchGateUrl: undefined,
+    doi: 'https://doi.org/10.13140/RG.2.2.13556.62080',
   },
 ]
 
@@ -220,6 +195,17 @@ export default function PublicationsPage() {
                         >
                           <ExternalLink size={11} />
                           ResearchGate
+                        </a>
+                      )}
+                      {pub.doi && (
+                        <a
+                          href={pub.doi}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-medium text-blue-700 hover:text-blue-900 border border-blue-200 hover:border-blue-400 rounded-full px-3 py-1.5 bg-blue-50 transition-all"
+                        >
+                          <ExternalLink size={11} />
+                          DOI
                         </a>
                       )}
                       {pub.available && (
