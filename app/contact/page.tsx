@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Mail, Twitter, Linkedin, ExternalLink, MessageSquare } from 'lucide-react'
+import { Mail, Twitter, Linkedin, Phone, ExternalLink, MessageSquare } from 'lucide-react'
 import { PageHeader } from '@/components/PageHeader'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { Button } from '@/components/ui/button'
@@ -17,6 +17,14 @@ const contactMethods = [
     href: 'mailto:fbkhan137@gmail.com',
     description: 'Best for academic inquiries, collaboration proposals, and media requests.',
     cta: 'Send Email',
+  },
+  {
+    icon: Phone,
+    label: 'Phone',
+    value: '(662) 380-8672',
+    href: 'tel:+16623808672',
+    description: 'Available for calls regarding academic collaboration and research inquiries.',
+    cta: 'Call',
   },
   {
     icon: Twitter,
