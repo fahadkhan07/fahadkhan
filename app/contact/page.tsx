@@ -1,156 +1,209 @@
 import type { Metadata } from 'next'
-import { Mail, Twitter, Linkedin, Phone, ExternalLink, MessageSquare } from 'lucide-react'
+import { Mail, Phone, Linkedin, ExternalLink } from 'lucide-react'
 import { PageHeader } from '@/components/PageHeader'
 import { AnimatedSection } from '@/components/AnimatedSection'
-import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Fahad Bin Islam Khan: academic inquiries, collaboration, and media.',
+  description:
+    'Research communication and academic correspondence with Fahad Bin Islam Khan, Ph.D. student in criminal justice at John Jay College of Criminal Justice, CUNY. Drug policy researcher and comparative criminology scholar.',
+  keywords: [
+    'Fahad Bin Islam Khan',
+    'criminal justice researcher',
+    'drug policy researcher',
+    'comparative criminology',
+    'John Jay College of Criminal Justice',
+    'CUNY',
+    'contact',
+    'academic collaboration',
+  ],
 }
 
-const contactMethods = [
+const directContact = [
   {
-    icon: Mail,
+    Icon: Mail,
     label: 'Email',
-    value: 'fbkhan137@gmail.com',
-    href: 'mailto:fbkhan137@gmail.com',
-    description: 'Best for academic inquiries, collaboration proposals, and media requests.',
-    cta: 'Send Email',
+    value: 'khan.fbi7@gmail.com',
+    href: 'mailto:khan.fbi7@gmail.com',
+    note: 'Academic inquiries, collaboration proposals, and media requests',
   },
   {
-    icon: Phone,
+    Icon: Phone,
     label: 'Phone',
     value: '(662) 380-8672',
     href: 'tel:+16623808672',
-    description: 'Available for calls regarding academic collaboration and research inquiries.',
-    cta: 'Call',
+    note: 'Available for calls regarding research collaboration and academic inquiries',
   },
   {
-    icon: Twitter,
-    label: 'Twitter / X',
-    value: '@FahadKhanCJ',
-    href: 'https://twitter.com',
-    description: 'Follow for commentary on drug policy, criminal justice news, and research updates.',
-    cta: 'Follow on X',
-  },
-  {
-    icon: Linkedin,
+    Icon: Linkedin,
     label: 'LinkedIn',
     value: 'Fahad Bin Islam Khan',
-    href: 'https://linkedin.com',
-    description: 'Professional network and academic background.',
-    cta: 'Connect',
+    href: 'https://www.linkedin.com/in/fahad-bin-islam-khan-b64282211/',
+    note: 'Professional network and academic background',
   },
 ]
 
-const academicLinks = [
-  { name: 'Google Scholar', href: 'https://scholar.google.com', icon: '🎓' },
-  { name: 'ResearchGate',   href: 'https://researchgate.net',  icon: '🔬' },
-  { name: 'ORCID',          href: 'https://orcid.org',          icon: '🆔' },
-  { name: 'Academia.edu',   href: 'https://academia.edu',       icon: '📄' },
+const academicProfiles = [
+  {
+    name: 'Google Scholar',
+    href: 'https://scholar.google.com/citations?user=wRjP_1wAAAAJ&hl=en',
+    icon: '🎓',
+    note: 'Publications and citation metrics',
+  },
+  {
+    name: 'ResearchGate',
+    href: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan',
+    icon: '🔬',
+    note: 'Research papers and project updates',
+  },
+  {
+    name: 'ORCID',
+    href: 'https://orcid.org/my-orcid?orcid=0009-0009-0629-9473',
+    icon: '🆔',
+    note: 'Persistent researcher identifier',
+  },
+]
+
+const correspondenceTypes = [
+  'Academic collaboration on drug policy or criminal justice research',
+  'Peer review of manuscripts in relevant subject areas',
+  'Media commentary on drug policy and criminal justice reform',
+  'Conference presentations and speaking invitations',
+  'Research partnerships and joint project inquiries',
+  'Graduate study inquiries in criminal justice',
 ]
 
 export default function ContactPage() {
   return (
     <>
       <PageHeader
-        title="Contact"
-        subtitle="I welcome inquiries from fellow researchers, students, journalists, and policy advocates."
+        title="Academic and Research Contact"
+        subtitle="Available for academic collaboration, research communication, conference engagement, and professional correspondence."
       />
 
+      {/* ── MAIN CONTACT SECTION ──────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="section-container">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Left — contact info */}
+          <div className="grid lg:grid-cols-[3fr_2fr] gap-16 items-start">
+
+            {/* Left: Direct contact + correspondence types */}
             <AnimatedSection direction="left">
               <div className="gold-rule mb-6" />
-              <h2 className="heading-md text-navy-900 mb-4">Get in Touch</h2>
-              <p className="text-slate-600 leading-relaxed mb-8">
-                I am happy to correspond about my research, potential collaborations, speaking
-                invitations, media commentary, or questions from students considering graduate
-                school in criminal justice. I aim to respond to all messages within a few
+              <h2 className="heading-md text-navy-900 mb-3">Direct Contact</h2>
+              <p className="text-slate-500 text-sm leading-relaxed mb-8 max-w-lg">
+                Correspondence is welcome on academic research, collaboration proposals, conference
+                invitations, and professional inquiries. Responses are typically sent within a few
                 business days.
               </p>
 
-              <div className="space-y-4">
-                {contactMethods.map(({ icon: Icon, label, value, href, description, cta }) => (
-                  <div
+              <div className="space-y-3">
+                {directContact.map(({ Icon, label, value, href, note }) => (
+                  <a
                     key={label}
-                    className="flex gap-4 p-5 border border-slate-200 rounded-xl bg-slate-50 hover:border-navy-300 transition-colors"
+                    href={href}
+                    target={href.startsWith('http') ? '_blank' : undefined}
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-4 p-5 border border-slate-200 rounded-xl hover:border-navy-300 hover:shadow-sm transition-all duration-200"
                   >
                     <div className="w-10 h-10 rounded-lg bg-navy-950 flex items-center justify-center flex-shrink-0">
                       <Icon size={18} className="text-gold-400" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-slate-400 uppercase tracking-wide mb-0.5">{label}</p>
-                      <p className="font-medium text-navy-900 text-sm mb-1">{value}</p>
-                      <p className="text-xs text-slate-500 leading-relaxed mb-3">{description}</p>
-                      <Button asChild size="sm" variant="outline">
-                        <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">
-                          {cta}
-                          <ExternalLink size={12} />
-                        </a>
-                      </Button>
+                      <p className="font-medium text-navy-900 text-sm truncate">{value}</p>
+                      <p className="text-xs text-slate-400 mt-0.5 leading-snug">{note}</p>
                     </div>
-                  </div>
+                    <ExternalLink
+                      size={14}
+                      className="text-slate-300 group-hover:text-navy-500 flex-shrink-0 transition-colors"
+                    />
+                  </a>
                 ))}
+              </div>
+
+              {/* Correspondence types */}
+              <div className="mt-10 pt-8 border-t border-slate-100">
+                <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-5">
+                  Research Communication
+                </p>
+                <div className="grid sm:grid-cols-2 gap-y-3 gap-x-8">
+                  {correspondenceTypes.map((item) => (
+                    <div key={item} className="flex items-start gap-2.5">
+                      <span className="text-gold-500 text-xs mt-1 flex-shrink-0">▸</span>
+                      <p className="text-sm text-slate-600 leading-snug">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </AnimatedSection>
 
-            {/* Right — context + academic links */}
-            <AnimatedSection direction="right" className="space-y-8">
-              {/* What I can help with */}
-              <div className="bg-navy-950 text-white rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-5">
-                  <MessageSquare size={20} className="text-gold-400" />
-                  <h3 className="font-serif font-semibold text-lg">What I Can Help With</h3>
+            {/* Right: Academic identity card + profiles */}
+            <AnimatedSection direction="right" className="space-y-5">
+
+              {/* Identity card */}
+              <div className="bg-navy-950 rounded-2xl p-7">
+                <p className="text-xs text-gold-400 uppercase tracking-widest font-medium mb-5">
+                  Academic Affiliation
+                </p>
+                <p className="font-serif text-xl font-bold text-white mb-1">
+                  Fahad Bin Islam Khan
+                </p>
+                <p className="text-slate-300 text-sm font-medium mb-1">
+                  Ph.D. Student in Criminal Justice
+                </p>
+                <p className="text-slate-400 text-xs leading-relaxed">
+                  John Jay College of Criminal Justice<br />
+                  City University of New York (CUNY)<br />
+                  New York, New York
+                </p>
+
+                <div className="mt-6 pt-5 border-t border-white/10">
+                  <p className="text-xs text-slate-500 uppercase tracking-wide mb-4">Research Areas</p>
+                  <div className="space-y-2.5">
+                    {[
+                      'U.S. Drug Policy',
+                      'Criminal Justice Systems',
+                      'Comparative Criminology',
+                    ].map((area) => (
+                      <div key={area} className="flex items-center gap-2.5">
+                        <span className="text-gold-400 text-xs">▸</span>
+                        <span className="text-slate-300 text-sm">{area}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <ul className="space-y-3 text-sm text-slate-300">
-                  {[
-                    'Academic collaboration on drug policy or criminal justice research',
-                    'Peer review of manuscripts in my areas of expertise',
-                    'Media commentary on drug policy news and reform debates',
-                    'Speaking at conferences, seminars, or public events',
-                    'Advising students considering graduate study in criminal justice',
-                    'Connecting with advocacy organizations on reform initiatives',
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5">
-                      <span className="text-gold-400 mt-0.5 flex-shrink-0">▸</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
 
               {/* Academic profiles */}
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200">
-                <h3 className="font-serif font-semibold text-navy-900 mb-4">
-                  Find My Work Online
-                </h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {academicLinks.map(({ name, href, icon }) => (
+              <div className="rounded-2xl border border-slate-200 overflow-hidden">
+                <div className="px-5 py-4 border-b border-slate-200 bg-slate-50">
+                  <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest">
+                    Academic Profiles
+                  </p>
+                </div>
+                <div className="divide-y divide-slate-100">
+                  {academicProfiles.map(({ name, href, icon, note }) => (
                     <a
                       key={name}
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2.5 p-3 bg-white border border-slate-200 rounded-lg hover:border-navy-300 hover:shadow-sm transition-all text-sm font-medium text-navy-800"
+                      className="group flex items-center gap-3.5 px-5 py-4 bg-white hover:bg-slate-50 transition-colors"
                     >
-                      <span className="text-lg">{icon}</span>
-                      {name}
-                      <ExternalLink size={11} className="ml-auto text-slate-400" />
+                      <span className="text-lg w-7 text-center flex-shrink-0">{icon}</span>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-medium text-navy-900 text-sm">{name}</p>
+                        <p className="text-xs text-slate-400 mt-0.5">{note}</p>
+                      </div>
+                      <ExternalLink
+                        size={13}
+                        className="text-slate-300 group-hover:text-navy-500 flex-shrink-0 transition-colors"
+                      />
                     </a>
                   ))}
                 </div>
               </div>
 
-              {/* Institution */}
-              <div className="text-sm text-slate-500 text-center">
-                <p className="font-medium text-slate-700">Fahad Bin Islam Khan</p>
-                <p>John Jay College of Criminal Justice, CUNY</p>
-                <p>Department of Criminal Justice</p>
-              </div>
             </AnimatedSection>
           </div>
         </div>

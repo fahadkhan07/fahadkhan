@@ -33,11 +33,11 @@ export function Footer() {
               and criminal justice equity.
             </p>
             <a
-              href="mailto:fbkhan137@gmail.com"
+              href="mailto:khan.fbi7@gmail.com"
               className="mt-4 inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 text-sm transition-colors"
             >
               <Mail size={14} />
-              fbkhan137@gmail.com
+              khan.fbi7@gmail.com
             </a>
           </div>
 

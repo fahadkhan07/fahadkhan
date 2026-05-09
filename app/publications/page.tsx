@@ -87,7 +87,7 @@ const academicProfiles = [
   {
     name: 'Google Scholar',
     description: 'View all publications and citation metrics',
-    href: 'https://scholar.google.com',
+    href: 'https://scholar.google.com/citations?user=wRjP_1wAAAAJ&hl=en',
     bg: 'bg-blue-50 border-blue-200',
     icon: '🎓',
     cta: 'View Profile',
@@ -103,7 +103,7 @@ const academicProfiles = [
   {
     name: 'ORCID',
     description: 'Persistent researcher identifier',
-    href: 'https://orcid.org',
+    href: 'https://orcid.org/my-orcid?orcid=0009-0009-0629-9473',
     bg: 'bg-green-50 border-green-200',
     icon: '🆔',
     cta: 'View Profile',
