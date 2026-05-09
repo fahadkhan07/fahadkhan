@@ -28,7 +28,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <h3 className="font-serif text-xl font-bold mb-3">Fahad Bin Islam Khan</h3>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              M.A. Criminal Justice, University of Mississippi. Incoming PhD student researching
+              MSc in Criminal Justice, University of Mississippi. Incoming PhD student researching
               U.S. drug policy, sentencing reform, and criminal justice equity.
             </p>
             <a

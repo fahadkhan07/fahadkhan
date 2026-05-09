@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: '%s | Fahad Bin Islam Khan',
   },
   description:
-    'Academic portfolio of Fahad Bin Islam Khan — M.A. Criminal Justice, University of Mississippi. Incoming PhD student focused on U.S. drug policy, sentencing reform, and criminal justice equity.',
+    'Academic portfolio of Fahad Bin Islam Khan — MSc in Criminal Justice, University of Mississippi. Incoming PhD student focused on U.S. drug policy, sentencing reform, and criminal justice equity.',
   keywords: [
     'Fahad Bin Islam Khan',
     'criminal justice',

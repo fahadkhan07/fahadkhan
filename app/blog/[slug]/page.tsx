@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: Props) {
               {frontmatter.author ?? 'Fahad Bin Islam Khan'}
             </p>
             <p className="text-sm text-slate-500 leading-relaxed">
-              Criminal justice scholar and drug policy researcher. M.A. University of Mississippi.
+              Criminal justice scholar and drug policy researcher. MSc in Criminal Justice, University of Mississippi.
               Incoming PhD student studying U.S. drug policy, sentencing disparities, and criminal
               justice reform.
             </p>

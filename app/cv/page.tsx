@@ -19,7 +19,7 @@ const cvSections = [
         detail: 'Dissertation focus: U.S. Drug Policy, Sentencing, and Racial Equity',
       },
       {
-        primary: 'M.A. in Criminal Justice',
+        primary: 'MSc in Criminal Justice',
         secondary: 'University of Mississippi · 2022–2024',
         detail:
           'Thesis: "Punishing Poverty: Drug Sentencing Disparities and the Reproduction of Inequality"',

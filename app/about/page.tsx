@@ -19,7 +19,7 @@ const education = [
     current: true,
   },
   {
-    degree: 'M.A. in Criminal Justice',
+    degree: 'MSc in Criminal Justice',
     institution: 'University of Mississippi',
     year: '2022–2024',
     notes:
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <div className="prose prose-slate max-w-none space-y-5 text-slate-600 leading-relaxed">
                   <p>
                     Fahad Bin Islam Khan is a criminal justice scholar whose research sits at the intersection of
-                    drug policy, law, and social inequality. He holds a Master of Arts in Criminal
+                    drug policy, law, and social inequality. He holds a Master of Science in Criminal
                     Justice from the{' '}
                     <strong className="text-navy-800">University of Mississippi</strong>, where he
                     developed a rigorous research agenda examining how federal and state drug policies
@@ -110,7 +110,7 @@ export default function AboutPage() {
                 <h3 className="font-serif text-lg font-semibold text-navy-900 mb-4">Quick Facts</h3>
                 <ul className="space-y-3 text-sm">
                   {[
-                    { icon: GraduationCap, text: 'M.A. Criminal Justice, Ole Miss' },
+                    { icon: GraduationCap, text: 'MSc in Criminal Justice, Ole Miss' },
                     { icon: BookOpen, text: 'Incoming PhD Student' },
                     { icon: MapPin, text: 'Mississippi / United States' },
                     { icon: Award, text: 'Graduate Teaching Assistant' },
