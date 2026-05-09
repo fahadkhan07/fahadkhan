@@ -1,5 +1,6 @@
 export type PubCategory =
-  | 'Published Article'
+  | 'Journal Publication'
+  | 'Research Article'
   | 'Preprint'
   | 'Research Proposal'
   | 'Thesis'
@@ -44,7 +45,7 @@ export const publications: Publication[] = [
 
   {
     id: 'bordered-justice',
-    category: 'Published Article',
+    category: 'Research Article',
     title:
       'Bordered Justice: A Conflict Theory Analysis of Drug Tourism, Law Enforcement, and Sentencing Disparities in the United States',
     authors: 'Khan, F. B. I.',
@@ -61,7 +62,7 @@ export const publications: Publication[] = [
 
   {
     id: 'legal-compliance-tannery',
-    category: 'Published Article',
+    category: 'Journal Publication',
     title:
       'Legal Compliance of Waste Management in Tannery Industrial Estate in Bangladesh: An Assessment from Environmental Criminological Perspective',
     authors: 'Khan, F. B. I., & Akond, M. A.',
@@ -80,7 +81,7 @@ export const publications: Publication[] = [
 
   {
     id: 'food-victimization',
-    category: 'Published Article',
+    category: 'Journal Publication',
     title:
       'From Victimless Crime to Habitual Victim: An Empirical Study on Food Victimization',
     authors: 'Khan, F. B. I., & Tauhid, K.',
@@ -97,7 +98,7 @@ export const publications: Publication[] = [
 
   {
     id: 'tourist-victimization-bangladesh',
-    category: 'Published Article',
+    category: 'Journal Publication',
     title:
       'Nature of Crime Victimization Among Tourists in Bangladesh: An Analysis',
     authors: 'Khan, F. B. I., & Akter, M.',
@@ -193,24 +194,27 @@ export const publications: Publication[] = [
 // ─── SECTION CONFIG ────────────────────────────────────────────────────────
 
 export const pubCategories: PubCategory[] = [
-  'Published Article',
+  'Journal Publication',
+  'Research Article',
   'Preprint',
   'Research Proposal',
   'Thesis',
 ]
 
 export const categoryLabels: Record<PubCategory, string> = {
-  'Published Article':  'Published Research',
-  'Preprint':           'Working Papers & Preprints',
-  'Research Proposal':  'Research Projects & Proposals',
-  'Thesis':             'Thesis Research',
+  'Journal Publication': 'Peer-Reviewed / Journal Publications',
+  'Research Article':    'Research Articles',
+  'Preprint':            'Working Papers & Preprints',
+  'Research Proposal':   'Research Projects & Proposals',
+  'Thesis':              'Thesis Research',
 }
 
 export const categoryDescriptions: Record<PubCategory, string> = {
-  'Published Article':  'Peer-reviewed articles published in academic journals.',
-  'Preprint':           'Manuscripts available as preprints or currently under review.',
-  'Research Proposal':  'Formal research proposals and in-progress research designs.',
-  'Thesis':             'Graduate thesis research submitted for academic degree requirements.',
+  'Journal Publication': 'Articles published in verified peer-reviewed academic journals.',
+  'Research Article':    'Scholarly research articles available on ResearchGate. No verified journal venue at this time.',
+  'Preprint':            'Manuscripts available as preprints or currently under review.',
+  'Research Proposal':   'Formal research proposals and in-progress research designs.',
+  'Thesis':              'Graduate thesis research submitted for academic degree requirements.',
 }
 
 // ─── RESEARCH PROJECTS ────────────────────────────────────────────────────

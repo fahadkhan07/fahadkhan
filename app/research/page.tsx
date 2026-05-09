@@ -45,7 +45,7 @@ export default function ResearchPage() {
               </div>
               <div className="text-center">
                 <p className="text-4xl font-serif font-bold text-gold-400 mb-1">
-                  {publications.filter(p => p.category === 'Published Article').length}
+                  {publications.filter(p => p.category === 'Journal Publication').length}
                 </p>
                 <p className="text-xs text-slate-400 uppercase tracking-wider">Published Articles</p>
               </div>

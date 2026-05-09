@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 // Published articles only — matches ResearchGate profile/research (4 articles)
 const publications = [
   {
-    type: 'Journal Article',
+    type: 'Research Article',
     title:
       'Bordered Justice: A Conflict Theory Analysis of Drug Tourism, Law Enforcement, and Sentencing Disparities in the United States',
     authors: 'Khan, F. B. I.',
@@ -23,7 +23,7 @@ const publications = [
     monthYear: 'May 2025',
     abstract: null,
     tags: ['Drug Tourism', 'Conflict Theory', 'Law Enforcement', 'Sentencing Disparities'],
-    status: 'Published',
+    status: 'Full-text available',
     available: true,
     researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
     doi: null,
@@ -114,8 +114,9 @@ const academicProfiles = [
 
 const typeColors: Record<string, 'default' | 'gold' | 'secondary' | 'outline'> = {
   'Journal Article':  'default',
+  'Research Article': 'gold',
   Thesis:             'outline',
-  'Working Paper':    'gold',
+  'Working Paper':    'secondary',
   'Conference Paper': 'secondary',
 }
 
@@ -174,9 +175,9 @@ export default function PublicationsPage() {
                     <span className="text-xs text-slate-400">{pub.monthYear ?? pub.year}</span>
                     <span
                       className={`ml-auto text-xs font-medium px-2.5 py-0.5 rounded-full ${
-                        pub.status === 'Completed' || pub.status === 'Presented' || pub.status === 'Published'
+                        pub.status === 'Published' || pub.status === 'Full-text available'
                           ? 'bg-green-100 text-green-700'
-                          : pub.status === 'Preprint'
+                          : pub.status === 'Preprint' || pub.status === 'File available'
                           ? 'bg-blue-100 text-blue-700'
                           : 'bg-amber-100 text-amber-700'
                       }`}
