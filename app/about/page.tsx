@@ -7,15 +7,15 @@ import { Badge } from '@/components/ui/badge'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Fahad Bin Islam Khan — criminal justice scholar, MSc University of Mississippi, ASC member, drug policy and sentencing reform researcher.',
+    'Fahad Bin Islam Khan — Ph.D. Student in Criminal Justice at John Jay College of Criminal Justice, CUNY. M.Sc. in Criminal Justice, University of Mississippi. Drug policy, institutional inequality, and comparative criminology researcher.',
 }
 
 const education = [
   {
-    degree: 'PhD in Criminal Justice',
-    institution: 'Incoming — PhD Program',
-    year: '2025–Present',
-    notes: 'Research focus: U.S. drug policy, sentencing structures, and racial equity in criminal justice.',
+    degree: 'Ph.D. in Criminal Justice',
+    institution: 'John Jay College of Criminal Justice, City University of New York (CUNY)',
+    year: '2026–Present',
+    notes: 'Doctoral research in criminology: drug policy, institutional inequality, race, law enforcement, and comparative criminal justice systems. New York City.',
     current: true,
   },
   {
@@ -36,10 +36,10 @@ const education = [
 ]
 
 const quickFacts = [
-  { icon: GraduationCap, text: 'MSc in Criminal Justice, Ole Miss' },
-  { icon: BookOpen,      text: 'Incoming PhD Student' },
-  { icon: MapPin,        text: 'Mississippi, United States' },
-  { icon: Award,         text: 'Graduate Teaching Assistant' },
+  { icon: GraduationCap, text: 'Ph.D. Student, John Jay College of Criminal Justice (CUNY)' },
+  { icon: BookOpen,      text: 'M.Sc. in Criminal Justice, University of Mississippi' },
+  { icon: MapPin,        text: 'New York City, New York' },
+  { icon: Award,         text: 'Graduate Teaching Assistant, Ole Miss' },
   { icon: Users,         text: 'ASC · ACJS · SCJA Member' },
   { icon: Globe,         text: 'ASC Annual Meeting 2025, Washington D.C.' },
 ]
@@ -75,11 +75,11 @@ export default function AboutPage() {
               Fahad Bin Islam Khan
             </h1>
             <p className="text-gold-400 text-xl font-serif mb-2">
-              Criminal Justice Scholar
+              Ph.D. Student in Criminal Justice
             </p>
             <p className="text-slate-400 text-sm mb-8 leading-relaxed">
-              MSc in Criminal Justice · University of Mississippi<br />
-              Incoming PhD Student · Drug Policy Researcher
+              John Jay College of Criminal Justice · City University of New York<br />
+              M.Sc. in Criminal Justice · University of Mississippi
             </p>
             <p className="text-slate-300 leading-relaxed mb-8 max-w-2xl text-lg">
               My research sits at the intersection of drug policy, law, and social inequality —
@@ -121,11 +121,20 @@ export default function AboutPage() {
                     understand substance coping among youth.
                   </p>
                   <p>
-                    As an incoming doctoral student, Fahad&rsquo;s broader scholarly interests
-                    encompass drug tourism, capital punishment disparities, environmental
-                    criminology, tourist victimization, and comparative criminal justice. His
-                    research spans both domestic U.S. contexts and international settings,
-                    including Bangladesh, Nigeria, and cross-national comparative frameworks.
+                    He is pursuing doctoral studies in criminal justice at{' '}
+                    <strong className="text-navy-800">John Jay College of Criminal Justice,
+                    City University of New York (CUNY)</strong> — an institution recognized
+                    globally for its scholarship in criminology, law, and public policy. His
+                    doctoral research expands on his master&rsquo;s work, developing a
+                    comparative and socio-legal analysis of how drug policy intersects with
+                    race, institutional structure, and legal inequality.
+                  </p>
+                  <p>
+                    Fahad&rsquo;s broader scholarly interests encompass drug tourism, capital
+                    punishment disparities, environmental criminology, tourist victimization,
+                    and comparative criminal justice. His research spans domestic U.S. contexts
+                    and international settings, including Bangladesh, Nigeria, and cross-national
+                    comparative frameworks.
                   </p>
                   <p>
                     Drawing on quantitative and qualitative methods, his work interrogates how
@@ -146,6 +155,23 @@ export default function AboutPage() {
 
             {/* Side panel */}
             <AnimatedSection direction="right" className="space-y-5">
+              <div className="bg-navy-950 rounded-2xl p-6">
+                <h3 className="font-serif text-sm font-semibold text-gold-400 uppercase tracking-widest mb-4">Academic Affiliation</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">Current</p>
+                    <p className="text-white text-sm font-medium leading-snug">Ph.D. in Criminal Justice</p>
+                    <p className="text-slate-300 text-xs mt-0.5">John Jay College of Criminal Justice</p>
+                    <p className="text-gold-400 text-xs">City University of New York (CUNY)</p>
+                  </div>
+                  <div className="border-t border-white/10 pt-4">
+                    <p className="text-xs text-slate-500 uppercase tracking-wider mb-1">Previous</p>
+                    <p className="text-white text-sm font-medium leading-snug">M.Sc. in Criminal Justice</p>
+                    <p className="text-slate-300 text-xs mt-0.5">University of Mississippi</p>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-slate-50 rounded-2xl p-6 border border-slate-200">
                 <h3 className="font-serif text-lg font-semibold text-navy-900 mb-4">Quick Facts</h3>
                 <ul className="space-y-3 text-sm">
@@ -165,7 +191,7 @@ export default function AboutPage() {
                     'Drug Policy', 'Capital Punishment', 'Tourist Victimization',
                     'Environmental Criminology', 'Sentencing Disparities',
                     'Racial Equity', 'Harm Reduction', 'Adolescent Substance Use',
-                    'Comparative Justice', 'Police Brutality',
+                    'Comparative Justice', 'Institutional Inequality',
                   ].map((kw) => (
                     <span
                       key={kw}

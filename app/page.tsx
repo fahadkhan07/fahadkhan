@@ -106,13 +106,13 @@ export default async function HomePage() {
 
               <AnimatedSection delay={0.3}>
                 <p className="text-xl sm:text-2xl text-gold-400 font-serif mb-4">
-                  Criminal Justice Scholar & Drug Policy Researcher
+                  Ph.D. Student in Criminal Justice
                 </p>
                 <p className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl mb-10">
-                  MSc in Criminal Justice · University of Mississippi<br />
+                  John Jay College of Criminal Justice, City University of New York<br />
                   <span className="text-slate-300">
-                    Incoming PhD Student · Researching U.S. drug policy, sentencing reform,
-                    and the social consequences of drug prohibition.
+                    M.Sc. in Criminal Justice, University of Mississippi · Drug policy,
+                    institutional inequality, and comparative criminal justice.
                   </span>
                 </p>
               </AnimatedSection>
@@ -201,9 +201,11 @@ export default async function HomePage() {
                   to drug control.
                 </p>
                 <p>
-                  As an incoming PhD student, my work centers on the intersection of drug policy,
-                  race, and punishment — interrogating how prohibition regimes have produced
-                  systematic inequalities in American society.
+                  As a doctoral student at{' '}
+                  <strong className="text-navy-800">John Jay College of Criminal Justice, CUNY</strong>,
+                  my work centers on the intersection of drug policy, race, and punishment —
+                  interrogating how prohibition regimes produce systematic inequalities across
+                  institutions, law, and society.
                 </p>
                 <p>
                   My research draws on criminological theory, legal analysis, and policy evaluation
@@ -223,10 +225,10 @@ export default async function HomePage() {
             <AnimatedSection direction="right">
               <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200 space-y-6">
                 {[
-                  { icon: GraduationCap, label: 'Degree', value: 'MSc in Criminal Justice' },
-                  { icon: BookOpen,       label: 'Institution', value: 'University of Mississippi' },
-                  { icon: FileText,       label: 'Status', value: 'Incoming PhD Student' },
-                  { icon: ArrowRight,     label: 'Focus', value: 'U.S. Drug Policy' },
+                  { icon: GraduationCap, label: 'Current Program', value: 'Ph.D. in Criminal Justice' },
+                  { icon: BookOpen,       label: 'Institution', value: 'John Jay College of Criminal Justice, CUNY' },
+                  { icon: FileText,       label: 'M.Sc.', value: 'Criminal Justice — University of Mississippi' },
+                  { icon: ArrowRight,     label: 'Research Focus', value: 'Drug Policy & Institutional Inequality' },
                 ].map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-navy-950 flex items-center justify-center flex-shrink-0">

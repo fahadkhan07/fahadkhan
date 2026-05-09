@@ -28,8 +28,9 @@ export function Footer() {
           <div className="lg:col-span-2">
             <h3 className="font-serif text-xl font-bold mb-3">Fahad Bin Islam Khan</h3>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              MSc in Criminal Justice, University of Mississippi. Incoming PhD student researching
-              U.S. drug policy, sentencing reform, and criminal justice equity.
+              Ph.D. Student in Criminal Justice, John Jay College of Criminal Justice (CUNY).
+              M.Sc., University of Mississippi. Researching drug policy, institutional inequality,
+              and criminal justice equity.
             </p>
             <a
               href="mailto:fbkhan137@gmail.com"
@@ -87,7 +88,7 @@ export function Footer() {
             © {new Date().getFullYear()} Fahad Bin Islam Khan. All rights reserved.
           </p>
           <p className="text-slate-600 text-xs">
-            Criminal Justice Scholar · Drug Policy Researcher
+            Ph.D. Student in Criminal Justice · John Jay College of Criminal Justice, CUNY
           </p>
         </div>
       </div>

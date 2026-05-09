@@ -14,9 +14,9 @@ const cvSections = [
     title: 'Education',
     items: [
       {
-        primary: 'Ph.D. in Criminal Justice (Incoming)',
-        secondary: 'PhD Program · 2024–Present',
-        detail: 'Dissertation focus: U.S. Drug Policy, Sentencing, and Racial Equity',
+        primary: 'Ph.D. in Criminal Justice',
+        secondary: 'John Jay College of Criminal Justice, City University of New York (CUNY) · 2026–Present',
+        detail: 'Doctoral research in criminology: drug policy, institutional inequality, and comparative criminal justice.',
       },
       {
         primary: 'MSc in Criminal Justice',
