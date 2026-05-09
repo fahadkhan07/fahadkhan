@@ -89,93 +89,119 @@ export default async function HomePage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────── */}
-      <section className="relative min-h-screen overflow-hidden bg-navy-950">
+      <section className="relative bg-navy-950 overflow-hidden">
         {/* Gold accent line */}
-        <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 z-20" />
+        <div className="absolute top-0 inset-x-0 h-0.5 bg-gradient-to-r from-gold-400 via-gold-300 to-gold-500 z-10" />
 
-        {/* Full-width portrait — upper half completely clear so the face is fully visible */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/about/criminal-justice-portrait.jpg"
-            alt="Fahad Bin Islam Khan, criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice"
-            fill
-            sizes="100vw"
-            className="object-cover object-top"
-            priority
-          />
-          {/* Subtle bottom vignette only — upper image is untouched */}
-          <div className="absolute inset-x-0 bottom-0 h-[32%] bg-gradient-to-t from-navy-950/80 to-transparent" />
-        </div>
+        <div className="flex flex-col lg:flex-row lg:min-h-screen">
 
-        {/* Floating bio card — anchored to bottom so the face area is never covered */}
-        <div className="absolute z-10
-          bottom-6 left-4 right-4
-          sm:bottom-10 sm:left-8 sm:right-8
-          lg:bottom-14 lg:left-12 lg:right-auto lg:max-w-[430px]
-        ">
-          <div className="bg-navy-950/90 backdrop-blur-md rounded-2xl border border-white/10 p-5 sm:p-7 shadow-2xl">
-
-            <div className="flex items-center gap-3 mb-4">
-              <div className="gold-rule" />
-              <span className="text-gold-400 text-xs font-medium tracking-widest uppercase">
-                John Jay College of Criminal Justice · CUNY
-              </span>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight mb-3">
-              Fahad Bin Islam Khan
-            </h1>
-
-            <div className="space-y-1 mb-5">
-              <p className="text-base sm:text-lg text-gold-400 font-serif font-semibold">
-                Ph.D. Student in Criminal Justice
-              </p>
-              <p className="text-slate-300 text-xs leading-snug">
-                John Jay College of Criminal Justice, City University of New York (CUNY)
-              </p>
-              <p className="text-slate-200 text-sm font-semibold">
-                Drug Policy and Criminal Justice Researcher
-              </p>
-            </div>
-
-            <p className="text-slate-300 text-sm leading-relaxed mb-5">
-              His work examines U.S. drug policy, criminal justice systems, marijuana
-              legalization, drug law enforcement, sentencing disparities, and comparative
-              criminology.
-            </p>
-
-            <div className="flex flex-wrap gap-2.5 mb-4">
-              <Button asChild size="sm" variant="gold">
-                <Link href="/research">
-                  <BookOpen size={15} />
-                  View Research
-                </Link>
-              </Button>
-              <Button asChild size="sm" variant="outline"
-                className="border-white/30 text-white hover:bg-white hover:text-navy-950">
-                <Link href="/cv">
-                  <FileText size={15} />
-                  Curriculum Vitae
-                </Link>
-              </Button>
-            </div>
-
-            <div className="flex flex-wrap gap-1.5">
-              {['U.S. Drug Policy', 'Sentencing Disparities', 'Comparative Criminology', 'Criminal Justice', 'Marijuana Legalization'].map((tag) => (
-                <span key={tag}
-                  className="text-xs text-slate-300 border border-white/[0.15] rounded-full px-2.5 py-0.5">
-                  {tag}
-                </span>
-              ))}
-            </div>
-
+          {/* ── Mobile: portrait shown above text (56 vh gives face + upper body) ── */}
+          <div className="lg:hidden relative w-full h-[56vh] flex-shrink-0">
+            <Image
+              src="/images/about/criminal-justice-portrait.jpg"
+              alt="Fahad Bin Islam Khan, drug policy and criminal justice researcher at John Jay College of Criminal Justice"
+              fill
+              sizes="100vw"
+              className="object-cover object-top"
+              priority
+            />
+            {/* Thin bottom fade for smooth visual transition to navy text section */}
+            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-navy-950 to-transparent" />
           </div>
-        </div>
 
-        {/* Scroll indicator — desktop only, right side away from card */}
-        <div className="absolute bottom-14 right-10 z-10 hidden lg:flex flex-col items-center gap-2 text-slate-400">
-          <span className="text-xs tracking-widest uppercase">Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-slate-400 to-transparent" />
+          {/* ── Left: academic identity and bio ── */}
+          <div className="lg:w-[55%] flex flex-col justify-center px-5 sm:px-8 lg:px-16 py-10 lg:py-0">
+            <div className="max-w-lg">
+
+              <AnimatedSection delay={0.1}>
+                <div className="flex items-center gap-3 mb-7">
+                  <div className="gold-rule" />
+                  <span className="text-gold-400 text-xs font-medium tracking-widest uppercase">
+                    John Jay College of Criminal Justice · CUNY
+                  </span>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.2}>
+                <h1 className="heading-xl text-white mb-4 text-balance">
+                  Fahad Bin Islam Khan
+                </h1>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.27}>
+                <div className="mb-7 space-y-1.5">
+                  <p className="text-xl sm:text-2xl text-gold-400 font-serif font-semibold">
+                    Ph.D. Student in Criminal Justice
+                  </p>
+                  <p className="text-slate-400 text-sm leading-snug">
+                    John Jay College of Criminal Justice, City University of New York (CUNY)
+                  </p>
+                  <p className="text-slate-200 text-sm font-semibold pt-0.5">
+                    Drug Policy and Criminal Justice Researcher
+                  </p>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.34}>
+                <p className="text-slate-300 text-base leading-relaxed mb-9">
+                  His work examines U.S. drug policy, criminal justice systems, marijuana
+                  legalization, drug law enforcement, sentencing disparities, and comparative
+                  criminology.
+                </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.41}>
+                <div className="flex flex-wrap gap-3 mb-8">
+                  <Button asChild size="lg" variant="gold">
+                    <Link href="/research">
+                      <BookOpen size={18} />
+                      View Research
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" variant="outline"
+                    className="border-white/30 text-white hover:bg-white hover:text-navy-950">
+                    <Link href="/cv">
+                      <FileText size={18} />
+                      Download CV
+                    </Link>
+                  </Button>
+                  <Button asChild size="lg" variant="ghost"
+                    className="text-slate-300 hover:text-white hover:bg-white/10">
+                    <Link href="/contact">
+                      Contact
+                    </Link>
+                  </Button>
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.5}>
+                <div className="flex flex-wrap gap-2">
+                  {['U.S. Drug Policy', 'Sentencing Disparities', 'Comparative Criminology', 'Criminal Justice', 'Marijuana Legalization'].map((tag) => (
+                    <span key={tag}
+                      className="text-xs text-slate-500 border border-white/10 rounded-full px-3 py-1">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </AnimatedSection>
+
+            </div>
+          </div>
+
+          {/* ── Right: portrait column (desktop only, stretches to full section height) ── */}
+          <div className="hidden lg:block lg:w-[45%] relative flex-shrink-0">
+            <Image
+              src="/images/about/criminal-justice-portrait.jpg"
+              alt="Fahad Bin Islam Khan, drug policy and criminal justice researcher at John Jay College of Criminal Justice"
+              fill
+              sizes="45vw"
+              className="object-cover object-top"
+              priority
+            />
+            {/* Soft left-edge gradient to blend cleanly with navy text panel */}
+            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-navy-950 to-transparent" />
+          </div>
+
         </div>
       </section>
 
