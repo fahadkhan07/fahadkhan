@@ -14,11 +14,11 @@ import {
 
 // ─── Badge colours per category ──────────────────────────────────────────────
 const categoryBadge: Record<PubCategory, 'default' | 'gold' | 'secondary' | 'outline'> = {
-  'Journal Publication': 'default',
-  'Research Article':    'gold',
-  'Preprint':            'secondary',
-  'Research Proposal':   'outline',
-  'Thesis':              'outline',
+  'Journal Publication':      'default',
+  'Accepted for Publication': 'gold',
+  'Conference Presentation':  'secondary',
+  'Research Proposal':        'outline',
+  'Thesis':                   'outline',
 }
 
 // ─── Status chip styling ─────────────────────────────────────────────────────

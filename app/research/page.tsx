@@ -20,10 +20,11 @@ export const metadata: Metadata = {
 }
 
 const statusColors: Record<string, 'default' | 'gold' | 'secondary' | 'outline'> = {
-  'In Progress':      'default',
-  'Working Paper':    'gold',
-  'Conceptual Stage': 'secondary',
-  'Exploratory':      'secondary',
+  'Accepted for Publication': 'default',
+  'University Funded Project': 'default',
+  'Under Review':             'gold',
+  'In Processing':            'secondary',
+  'Academic Seminar Paper':   'outline',
 }
 
 export default function ResearchPage() {
@@ -143,6 +144,7 @@ export default function ResearchPage() {
                       </span>
                     </div>
                     <CardTitle className="text-xl">{project.title}</CardTitle>
+                    <p className="text-xs text-slate-500 mt-1">{project.authors}</p>
                   </CardHeader>
                   <CardContent>
                     <p className="text-slate-600 leading-relaxed text-sm mb-5">

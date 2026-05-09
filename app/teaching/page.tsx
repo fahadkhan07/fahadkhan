@@ -16,7 +16,7 @@ const courses = [
     title: 'Introduction to Criminal Justice',
     role: 'Graduate Teaching Assistant',
     institution: 'University of Mississippi',
-    semesters: ['Fall 2022', 'Fall 2023'],
+    semesters: ['2024–Present'],
     level: 'Undergraduate',
     enrollment: '~120 students',
     description:
@@ -35,7 +35,7 @@ const courses = [
     title: 'Research Methods in Criminal Justice',
     role: 'Graduate Teaching Assistant',
     institution: 'University of Mississippi',
-    semesters: ['Spring 2023', 'Spring 2024'],
+    semesters: ['2024–Present'],
     level: 'Undergraduate',
     enrollment: '~60 students',
     description:

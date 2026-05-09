@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ExternalLink, FileText, Download } from 'lucide-react'
+import { ExternalLink, FileText } from 'lucide-react'
 import { PageHeader } from '@/components/PageHeader'
 import { AnimatedSection, AnimatedStagger, AnimatedItem } from '@/components/AnimatedSection'
 import { Badge } from '@/components/ui/badge'
@@ -8,72 +8,78 @@ import { Button } from '@/components/ui/button'
 export const metadata: Metadata = {
   title: 'Publications',
   description:
-    'Academic publications, working papers, and research by Fahad Bin Islam Khan on U.S. drug policy and criminal justice.',
+    'Academic publications and conference presentations by Fahad Bin Islam Khan on criminal justice, drug policy, and environmental criminology.',
 }
 
-// Published articles only — matches ResearchGate profile/research (4 articles)
-const publications = [
+const peerReviewed = [
   {
-    type: 'Research Article',
-    title:
-      'Bordered Justice: A Conflict Theory Analysis of Drug Tourism, Law Enforcement, and Sentencing Disparities in the United States',
-    authors: 'Khan, F. B. I.',
-    venue: null,
-    year: '2025',
-    monthYear: 'May 2025',
-    abstract: null,
-    tags: ['Drug Tourism', 'Conflict Theory', 'Law Enforcement', 'Sentencing Disparities'],
-    status: 'Full-text available',
-    available: true,
-    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
-    doi: null,
-  },
-  {
-    type: 'Journal Article',
-    title:
-      'Legal Compliance of Waste Management in Tannery Industrial Estate in Bangladesh: An Assessment from Environmental Criminological Perspective',
-    authors: 'Khan, F. B. I., & Akond, M. A.',
-    venue: 'TWIST',
+    apa: 'Khan, F.B.I. and Akond, A. (2024). Legal Compliance of Waste Management in Savar BSCIC Tannery Industrial Estate: An Assessment from Environmental Criminological Perspective.',
+    venue: 'TWIST International Multidisciplinary Journal',
+    volume: 'Vol. 19, Issue 1, pp. 306–320',
     year: '2024',
-    monthYear: 'February 2024',
+    tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance'],
     abstract:
       'Examines the Savar BSCIC Tannery Industrial Estate, the only tannery industrial estate in Bangladesh, focusing on waste management practices and legal compliance. Findings show that lack of effective waste management regulations, substandard technology, and inadequate treatment facilities are causing significant environmental harm.',
-    tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance'],
-    status: 'Published',
-    available: true,
     researchGateUrl: 'https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective',
+    url: 'https://twistjournal.net/twist/article/view/131',
     doi: 'https://doi.org/10.5281/zenodo.10049652',
-  },
-  {
-    type: 'Journal Article',
-    title:
-      'From Victimless Crime to Habitual Victim: An Empirical Study on Food Victimization',
-    authors: 'Khan, F. B. I., & Tauhid, K.',
-    venue: 'International Journal of Research and Innovation in Social Science',
-    year: '2023',
-    monthYear: 'November 2023',
-    abstract: null,
-    tags: ['Food Victimization', 'Victimology', 'Empirical Study', 'Social Science'],
     status: 'Published',
-    available: true,
-    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
-    doi: null,
   },
   {
-    type: 'Journal Article',
-    title:
-      'Nature of Crime Victimization Among Tourists in Bangladesh: An Analysis',
-    authors: 'Khan, F. B. I., & Akter, M.',
-    venue: 'International Journal of Law Management & Humanities',
+    apa: 'Khan, F.B.I. and Akter, M. (2023). Nature of Crime Victimization among Tourists in Bangladesh: An Analysis.',
+    venue: 'International Journal of Law Management and Humanities',
+    volume: 'Vol. 6, Issue 3, pp. 2711–2726',
     year: '2023',
-    monthYear: 'July 2023',
+    tags: ['Tourist Victimization', 'Crime', 'Bangladesh', 'Routine Activity Theory'],
     abstract:
       "Examines how tourism growth in Bangladesh correlates with increased criminal threats targeting visitors. Using opportunity theory, routine activity theory, and Butler's TALC model, the study identifies victimization patterns across tourist destinations including theft, robbery, sexual assault, and terrorism.",
-    tags: ['Tourist Victimization', 'Crime', 'Bangladesh', 'Tourism', 'Routine Activity Theory'],
-    status: 'Published',
-    available: true,
     researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    url: null,
     doi: 'https://doij.org/10.10000/IJLMH.115097',
+    status: 'Published',
+  },
+  {
+    apa: 'Akter, M., Kazi, T. and Khan, F.B.I. (2023). From Victimless Crime to Habitual Victim: An Empirical Study on Food Victimization.',
+    venue: 'International Journal of Research and Innovation in Social Science (IJRISS)',
+    volume: 'Vol. 7, Issue 10, pp. 1729–1750',
+    year: '2023',
+    tags: ['Food Victimization', 'Victimology', 'Empirical Study', 'Criminology'],
+    abstract: null,
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    url: null,
+    doi: 'https://dx.doi.org/10.47772/IJRISS.2023.701133',
+    status: 'Published',
+  },
+  {
+    apa: 'Khan, F.B.I. and Greenspan, R. (2025). Drug Tourism and Youth: Legal Awareness, Attitudes, and Policy Implications for Mississippi.',
+    venue: 'International Journal for Crime, Justice and Social Democracy',
+    volume: null,
+    year: '2025',
+    tags: ['Drug Tourism', 'Youth', 'Drug Policy', 'Mississippi', 'Legal Awareness'],
+    abstract: null,
+    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    url: null,
+    doi: null,
+    status: 'Accepted',
+  },
+]
+
+const conferences = [
+  {
+    apa: 'Khan, F.B.I. (2025). Punitive vs. Rehabilitative Drug Policies: A Comparative Analysis across U.S. States.',
+    venue: 'American Society of Criminology (ASC) Annual Meeting',
+    location: 'Washington, D.C., USA',
+    year: '2025',
+    tags: ['Drug Policy', 'Comparative Analysis', 'Punishment', 'Rehabilitation'],
+    status: 'Presented',
+  },
+  {
+    apa: 'Islam, M.J., Hossain, M.L., Khan, F.B.I. and Tazally, U.A. (2026). Western Paradigm, Epistemic Colonialism and Pedagogical Challenges: Toward a Quest for Decolonizing Criminology in Bangladesh.',
+    venue: 'European Society of Criminology Annual Conference',
+    location: 'Warsaw, Poland',
+    year: '2026',
+    tags: ['Criminology', 'Decolonization', 'Bangladesh', 'Comparative Criminology'],
+    status: 'Accepted',
   },
 ]
 
@@ -112,20 +118,12 @@ const academicProfiles = [
   },
 ]
 
-const typeColors: Record<string, 'default' | 'gold' | 'secondary' | 'outline'> = {
-  'Journal Article':  'default',
-  'Research Article': 'gold',
-  Thesis:             'outline',
-  'Working Paper':    'secondary',
-  'Conference Paper': 'secondary',
-}
-
 export default function PublicationsPage() {
   return (
     <>
       <PageHeader
         title="Publications"
-        subtitle="Peer-reviewed articles, working papers, conference presentations, and thesis research."
+        subtitle="Peer-reviewed articles, accepted manuscripts, and conference presentations."
       />
 
       {/* ── ACADEMIC PROFILES ─────────────────────────────── */}
@@ -158,49 +156,40 @@ export default function PublicationsPage() {
         </div>
       </section>
 
-      {/* ── PUBLICATIONS LIST ──────────────────────────────── */}
+      {/* ── PEER-REVIEWED PUBLICATIONS ──────────────────────── */}
       <section className="section-padding bg-white">
         <div className="section-container">
           <AnimatedSection className="mb-12">
             <div className="gold-rule mb-6" />
-            <h2 className="heading-md text-navy-900">Research Output</h2>
+            <h2 className="heading-md text-navy-900">Peer-Reviewed Publications</h2>
+            <p className="text-slate-500 mt-2 text-sm">Articles published or accepted in peer-reviewed academic journals.</p>
           </AnimatedSection>
 
           <div className="space-y-8 max-w-4xl">
-            {publications.map((pub, i) => (
-              <AnimatedSection key={pub.title} delay={i * 0.1}>
+            {peerReviewed.map((pub, i) => (
+              <AnimatedSection key={i} delay={i * 0.1}>
                 <div className="border border-slate-200 rounded-xl p-7 bg-white hover:border-navy-300 hover:shadow-sm transition-all duration-200">
                   <div className="flex flex-wrap items-center gap-2 mb-4">
-                    <Badge variant={typeColors[pub.type] ?? 'secondary'}>{pub.type}</Badge>
-                    <span className="text-xs text-slate-400">{pub.monthYear ?? pub.year}</span>
                     <span
-                      className={`ml-auto text-xs font-medium px-2.5 py-0.5 rounded-full ${
-                        pub.status === 'Published' || pub.status === 'Full-text available'
+                      className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${
+                        pub.status === 'Published'
                           ? 'bg-green-100 text-green-700'
-                          : pub.status === 'Preprint' || pub.status === 'File available'
-                          ? 'bg-blue-100 text-blue-700'
-                          : 'bg-amber-100 text-amber-700'
+                          : 'bg-gold-100 text-gold-700'
                       }`}
                     >
-                      {pub.status}
+                      {pub.status === 'Accepted' ? 'Accepted for Publication' : pub.status}
                     </span>
+                    <span className="text-xs text-slate-400">{pub.year}</span>
                   </div>
 
-                  <h3 className="font-serif text-lg font-semibold text-navy-900 mb-1 leading-snug">
-                    {pub.title}
-                  </h3>
-                  <p className="text-sm text-slate-500 mb-0.5">{pub.authors}</p>
-                  {pub.venue && (
-                    <p className="text-sm text-gold-600 font-medium mb-4">{pub.venue}</p>
+                  <p className="text-sm text-slate-700 leading-relaxed mb-1">{pub.apa}</p>
+                  <p className="text-sm text-gold-600 font-medium">{pub.venue}{pub.volume ? `, ${pub.volume}` : ''}</p>
+
+                  {pub.abstract && (
+                    <p className="text-sm text-slate-600 leading-relaxed mt-3 mb-3">{pub.abstract}</p>
                   )}
 
-                  {pub.abstract ? (
-                    <p className="text-sm text-slate-600 leading-relaxed mb-5 mt-3">{pub.abstract}</p>
-                  ) : (
-                    <p className="text-sm text-slate-400 italic mb-5 mt-3">Full text available on ResearchGate.</p>
-                  )}
-
-                  <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap items-center justify-between gap-4 mt-4">
                     <div className="flex flex-wrap gap-2">
                       {pub.tags.map((tag) => (
                         <Badge key={tag} variant="secondary">{tag}</Badge>
@@ -218,6 +207,17 @@ export default function PublicationsPage() {
                           ResearchGate
                         </a>
                       )}
+                      {pub.url && (
+                        <a
+                          href={pub.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs font-medium text-blue-700 hover:text-blue-900 border border-blue-200 hover:border-blue-400 rounded-full px-3 py-1.5 bg-blue-50 transition-all"
+                        >
+                          <ExternalLink size={11} />
+                          Full Text
+                        </a>
+                      )}
                       {pub.doi && (
                         <a
                           href={pub.doi}
@@ -229,20 +229,56 @@ export default function PublicationsPage() {
                           DOI
                         </a>
                       )}
-                      {pub.available && (
-                        <Button size="sm" variant="outline">
-                          <Download size={13} />
-                          Request PDF
-                        </Button>
-                      )}
                     </div>
                   </div>
                 </div>
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
 
-          <AnimatedSection className="mt-16 p-8 bg-slate-50 rounded-2xl border border-slate-200 max-w-4xl">
+      {/* ── CONFERENCE PRESENTATIONS ────────────────────────── */}
+      <section className="section-padding bg-slate-50">
+        <div className="section-container">
+          <AnimatedSection className="mb-12">
+            <div className="gold-rule mb-6" />
+            <h2 className="heading-md text-navy-900">Conference Presentations</h2>
+            <p className="text-slate-500 mt-2 text-sm">Papers presented or accepted for presentation at academic conferences.</p>
+          </AnimatedSection>
+
+          <div className="space-y-6 max-w-4xl">
+            {conferences.map((conf, i) => (
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <div className="border border-slate-200 rounded-xl p-7 bg-white hover:border-navy-300 hover:shadow-sm transition-all duration-200">
+                  <div className="flex flex-wrap items-center gap-2 mb-4">
+                    <span
+                      className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${
+                        conf.status === 'Presented'
+                          ? 'bg-green-100 text-green-700'
+                          : 'bg-blue-100 text-blue-700'
+                      }`}
+                    >
+                      {conf.status === 'Accepted' ? 'Accepted for Presentation' : conf.status}
+                    </span>
+                    <span className="text-xs text-slate-400">{conf.year}</span>
+                  </div>
+
+                  <p className="text-sm text-slate-700 leading-relaxed mb-1">{conf.apa}</p>
+                  <p className="text-sm text-gold-600 font-medium">{conf.venue}</p>
+                  <p className="text-xs text-slate-400 mt-0.5">{conf.location}</p>
+
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {conf.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary">{tag}</Badge>
+                    ))}
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection className="mt-16 p-8 bg-white rounded-2xl border border-slate-200 max-w-4xl">
             <div className="flex items-start gap-4">
               <FileText size={24} className="text-gold-500 flex-shrink-0 mt-1" />
               <div>
@@ -250,10 +286,13 @@ export default function PublicationsPage() {
                   Request a Paper
                 </h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  If you are interested in any of my research and would like a copy of a paper,
-                  please reach out via the contact page. I am happy to share work-in-progress
-                  and completed manuscripts with fellow scholars, students, and policy professionals.
+                  If you are interested in any of my research and would like a copy of a paper, please reach out via the contact page. I am happy to share work-in-progress and completed manuscripts with fellow scholars, students, and policy professionals.
                 </p>
+                <div className="mt-4">
+                  <Button asChild size="sm">
+                    <a href="/contact">Contact Me</a>
+                  </Button>
+                </div>
               </div>
             </div>
           </AnimatedSection>

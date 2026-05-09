@@ -40,32 +40,40 @@ const education = [
   {
     degree: 'Ph.D. in Criminal Justice',
     institution: 'John Jay College of Criminal Justice, City University of New York (CUNY)',
-    year: '2026–Present',
-    notes: 'Doctoral research in criminology: drug policy, institutional inequality, race, law enforcement, and comparative criminal justice systems. New York City.',
+    year: 'Expecting 2031',
+    notes: 'Departmental Fellow and Graduate Research Assistant. Doctoral research in criminology: drug policy, institutional inequality, race, law enforcement, and comparative criminal justice systems.',
     current: true,
   },
   {
-    degree: 'MSc in Criminal Justice',
-    institution: 'University of Mississippi',
-    year: '2022–2024',
+    degree: 'Master of Science in Criminal Justice',
+    institution: 'University of Mississippi, Oxford, MS',
+    year: '2026',
     notes:
-      'Thesis: "Institutional Strain and Substance Coping: Analyzing Perceived Racial Discrimination as a Predictor of Adolescent Marijuana Use." Graduate Teaching Assistant.',
+      'Thesis: "Institutional Strain and Substance Coping: Analyzing Perceived Racial Discrimination As A Predictor Of Adolescent Marijuana Use." Committee: Dr. D\'Andre Walker, Dr. Francis Boateng, Dr. Katharine Brown. CGPA: 4.0/4.0',
     current: false,
   },
   {
-    degree: 'B.A. in Criminal Justice',
-    institution: 'Prior undergraduate studies',
-    year: 'Completed',
-    notes: 'Foundation in criminological theory and criminal justice policy.',
+    degree: 'Master of Science in Criminology and Police Science',
+    institution: 'Mawlana Bhashani Science and Technology University (MBSTU), Bangladesh',
+    year: '2023–2024',
+    notes: 'Internship: Bangladesh Legal Aid and Services Trust (BLAST). CGPA: 3.72/4.0',
+    current: false,
+  },
+  {
+    degree: 'Bachelor of Science in Criminology and Police Science',
+    institution: 'Mawlana Bhashani Science and Technology University (MBSTU), Bangladesh',
+    year: '2017–2023',
+    notes: 'Monograph: Legal Compliance of Waste Management in Savar BSCIC Tannery Industrial Estate. CGPA: 3.70/4.0',
     current: false,
   },
 ]
 
 const quickFacts = [
   { icon: GraduationCap, text: 'Ph.D. Student, John Jay College of Criminal Justice (CUNY)' },
-  { icon: BookOpen,      text: 'M.Sc. in Criminal Justice, University of Mississippi' },
+  { icon: BookOpen,      text: 'M.S. in Criminal Justice, University of Mississippi (2026)' },
+  { icon: BookOpen,      text: 'M.S. in Criminology and Police Science, MBSTU Bangladesh' },
   { icon: MapPin,        text: 'New York City, New York' },
-  { icon: Award,         text: 'Graduate Teaching Assistant, Ole Miss' },
+  { icon: Award,         text: 'Five-Year Doctoral Fellow, John Jay College / CUNY' },
   { icon: Users,         text: 'ASC · Bangladesh Society of Criminology' },
   { icon: Globe,         text: 'ASC Annual Meeting 2025, Washington D.C.' },
 ]
@@ -139,7 +147,7 @@ export default function AboutPage() {
             </p>
             <p className="text-slate-400 text-sm mb-8 leading-relaxed">
               John Jay College of Criminal Justice · City University of New York<br />
-              M.Sc. in Criminal Justice · University of Mississippi
+              M.S. in Criminal Justice · University of Mississippi, 2026
             </p>
             <p className="text-slate-300 leading-relaxed mb-8 max-w-2xl text-lg">
               My research sits at the intersection of drug policy, law, and social inequality,
@@ -147,7 +155,7 @@ export default function AboutPage() {
               of those most affected by the criminal justice system.
             </p>
             <div className="flex flex-wrap gap-2">
-              {['Drug Policy', 'Sentencing Reform', 'Racial Equity', 'Harm Reduction', 'Criminological Theory'].map((tag) => (
+              {['Drug Policy', 'Comparative Criminology', 'Criminal Justice', 'Race and Crime', 'Environmental Criminology'].map((tag) => (
                 <span
                   key={tag}
                   className="text-xs text-slate-300 border border-white/15 rounded-full px-3 py-1.5 hover:border-gold-400/50 transition-colors"

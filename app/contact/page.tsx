@@ -140,7 +140,7 @@ export default function ContactPage() {
               {/* Institution */}
               <div className="text-sm text-slate-500 text-center">
                 <p className="font-medium text-slate-700">Fahad Bin Islam Khan</p>
-                <p>University of Mississippi</p>
+                <p>John Jay College of Criminal Justice, CUNY</p>
                 <p>Department of Criminal Justice</p>
               </div>
             </AnimatedSection>

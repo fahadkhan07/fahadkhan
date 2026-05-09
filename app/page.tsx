@@ -111,8 +111,7 @@ export default async function HomePage() {
                 <p className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl mb-10">
                   John Jay College of Criminal Justice, City University of New York<br />
                   <span className="text-slate-300">
-                    M.Sc. in Criminal Justice, University of Mississippi · Drug policy,
-                    institutional inequality, and comparative criminal justice.
+                    My research examines U.S. drug policy, criminal justice systems, comparative criminology, race and crime, policing, prison, and environmental criminology, with a focus on how law, enforcement, and policy implementation shape social inequality across jurisdictions.
                   </span>
                 </p>
               </AnimatedSection>
@@ -144,7 +143,7 @@ export default async function HomePage() {
 
               <AnimatedSection delay={0.55}>
                 <div className="mt-12 flex flex-wrap gap-3">
-                  {['Drug Policy', 'Sentencing Reform', 'Criminal Justice', 'Racial Equity', 'Harm Reduction'].map((tag) => (
+                  {['Drug Policy', 'Comparative Criminology', 'Criminal Justice', 'Race and Crime', 'Environmental Criminology'].map((tag) => (
                     <span key={tag}
                       className="text-xs text-slate-400 border border-white/10 rounded-full px-3 py-1">
                       {tag}
