@@ -47,6 +47,27 @@ const researchAreas = [
   },
 ]
 
+const mediaItems = [
+  {
+    source: 'The Daily Campus',
+    title: 'যুক্তরাষ্ট্রে উচ্চশিক্ষার সুযোগ পেলেন মাভাবিপ্রবি ক্রিমিনোলজির ৩ শিক্ষার্থী',
+    date: 'September 4, 2024',
+    context:
+      'Reports Fahad Bin Islam Khan receiving a full scholarship and Graduate Research and Teaching Assistantship for the M.S. in Criminal Justice at the University of Mississippi, recognizing his academic achievement in international higher education.',
+    href: 'https://thedailycampus.com/scholarship/152048/',
+    category: 'Scholarship and Higher Education',
+  },
+  {
+    source: 'Ajker Patrika',
+    title: 'যুক্তরাষ্ট্রে বাসা ভাড়া নিয়ে জটিলতায় শিক্ষার্থীরা',
+    date: null as string | null,
+    context:
+      'Features Fahad Bin Islam Khan as an international criminal justice researcher, discussing housing challenges encountered by graduate students from Bangladesh pursuing higher education in the United States.',
+    href: 'https://www.ajkerpatrika.com/education/ajpmifsfouygm',
+    category: 'International Student Life',
+  },
+]
+
 const academicProfiles = [
   {
     name: 'Google Scholar',
@@ -265,8 +286,88 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── MEDIA & RECOGNITION ──────────────────────────── */}
+      <section
+        className="section-padding bg-slate-50"
+        aria-label="Media coverage of Fahad Bin Islam Khan, criminal justice researcher"
+      >
+        <div className="section-container">
+          <AnimatedSection className="mb-12">
+            <div className="gold-rule mb-6" />
+            <h2 className="heading-lg text-navy-900 mb-3">Media &amp; Recognition</h2>
+            <p className="text-slate-500 max-w-xl">
+              Selected media coverage highlighting academic milestones, international higher
+              education, and the professional development of Fahad Bin Islam Khan as a criminal
+              justice researcher and drug policy scholar.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedStagger className="grid md:grid-cols-2 gap-6 max-w-4xl">
+            {mediaItems.map((item) => (
+              <AnimatedItem key={item.source}>
+                <article
+                  className="bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full"
+                  itemScope
+                  itemType="https://schema.org/NewsArticle"
+                >
+                  {/* Publication masthead */}
+                  <div className="border-t-2 border-gold-400 px-6 pt-5 pb-4 border-b border-slate-100">
+                    <div className="flex items-center justify-between gap-4 flex-wrap">
+                      <span
+                        className="text-xs font-semibold text-gold-600 uppercase tracking-widest"
+                        itemProp="publisher"
+                      >
+                        {item.source}
+                      </span>
+                      <span className="text-xs text-slate-400 bg-slate-100 rounded-full px-2.5 py-0.5">
+                        {item.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Card body */}
+                  <div className="px-6 py-5 flex flex-col flex-1">
+                    <h3
+                      className="font-serif text-navy-900 font-semibold text-base leading-snug mb-3"
+                      itemProp="headline"
+                    >
+                      {item.title}
+                    </h3>
+
+                    {item.date && (
+                      <p className="flex items-center gap-1.5 text-xs text-slate-400 mb-3" itemProp="datePublished">
+                        <Calendar size={11} aria-hidden="true" />
+                        {item.date}
+                      </p>
+                    )}
+
+                    <p className="text-slate-500 text-sm leading-relaxed flex-1 mb-5" itemProp="description">
+                      {item.context}
+                    </p>
+
+                    <div>
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-navy-700 border border-navy-200 rounded-md px-4 py-2 hover:bg-navy-50 hover:border-navy-300 transition-colors"
+                        aria-label={`Read article: ${item.title} on ${item.source}`}
+                        itemProp="url"
+                      >
+                        Read Article
+                        <ExternalLink size={13} aria-hidden="true" />
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </AnimatedItem>
+            ))}
+          </AnimatedStagger>
+        </div>
+      </section>
+
       {/* ── RESEARCH AREAS ────────────────────────────────── */}
-      <section className="section-padding bg-slate-50">
+      <section className="section-padding bg-white">
         <div className="section-container">
           <AnimatedSection className="text-center mb-16">
             <div className="gold-rule mx-auto mb-6" />
@@ -312,7 +413,7 @@ export default async function HomePage() {
       </section>
 
       {/* ── SCHOLARSHIP IN ACTION ─────────────────────────── */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-slate-50">
         <div className="section-container">
           <AnimatedSection className="mb-12">
             <div className="gold-rule mb-6" />
