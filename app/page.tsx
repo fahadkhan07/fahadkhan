@@ -55,7 +55,10 @@ const mediaItems = [
     context:
       'Reports Fahad Bin Islam Khan receiving a full scholarship and Graduate Research and Teaching Assistantship for the M.S. in Criminal Justice at the University of Mississippi, recognizing his academic achievement in international higher education.',
     href: 'https://thedailycampus.com/scholarship/152048/',
-    category: 'Scholarship and Higher Education',
+    category: 'Scholarship',
+    image: '/images/media/daily-campus-scholarship.jpg',
+    imageAlt:
+      'The Daily Campus article featuring Fahad Bin Islam Khan receiving a full scholarship for M.S. in Criminal Justice at the University of Mississippi',
   },
   {
     source: 'Ajker Patrika',
@@ -65,6 +68,9 @@ const mediaItems = [
       'Features Fahad Bin Islam Khan as an international criminal justice researcher, discussing housing challenges encountered by graduate students from Bangladesh pursuing higher education in the United States.',
     href: 'https://www.ajkerpatrika.com/education/ajpmifsfouygm',
     category: 'International Student Life',
+    image: '/images/media/ajker-patrika-housing.jpg',
+    imageAlt:
+      'Ajker Patrika article featuring Fahad Bin Islam Khan on housing challenges faced by Bangladeshi international students in the United States',
   },
 ]
 
@@ -302,46 +308,65 @@ export default async function HomePage() {
             </p>
           </AnimatedSection>
 
-          <AnimatedStagger className="grid md:grid-cols-2 gap-6 max-w-4xl">
+          <AnimatedStagger className="grid md:grid-cols-2 gap-7 max-w-4xl">
             {mediaItems.map((item) => (
               <AnimatedItem key={item.source}>
                 <article
-                  className="bg-white rounded-xl border border-slate-200 overflow-hidden flex flex-col h-full"
+                  className="group bg-white rounded-2xl border border-slate-200 overflow-hidden flex flex-col h-full shadow-sm hover:shadow-lg transition-shadow duration-300"
                   itemScope
                   itemType="https://schema.org/NewsArticle"
                 >
-                  {/* Publication masthead */}
-                  <div className="border-t-2 border-gold-400 px-6 pt-5 pb-4 border-b border-slate-100">
-                    <div className="flex items-center justify-between gap-4 flex-wrap">
-                      <span
-                        className="text-xs font-semibold text-gold-600 uppercase tracking-widest"
-                        itemProp="publisher"
-                      >
-                        {item.source}
-                      </span>
-                      <span className="text-xs text-slate-400 bg-slate-100 rounded-full px-2.5 py-0.5">
+                  {/* Featured image */}
+                  <div className="relative aspect-video overflow-hidden bg-slate-100">
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 580px"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                      itemProp="image"
+                    />
+                    {/* Category badge overlay */}
+                    <div className="absolute top-3 left-3 z-10">
+                      <span className="text-[11px] font-medium text-white bg-navy-950/70 backdrop-blur-sm rounded-full px-3 py-1 tracking-wide">
                         {item.category}
                       </span>
                     </div>
                   </div>
 
-                  {/* Card body */}
+                  {/* Gold accent rule + publication name */}
+                  <div className="border-t-2 border-gold-400 px-6 pt-4 pb-3 border-b border-slate-100">
+                    <span
+                      className="text-xs font-semibold text-gold-600 uppercase tracking-widest"
+                      itemProp="publisher"
+                    >
+                      {item.source}
+                    </span>
+                  </div>
+
+                  {/* Text content */}
                   <div className="px-6 py-5 flex flex-col flex-1">
                     <h3
-                      className="font-serif text-navy-900 font-semibold text-base leading-snug mb-3"
+                      className="font-serif text-navy-900 font-semibold text-[1.05rem] leading-snug mb-3"
                       itemProp="headline"
                     >
                       {item.title}
                     </h3>
 
                     {item.date && (
-                      <p className="flex items-center gap-1.5 text-xs text-slate-400 mb-3" itemProp="datePublished">
+                      <p
+                        className="flex items-center gap-1.5 text-xs text-slate-400 mb-3"
+                        itemProp="datePublished"
+                      >
                         <Calendar size={11} aria-hidden="true" />
                         {item.date}
                       </p>
                     )}
 
-                    <p className="text-slate-500 text-sm leading-relaxed flex-1 mb-5" itemProp="description">
+                    <p
+                      className="text-slate-500 text-sm leading-relaxed flex-1 mb-5"
+                      itemProp="description"
+                    >
                       {item.context}
                     </p>
 
@@ -350,7 +375,7 @@ export default async function HomePage() {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-medium text-navy-700 border border-navy-200 rounded-md px-4 py-2 hover:bg-navy-50 hover:border-navy-300 transition-colors"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-navy-700 border border-navy-200 rounded-md px-4 py-2 hover:bg-navy-50 hover:border-navy-400 transition-colors duration-200"
                         aria-label={`Read article: ${item.title} on ${item.source}`}
                         itemProp="url"
                       >
