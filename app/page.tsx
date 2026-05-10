@@ -444,20 +444,20 @@ export default async function HomePage() {
             </p>
           </AnimatedSection>
 
-          <AnimatedStagger className="grid sm:grid-cols-2 gap-6 max-w-3xl">
+          <AnimatedStagger className="grid sm:grid-cols-2 gap-8">
 
             <AnimatedItem>
-              <figure className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+              <figure className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-shadow duration-300">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/images/about/conference-presentation.jpg"
                     alt="Fahad Bin Islam Khan presenting criminal justice research at a national conference"
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 480px"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 580px"
                     className="object-cover object-center"
                   />
                 </div>
-                <figcaption className="px-5 py-4 border-t border-slate-100">
+                <figcaption className="px-6 py-5 border-t border-slate-100">
                   <p className="text-xs text-gold-600 font-semibold uppercase tracking-widest mb-1.5">
                     Conference Presentation
                   </p>
@@ -469,17 +469,17 @@ export default async function HomePage() {
             </AnimatedItem>
 
             <AnimatedItem>
-              <figure className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+              <figure className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-shadow duration-300">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/images/about/conference.jpg"
                     alt="Fahad Bin Islam Khan at the American Society of Criminology Annual Meeting, Washington D.C."
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 480px"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 580px"
                     className="object-cover object-center"
                   />
                 </div>
-                <figcaption className="px-5 py-4 border-t border-slate-100">
+                <figcaption className="px-6 py-5 border-t border-slate-100">
                   <p className="text-xs text-gold-600 font-semibold uppercase tracking-widest mb-1.5">
                     ASC Annual Meeting
                   </p>
