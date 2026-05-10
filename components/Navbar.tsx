@@ -54,10 +54,15 @@ export function Navbar() {
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.slice(1).map(({ href, label }) => (
+            {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
+                onClick={
+                  href === '/' && pathname === '/'
+                    ? (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }
+                    : undefined
+                }
                 className={cn(
                   'px-3 py-2 rounded-md text-sm font-medium transition-all duration-200',
                   pathname === href
