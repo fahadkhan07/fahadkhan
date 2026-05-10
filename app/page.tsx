@@ -189,13 +189,7 @@ export default async function HomePage() {
                     className="border-white/30 text-white hover:bg-white hover:text-navy-950">
                     <Link href="/cv">
                       <FileText size={18} />
-                      Download CV
-                    </Link>
-                  </Button>
-                  <Button asChild size="lg" variant="ghost"
-                    className="text-slate-300 hover:text-white hover:bg-white/10">
-                    <Link href="/contact">
-                      Contact
+                      Curriculum Vitae
                     </Link>
                   </Button>
                 </div>

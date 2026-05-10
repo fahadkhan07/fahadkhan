@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Mail, Phone, Linkedin, ExternalLink } from 'lucide-react'
+import { Mail, Linkedin, ExternalLink } from 'lucide-react'
 import { PageHeader } from '@/components/PageHeader'
 import { AnimatedSection } from '@/components/AnimatedSection'
 
@@ -24,13 +24,6 @@ const directContact = [
     value: 'khan.fbi7@gmail.com',
     href: 'mailto:khan.fbi7@gmail.com',
     note: 'Academic inquiries, collaboration proposals, and media requests',
-  },
-  {
-    Icon: Phone,
-    label: 'Phone',
-    value: '(662) 380-8672',
-    href: 'tel:+16623808672',
-    note: 'Available for calls regarding research collaboration and academic inquiries',
   },
   {
     Icon: Linkedin,
@@ -59,6 +52,12 @@ const academicProfiles = [
     href: 'https://orcid.org/my-orcid?orcid=0009-0009-0629-9473',
     icon: '🆔',
     note: 'Persistent researcher identifier',
+  },
+  {
+    name: 'Website',
+    href: 'https://fahadkhanresearch.com',
+    icon: '🌐',
+    note: 'Academic portfolio and research overview',
   },
 ]
 
