@@ -439,16 +439,16 @@ export default async function HomePage() {
             <h2 className="heading-lg text-navy-900 mb-3">Scholarship in Action</h2>
             <p className="text-slate-500 max-w-2xl">
               Selected moments from academic conferences and research presentations, reflecting
-              ongoing engagement with criminological scholarship, policy analysis, and
+              my engagement with criminological scholarship, criminal justice policy, and
               professional research communities.
             </p>
           </AnimatedSection>
 
-          <AnimatedStagger className="grid sm:grid-cols-2 gap-8">
+          <AnimatedStagger className="grid sm:grid-cols-2 gap-8 items-stretch">
 
-            <AnimatedItem>
-              <figure className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-shadow duration-300">
-                <div className="relative aspect-[4/3] overflow-hidden">
+            <AnimatedItem className="h-full">
+              <figure className="h-full flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div className="relative aspect-[4/3] flex-shrink-0 overflow-hidden">
                   <Image
                     src="/images/about/conference-presentation.jpg"
                     alt="Fahad Bin Islam Khan presenting criminal justice research at a national conference"
@@ -457,20 +457,21 @@ export default async function HomePage() {
                     className="object-cover object-center"
                   />
                 </div>
-                <figcaption className="px-6 py-5 border-t border-slate-100">
-                  <p className="text-xs text-gold-600 font-semibold uppercase tracking-widest mb-1.5">
-                    Conference Presentation
+                <figcaption className="flex-1 flex flex-col px-6 py-5 border-t border-slate-100">
+                  <p className="text-xs text-gold-600 font-semibold uppercase tracking-widest mb-2">
+                    Research Presentation in Criminal Justice
                   </p>
-                  <p className="text-sm text-slate-600 leading-snug">
-                    Presenting research in criminology and criminal justice policy.
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    Presenting academic work on criminology and criminal justice policy, with emphasis
+                    on research communication, policy analysis, and scholarly engagement.
                   </p>
                 </figcaption>
               </figure>
             </AnimatedItem>
 
-            <AnimatedItem>
-              <figure className="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-shadow duration-300">
-                <div className="relative aspect-[4/3] overflow-hidden">
+            <AnimatedItem className="h-full">
+              <figure className="h-full flex flex-col bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl transition-shadow duration-300">
+                <div className="relative aspect-[4/3] flex-shrink-0 overflow-hidden">
                   <Image
                     src="/images/about/conference.jpg"
                     alt="Fahad Bin Islam Khan at the American Society of Criminology Annual Meeting, Washington D.C."
@@ -479,12 +480,14 @@ export default async function HomePage() {
                     className="object-cover object-center"
                   />
                 </div>
-                <figcaption className="px-6 py-5 border-t border-slate-100">
-                  <p className="text-xs text-gold-600 font-semibold uppercase tracking-widest mb-1.5">
-                    ASC Annual Meeting
+                <figcaption className="flex-1 flex flex-col px-6 py-5 border-t border-slate-100">
+                  <p className="text-xs text-gold-600 font-semibold uppercase tracking-widest mb-2">
+                    American Society of Criminology Annual Meeting
                   </p>
-                  <p className="text-sm text-slate-600 leading-snug">
-                    Professional engagement at the American Society of Criminology Annual Meeting.
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    Participating in the American Society of Criminology Annual Meeting, a major
+                    professional forum for criminology, criminal justice research, and
+                    policy-focused scholarship.
                   </p>
                 </figcaption>
               </figure>
