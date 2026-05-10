@@ -122,9 +122,9 @@ export default async function BlogPostPage({ params }: Props) {
               {frontmatter.author ?? 'Fahad Bin Islam Khan'}
             </p>
             <p className="text-sm text-slate-500 leading-relaxed">
-              Criminal justice scholar and drug policy researcher. MSc in Criminal Justice, University of Mississippi.
-              Incoming PhD student studying U.S. drug policy, sentencing disparities, and criminal
-              justice reform.
+              Ph.D. student in Criminal Justice at John Jay College of Criminal Justice, City University of New York (CUNY).
+              Research focuses on U.S. drug policy, criminal justice systems, comparative criminology, and institutional
+              inequality within policing and criminal justice institutions.
             </p>
             <Link href="/about" className="mt-2 inline-flex text-sm text-navy-700 hover:text-gold-600 font-medium transition-colors">
               Read more about Fahad →
