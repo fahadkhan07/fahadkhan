@@ -54,6 +54,12 @@ const academicProfiles = [
     note: 'Persistent researcher identifier',
   },
   {
+    name: 'SSRN',
+    href: 'https://hq.ssrn.com/UserHome.cfm',
+    icon: '📋',
+    note: 'Working papers and preprints',
+  },
+  {
     name: 'Website',
     href: 'https://khanfahad.com',
     icon: '🌐',

@@ -134,6 +134,14 @@ const academicProfiles = [
     cta: 'View Profile',
   },
   {
+    name: 'SSRN',
+    description: 'Working papers and preprints',
+    href: 'https://hq.ssrn.com/UserHome.cfm',
+    bg: 'bg-blue-50 border-blue-200',
+    icon: '📋',
+    cta: 'View Profile',
+  },
+  {
     name: 'Academia.edu',
     description: 'Working papers and preprints',
     href: 'https://academia.edu',
