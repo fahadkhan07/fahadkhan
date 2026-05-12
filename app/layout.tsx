@@ -31,7 +31,7 @@ const spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fahadkhanresearch.com'),
+  metadataBase: new URL('https://khanfahad.com'),
   title: {
     default: 'Fahad Bin Islam Khan | Drug Policy and Criminal Justice Researcher',
     template: '%s | Fahad Bin Islam Khan',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     'race and crime',
     'criminal justice systems',
   ],
-  authors: [{ name: 'Fahad Bin Islam Khan', url: 'https://fahadkhanresearch.com' }],
+  authors: [{ name: 'Fahad Bin Islam Khan', url: 'https://khanfahad.com' }],
   creator: 'Fahad Bin Islam Khan',
   publisher: 'Fahad Bin Islam Khan',
   icons: {
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://fahadkhanresearch.com',
+    url: 'https://khanfahad.com',
     siteName: 'Fahad Bin Islam Khan',
     title: 'Fahad Bin Islam Khan | Drug Policy and Criminal Justice Researcher',
     description:
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
   alternates: {
-    canonical: 'https://fahadkhanresearch.com',
+    canonical: 'https://khanfahad.com',
   },
 }
 
@@ -138,9 +138,9 @@ const personSchema = {
       name: 'Mawlana Bhashani Science and Technology University',
     },
   ],
-  url: 'https://fahadkhanresearch.com',
+  url: 'https://khanfahad.com',
   email: 'khan.fbi7@gmail.com',
-  image: 'https://fahadkhanresearch.com/og-image.jpg',
+  image: 'https://khanfahad.com/og-image.jpg',
   sameAs: [
     'https://www.linkedin.com/in/fahad-bin-islam-khan-b64282211/',
     'https://scholar.google.com/citations?user=wRjP_1wAAAAJ&hl=en',
@@ -164,13 +164,13 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Fahad Bin Islam Khan | Criminal Justice Research',
-  url: 'https://fahadkhanresearch.com',
+  url: 'https://khanfahad.com',
   description:
     'Academic research and commentary on U.S. drug policy, criminal justice reform, policing, and sentencing disparities.',
   author: {
     '@type': 'Person',
     name: 'Fahad Bin Islam Khan',
-    url: 'https://fahadkhanresearch.com',
+    url: 'https://khanfahad.com',
   },
   inLanguage: 'en-US',
   copyrightYear: new Date().getFullYear(),

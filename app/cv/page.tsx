@@ -56,8 +56,8 @@ export default function CVPage() {
               <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-500">
                 <span>khan.fbi7@gmail.com</span>
                 <span>John Jay College of Criminal Justice, CUNY</span>
-                <a href="https://fahadkhanresearch.com" className="hover:text-navy-700">
-                  fahadkhanresearch.com
+                <a href="https://khanfahad.com" className="hover:text-navy-700">
+                  khanfahad.com
                 </a>
               </div>
             </AnimatedSection>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       'Contact Fahad Bin Islam Khan for academic collaboration, research communication, and professional correspondence.',
   },
   alternates: {
-    canonical: 'https://fahadkhanresearch.com/contact',
+    canonical: 'https://khanfahad.com/contact',
   },
 }
 
@@ -55,7 +55,7 @@ const academicProfiles = [
   },
   {
     name: 'Website',
-    href: 'https://fahadkhanresearch.com',
+    href: 'https://khanfahad.com',
     icon: '🌐',
     note: 'Academic portfolio and research overview',
   },

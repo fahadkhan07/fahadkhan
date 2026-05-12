@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { getAllBlogPosts } from '@/lib/mdx'
 
-const BASE_URL = 'https://fahadkhanresearch.com'
+const BASE_URL = 'https://khanfahad.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     'John Jay College research',
     'CUNY criminal justice',
   ],
-  alternates: { canonical: 'https://fahadkhanresearch.com/publications' },
+  alternates: { canonical: 'https://khanfahad.com/publications' },
   openGraph: {
     title: 'Publications: Criminal Justice & Drug Policy Research — Fahad Bin Islam Khan',
     description:
       'Peer-reviewed publications and conference presentations on U.S. drug policy, criminal justice, and criminology by Fahad Bin Islam Khan, John Jay College of Criminal Justice.',
-    url: 'https://fahadkhanresearch.com/publications',
+    url: 'https://khanfahad.com/publications',
     type: 'website',
   },
   robots: {

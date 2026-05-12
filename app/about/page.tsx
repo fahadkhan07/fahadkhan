@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     title: 'About Fahad Bin Islam Khan | Criminal Justice Researcher',
     description:
       'Fahad Bin Islam Khan is a criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY. Research focuses on U.S. drug policy, criminal justice systems, and comparative criminology.',
-    url: 'https://fahadkhanresearch.com/about',
+    url: 'https://khanfahad.com/about',
     type: 'profile',
   },
   alternates: {
-    canonical: 'https://fahadkhanresearch.com/about',
+    canonical: 'https://khanfahad.com/about',
   },
   robots: {
     index: true,
@@ -130,7 +130,7 @@ export default function AboutPage() {
                 name: 'Mawlana Bhashani Science and Technology University',
               },
             ],
-            url: 'https://fahadkhanresearch.com/about',
+            url: 'https://khanfahad.com/about',
             email: 'khan.fbi7@gmail.com',
             sameAs: [
               'https://www.linkedin.com/in/fahad-bin-islam-khan-b64282211/',

@@ -7,7 +7,7 @@ import rehypeSlug from 'rehype-slug'
 import { getBlogPost, getBlogSlugs } from '@/lib/mdx'
 import { ReadingProgress } from '@/components/ReadingProgress'
 
-const SITE_URL = 'https://fahadkhanresearch.com'
+const SITE_URL = 'https://khanfahad.com'
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`
 
 interface Props {

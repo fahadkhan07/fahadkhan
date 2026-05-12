@@ -25,12 +25,12 @@ export const metadata: Metadata = {
     'Fahad Bin Islam Khan',
     'John Jay College of Criminal Justice',
   ],
-  alternates: { canonical: 'https://fahadkhanresearch.com/blog' },
+  alternates: { canonical: 'https://khanfahad.com/blog' },
   openGraph: {
     title: 'Criminal Justice Blog | Drug Policy & Policing Research — Fahad Bin Islam Khan',
     description:
       'Academic commentary on U.S. drug policy, criminal justice reform, policing, and sentencing disparities by a Ph.D. researcher at John Jay College of Criminal Justice, CUNY.',
-    url: 'https://fahadkhanresearch.com/blog',
+    url: 'https://khanfahad.com/blog',
     type: 'website',
   },
   robots: {

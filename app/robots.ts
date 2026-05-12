@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://fahadkhanresearch.com/sitemap.xml',
+    sitemap: 'https://khanfahad.com/sitemap.xml',
   }
 }
