@@ -6,13 +6,33 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
-  title: 'Publications',
+  title: 'Publications | Criminal Justice & Drug Policy Research',
   description:
-    'Peer-reviewed publications and conference presentations by Fahad Bin Islam Khan on U.S. drug policy, criminal justice systems, tourist victimization, environmental criminology, and comparative criminology.',
+    'Peer-reviewed publications and conference presentations by Fahad Bin Islam Khan on U.S. drug policy, criminal justice systems, tourist victimization, environmental criminology, and comparative criminology. John Jay College of Criminal Justice, CUNY.',
+  keywords: [
+    'criminal justice publications',
+    'drug policy publications',
+    'Fahad Bin Islam Khan publications',
+    'criminology peer reviewed',
+    'U.S. drug policy academic',
+    'environmental criminology Bangladesh',
+    'tourist victimization research',
+    'criminal justice conference presentations',
+    'John Jay College research',
+    'CUNY criminal justice',
+  ],
+  alternates: { canonical: 'https://fahadkhanresearch.com/publications' },
   openGraph: {
-    title: 'Publications | Fahad Bin Islam Khan',
+    title: 'Publications: Criminal Justice & Drug Policy Research — Fahad Bin Islam Khan',
     description:
-      'Peer-reviewed publications and conference presentations by Fahad Bin Islam Khan on drug policy, criminal justice, and criminology.',
+      'Peer-reviewed publications and conference presentations on U.S. drug policy, criminal justice, and criminology by Fahad Bin Islam Khan, John Jay College of Criminal Justice.',
+    url: 'https://fahadkhanresearch.com/publications',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
   },
 }
 

@@ -14,13 +14,36 @@ import {
 } from '@/lib/research-data'
 
 export const metadata: Metadata = {
-  title: 'Research',
+  title: 'Research | U.S. Drug Policy, Policing & Criminal Justice',
   description:
-    'Research agenda of Fahad Bin Islam Khan: U.S. drug policy, criminal justice systems, comparative criminology, sentencing disparities, environmental criminology, and policing.',
+    'Research by Fahad Bin Islam Khan on U.S. drug policy, criminal justice systems, police institutionalism, sentencing disparities, comparative criminology, and environmental criminology. Ph.D. student at John Jay College of Criminal Justice, CUNY.',
+  keywords: [
+    'U.S. drug policy research',
+    'criminal justice research',
+    'policing research',
+    'sentencing disparities research',
+    'drug enforcement policy',
+    'comparative criminology',
+    'environmental criminology',
+    'institutional theory policing',
+    'marijuana legalization policy',
+    'drug policy reform',
+    'criminal justice systems',
+    'John Jay College of Criminal Justice',
+    'Fahad Bin Islam Khan research',
+  ],
+  alternates: { canonical: 'https://fahadkhanresearch.com/research' },
   openGraph: {
-    title: 'Research | Fahad Bin Islam Khan',
+    title: 'Research: U.S. Drug Policy, Policing & Criminal Justice — Fahad Bin Islam Khan',
     description:
-      'Research agenda of Fahad Bin Islam Khan: U.S. drug policy, criminal justice systems, comparative criminology, and sentencing disparities.',
+      'Research on U.S. drug policy, criminal justice systems, policing, and sentencing disparities by a Ph.D. researcher at John Jay College of Criminal Justice, CUNY.',
+    url: 'https://fahadkhanresearch.com/research',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
   },
 }
 

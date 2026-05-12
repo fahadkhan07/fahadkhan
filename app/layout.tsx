@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Inter, Playfair_Display, Source_Serif_4, Space_Mono } from 'next/font/google'
 import './globals.css'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
@@ -16,6 +16,20 @@ const playfair = Playfair_Display({
   display: 'swap',
 })
 
+const sourceSerif = Source_Serif_4({
+  subsets: ['latin'],
+  weight: ['300', '400', '600'],
+  variable: '--font-source-serif',
+  display: 'swap',
+})
+
+const spaceMono = Space_Mono({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-space-mono',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://fahadkhanresearch.com'),
   title: {
@@ -29,17 +43,22 @@ export const metadata: Metadata = {
     'drug policy researcher',
     'criminal justice researcher',
     'U.S. drug policy',
-    'criminal justice systems',
-    'comparative criminology',
-    'marijuana legalization',
+    'criminal justice blog',
+    'drug policy blog',
+    'policing research',
     'sentencing disparities',
+    'drug enforcement policy',
+    'institutional theory policing',
+    'criminal justice reform',
     'drug law enforcement',
     'John Jay College of Criminal Justice',
-    'CUNY',
+    'CUNY criminal justice',
     'PhD student criminal justice',
-    'criminal justice policy',
+    'comparative criminology',
+    'marijuana legalization policy',
     'environmental criminology',
     'race and crime',
+    'criminal justice systems',
   ],
   authors: [{ name: 'Fahad Bin Islam Khan', url: 'https://fahadkhanresearch.com' }],
   creator: 'Fahad Bin Islam Khan',
@@ -80,6 +99,9 @@ export const metadata: Metadata = {
     description:
       'Criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY. Research focuses on U.S. drug policy, criminal justice systems, and comparative criminology.',
     images: ['/og-image.jpg'],
+  },
+  verification: {
+    google: 'nTCztEGTnHKxQr6MT22F8bvENOlYsGeFN0ca5hxgcKM',
   },
   robots: {
     index: true,
@@ -138,17 +160,37 @@ const personSchema = {
   ],
 }
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Fahad Bin Islam Khan | Criminal Justice Research',
+  url: 'https://fahadkhanresearch.com',
+  description:
+    'Academic research and commentary on U.S. drug policy, criminal justice reform, policing, and sentencing disparities.',
+  author: {
+    '@type': 'Person',
+    name: 'Fahad Bin Islam Khan',
+    url: 'https://fahadkhanresearch.com',
+  },
+  inLanguage: 'en-US',
+  copyrightYear: new Date().getFullYear(),
+}
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable} ${sourceSerif.variable} ${spaceMono.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body>

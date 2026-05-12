@@ -5,12 +5,19 @@ import readingTime from 'reading-time'
 
 const blogDirectory = path.join(process.cwd(), 'content/blog')
 
+export interface TocItem {
+  label: string
+  anchor: string
+}
+
 export interface BlogFrontmatter {
   title: string
   date: string
   excerpt: string
   tags: string[]
   author?: string
+  toc?: TocItem[]
+  citation?: string
 }
 
 export interface BlogPost {
@@ -18,6 +25,7 @@ export interface BlogPost {
   frontmatter: BlogFrontmatter
   content: string
   readingTime: string
+  wordCount: number
 }
 
 export type BlogMeta = BlogFrontmatter & { slug: string; readingTime: string }
@@ -40,6 +48,7 @@ export function getBlogPost(slug: string): BlogPost {
     frontmatter: data as BlogFrontmatter,
     content,
     readingTime: stats.text,
+    wordCount: stats.words,
   }
 }
 

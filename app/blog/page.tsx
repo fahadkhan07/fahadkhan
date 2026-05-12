@@ -7,13 +7,36 @@ import { Badge } from '@/components/ui/badge'
 import { getAllBlogPosts } from '@/lib/mdx'
 
 export const metadata: Metadata = {
-  title: 'Blog',
+  title: 'Criminal Justice Blog | Drug Policy, Policing & Sentencing Research',
   description:
-    'Academic commentary and analysis on U.S. drug policy, criminal justice reform, marijuana legalization, and sentencing disparities by Fahad Bin Islam Khan.',
+    'Academic commentary and original analysis on U.S. drug policy, criminal justice reform, policing, sentencing disparities, and criminological research by Fahad Bin Islam Khan, Ph.D. student at John Jay College of Criminal Justice.',
+  keywords: [
+    'criminal justice blog',
+    'drug policy research',
+    'U.S. drug policy',
+    'policing research',
+    'sentencing disparities',
+    'criminal justice reform',
+    'criminology blog',
+    'drug enforcement policy',
+    'institutional theory policing',
+    'women in policing',
+    'marijuana legalization',
+    'Fahad Bin Islam Khan',
+    'John Jay College of Criminal Justice',
+  ],
+  alternates: { canonical: 'https://fahadkhanresearch.com/blog' },
   openGraph: {
-    title: 'Blog | Fahad Bin Islam Khan',
+    title: 'Criminal Justice Blog | Drug Policy & Policing Research — Fahad Bin Islam Khan',
     description:
-      'Academic commentary on U.S. drug policy, criminal justice reform, and criminological research by Fahad Bin Islam Khan.',
+      'Academic commentary on U.S. drug policy, criminal justice reform, policing, and sentencing disparities by a Ph.D. researcher at John Jay College of Criminal Justice, CUNY.',
+    url: 'https://fahadkhanresearch.com/blog',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
   },
 }
 
