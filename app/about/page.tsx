@@ -6,7 +6,7 @@ import { AnimatedSection, AnimatedStagger, AnimatedItem } from '@/components/Ani
 import { Badge } from '@/components/ui/badge'
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'Fahad Bin Islam Khan | Criminal Justice Researcher & Ph.D. Student',
   description:
     'Fahad Bin Islam Khan is a criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY. His research focuses on U.S. drug policy, criminal justice systems, comparative criminology, sentencing disparities, and environmental criminology.',
   keywords: [
