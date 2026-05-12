@@ -131,7 +131,7 @@ export default function AboutPage() {
               },
             ],
             url: 'https://khanfahad.com/about',
-            email: 'khan.fbi7@gmail.com',
+            email: 'fahad.bin.islam.khan@gmail.com',
             sameAs: [
               'https://www.linkedin.com/in/fahad-bin-islam-khan-b64282211/',
               'https://scholar.google.com/citations?user=wRjP_1wAAAAJ&hl=en',

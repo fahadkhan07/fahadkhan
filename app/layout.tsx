@@ -139,7 +139,7 @@ const personSchema = {
     },
   ],
   url: 'https://khanfahad.com',
-  email: 'khan.fbi7@gmail.com',
+  email: 'fahad.bin.islam.khan@gmail.com',
   image: 'https://khanfahad.com/og-image.jpg',
   sameAs: [
     'https://www.linkedin.com/in/fahad-bin-islam-khan-b64282211/',

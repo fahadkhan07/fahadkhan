@@ -21,8 +21,8 @@ const directContact = [
   {
     Icon: Mail,
     label: 'Email',
-    value: 'khan.fbi7@gmail.com',
-    href: 'mailto:khan.fbi7@gmail.com',
+    value: 'fahad.bin.islam.khan@gmail.com',
+    href: 'mailto:fahad.bin.islam.khan@gmail.com',
     note: 'Academic inquiries, collaboration proposals, and media requests',
   },
   {

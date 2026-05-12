@@ -33,11 +33,11 @@ export function Footer() {
               criminal justice systems, and comparative criminology.
             </p>
             <a
-              href="mailto:khan.fbi7@gmail.com"
+              href="mailto:fahad.bin.islam.khan@gmail.com"
               className="mt-4 inline-flex items-center gap-2 text-gold-400 hover:text-gold-300 text-sm transition-colors"
             >
               <Mail size={14} />
-              khan.fbi7@gmail.com
+              fahad.bin.islam.khan@gmail.com
             </a>
           </div>
 

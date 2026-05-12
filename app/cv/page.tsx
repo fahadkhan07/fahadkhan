@@ -54,7 +54,7 @@ export default function CVPage() {
               <h1 className="font-serif text-3xl font-bold text-navy-950 mb-1">Fahad Bin Islam Khan</h1>
               <p className="text-gold-600 font-medium mb-4">Ph.D. Student in Criminal Justice | Drug Policy and Comparative Criminology Researcher</p>
               <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-500">
-                <span>khan.fbi7@gmail.com</span>
+                <span>fahad.bin.islam.khan@gmail.com</span>
                 <span>John Jay College of Criminal Justice, CUNY</span>
                 <a href="https://khanfahad.com" className="hover:text-navy-700">
                   khanfahad.com
