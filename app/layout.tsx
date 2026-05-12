@@ -146,7 +146,7 @@ const personSchema = {
     'https://scholar.google.com/citations?user=wRjP_1wAAAAJ&hl=en',
     'https://orcid.org/my-orcid?orcid=0009-0009-0629-9473',
     'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan',
-    'https://hq.ssrn.com/UserHome.cfm',
+    'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=11548949',
   ],
   knowsAbout: [
     'U.S. Drug Policy',

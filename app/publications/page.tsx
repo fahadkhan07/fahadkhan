@@ -136,7 +136,7 @@ const academicProfiles = [
   {
     name: 'SSRN',
     description: 'Working papers and preprints',
-    href: 'https://hq.ssrn.com/UserHome.cfm',
+    href: 'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=11548949',
     bg: 'bg-blue-50 border-blue-200',
     icon: '📋',
     cta: 'View Profile',

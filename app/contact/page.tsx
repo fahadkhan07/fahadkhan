@@ -55,7 +55,7 @@ const academicProfiles = [
   },
   {
     name: 'SSRN',
-    href: 'https://hq.ssrn.com/UserHome.cfm',
+    href: 'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=11548949',
     icon: '📋',
     note: 'Working papers and preprints',
   },
