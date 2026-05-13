@@ -84,6 +84,7 @@
 .blog-editorial {
   background: #f6f1e9;
   color: #12100e;
+  overflow-x: hidden;
 }
 
 .editorial-layout {
@@ -96,10 +97,15 @@
 @media (max-width: 768px) {
   .editorial-layout {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 0;
   }
+  /* Sidebar goes AFTER article on mobile — no sticky, no reorder */
   .editorial-sidebar {
-    order: -1;
+    position: static;
+    top: auto;
+    border-top: 1px solid #cfc0a8;
+    padding-top: 2rem;
+    margin-top: 2rem;
   }
 }
 
@@ -408,4 +414,63 @@
 }
 .editorial-back:hover {
   color: #8c1f00;
+}
+
+/* ─── Mobile reading overrides (≤ 640px) ─── */
+@media (max-width: 640px) {
+  /* Drop cap smaller on narrow screens */
+  .prose-editorial > p:first-of-type::first-letter {
+    font-size: 3.4em;
+    line-height: 0.8;
+    margin: 0.06em 0.08em 0 0;
+  }
+
+  /* Body text */
+  .prose-editorial p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  /* Headings */
+  .prose-editorial h2 {
+    font-size: 1.25rem;
+    margin-top: 2.25rem;
+    padding-top: 1rem;
+  }
+  .prose-editorial h3 {
+    font-size: 1.05rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Pull quotes — tighter on mobile */
+  .prose-editorial blockquote {
+    padding: 1rem 1.1rem !important;
+    margin: 1.5rem 0 !important;
+  }
+  .prose-editorial blockquote p {
+    font-size: 1rem !important;
+  }
+
+  /* Prevent long words / URLs from overflowing */
+  .prose-editorial {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Editorial header spacing — keep 112px clear of fixed navbar */
+  .editorial-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+  .editorial-deck {
+    font-size: 1rem;
+  }
+
+  /* Sidebar sections on mobile */
+  .sidebar-section {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  .toc-list li a {
+    font-size: 0.82rem;
+  }
 }

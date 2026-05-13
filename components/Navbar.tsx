@@ -23,7 +23,10 @@ export function Navbar() {
   const pathname                   = usePathname()
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20)
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+      setIsOpen(false)
+    }
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -31,6 +34,15 @@ export function Navbar() {
   useEffect(() => setIsOpen(false), [pathname])
 
   return (
+    <>
+      {/* Tap-outside backdrop — closes menu on mobile */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-40 md:hidden"
+          aria-hidden="true"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
@@ -113,5 +125,6 @@ export function Navbar() {
         )}
       </nav>
     </header>
+    </>
   )
 }
