@@ -239,7 +239,7 @@ export default async function HomePage() {
               A qualitative study of waste-management practices and legal compliance at the Savar BSCIC Tannery Industrial Estate, using observation, focus groups, interviews, and thematic analysis. The paper connects environmental criminology with industrial regulation, human rights, and environmental justice.
             </p>
             <Button asChild variant="gold">
-              <Link href="/publications">Read the research spotlight <ArrowRight size={16} /></Link>
+              <Link href="/publications/legal-compliance-tannery">Read the research spotlight <ArrowRight size={16} /></Link>
             </Button>
           </AnimatedSection>
         </div>

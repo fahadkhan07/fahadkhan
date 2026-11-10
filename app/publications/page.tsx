@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { ExternalLink, FileText } from 'lucide-react'
 import { PageHeader } from '@/components/PageHeader'
 import { AnimatedSection, AnimatedStagger, AnimatedItem } from '@/components/AnimatedSection'
@@ -204,6 +205,7 @@ export default function PublicationsPage() {
               The study’s relevance extends across environmental criminology, industrial compliance, occupational risk, and environmental justice. Publicly visible ResearchGate data currently shows five citations; the figure of eleven remains Fahad’s reported Google Scholar count and is not presented here as independently verified.
             </p>
             <div className="flex flex-wrap gap-3">
+              <Link href="/publications/legal-compliance-tannery" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10">Read full spotlight <ExternalLink size={13} /></Link>
               <a href="https://twistjournal.net/twist/article/view/131" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gold-400 px-4 py-2 text-sm font-semibold text-navy-950 hover:bg-gold-300">Publisher record <ExternalLink size={13} /></a>
               <a href="https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10">ResearchGate record <ExternalLink size={13} /></a>
             </div>
