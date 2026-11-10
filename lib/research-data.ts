@@ -59,7 +59,7 @@ export const publications: Publication[] = [
     tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance', 'Human Rights'],
     researchGateUrl:
       'https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective',
-    doi: '10.5281/zenodo.10049652',
+    doi: null,
     apa: 'Khan, F. B. I. and Akond, A. (2024). Legal compliance of waste management in Savar BSCIC tannery industrial estate: An assessment from environmental criminological perspective. TWIST International Multidisciplinary Journal, 19(1), 306-320. https://twistjournal.net/twist/article/view/131',
   },
 
