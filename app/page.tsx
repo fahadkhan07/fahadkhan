@@ -226,6 +226,25 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── FEATURED PUBLICATION ─────────────────────────── */}
+      <section className="section-padding bg-navy-950 text-white">
+        <div className="section-container">
+          <AnimatedSection>
+            <div className="flex flex-wrap items-center gap-3 mb-5">
+              <span className="text-xs font-semibold uppercase tracking-widest text-gold-400">Featured research</span>
+              <span className="text-xs text-slate-400">11 Google Scholar citations reported by the author</span>
+            </div>
+            <h2 className="heading-lg mb-4">Environmental compliance and tannery waste in Bangladesh</h2>
+            <p className="text-slate-300 max-w-3xl leading-relaxed mb-6">
+              A qualitative study of waste-management practices and legal compliance at the Savar BSCIC Tannery Industrial Estate, using observation, focus groups, interviews, and thematic analysis. The paper connects environmental criminology with industrial regulation, human rights, and environmental justice.
+            </p>
+            <Button asChild variant="gold">
+              <Link href="/publications">Read the research spotlight <ArrowRight size={16} /></Link>
+            </Button>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ── ABOUT PREVIEW ─────────────────────────────────── */}
       <section className="section-padding bg-white">
         <div className="section-container">
