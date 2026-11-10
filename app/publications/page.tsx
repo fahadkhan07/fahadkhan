@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { ExternalLink, FileText } from 'lucide-react'
 import { PageHeader } from '@/components/PageHeader'
 import { AnimatedSection, AnimatedStagger, AnimatedItem } from '@/components/AnimatedSection'
@@ -38,8 +39,8 @@ export const metadata: Metadata = {
 
 const peerReviewed = [
   {
-    apa: 'Khan, F.B.I. and Akond, A. (2024). Legal Compliance of Waste Management in Savar BSCIC Tannery Industrial Estate: An Assessment from Environmental Criminological Perspective.',
-    venue: 'TWIST International Multidisciplinary Journal',
+    apa: 'Khan, F. B. I., & Akond, M. A. (2024). Legal compliance of waste management in tannery industrial estate in Bangladesh: An assessment from environmental criminological perspective. TWIST, 19(1), 306–320. https://twistjournal.net/twist/article/view/131',
+    venue: 'TWIST',
     volume: 'Vol. 19, Issue 1, pp. 306–320',
     year: '2024',
     tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance'],
@@ -47,7 +48,7 @@ const peerReviewed = [
       'Examines the Savar BSCIC Tannery Industrial Estate, the only tannery industrial estate in Bangladesh, focusing on waste management practices and legal compliance. Findings show that lack of effective waste management regulations, substandard technology, and inadequate treatment facilities are causing significant environmental harm.',
     researchGateUrl: 'https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective',
     url: 'https://twistjournal.net/twist/article/view/131',
-    doi: 'https://doi.org/10.5281/zenodo.10049652',
+    doi: null,
     status: 'Published',
   },
   {
@@ -186,6 +187,29 @@ export default function PublicationsPage() {
               </AnimatedItem>
             ))}
           </AnimatedStagger>
+        </div>
+      </section>
+
+      <section className="section-padding bg-navy-950 text-white">
+        <div className="section-container">
+          <AnimatedSection className="max-w-4xl">
+            <div className="flex flex-wrap items-center gap-3 mb-5">
+              <span className="text-xs font-semibold uppercase tracking-widest text-gold-400">Featured publication</span>
+              <span className="text-xs rounded-full border border-white/20 px-3 py-1 text-slate-300">11 citations reported on Google Scholar</span>
+            </div>
+            <h2 className="heading-md mb-5">Legal Compliance of Waste Management in Tannery Industrial Estate in Bangladesh</h2>
+            <p className="text-slate-300 leading-relaxed mb-5">
+              This qualitative study examines waste-management practices and legal compliance at the Savar BSCIC Tannery Industrial Estate. It combines direct observation, four focus-group discussions, ten in-depth interviews, and two telephone interviews to assess waste practices, regulatory weaknesses, and their implications for environmental and human rights protection.
+            </p>
+            <p className="text-slate-300 leading-relaxed mb-6">
+              The study’s relevance extends across environmental criminology, industrial compliance, occupational risk, and environmental justice. Publicly visible ResearchGate data currently shows five citations; the figure of eleven remains Fahad’s reported Google Scholar count and is not presented here as independently verified.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <Link href="/publications/legal-compliance-tannery" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10">Read full spotlight <ExternalLink size={13} /></Link>
+              <a href="https://twistjournal.net/twist/article/view/131" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gold-400 px-4 py-2 text-sm font-semibold text-navy-950 hover:bg-gold-300">Publisher record <ExternalLink size={13} /></a>
+              <a href="https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10">ResearchGate record <ExternalLink size={13} /></a>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
