@@ -30,6 +30,14 @@ export const metadata: Metadata = {
       'Fahad Bin Islam Khan is a criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY. Research focuses on U.S. drug policy, criminal justice systems, and comparative criminology.',
     url: 'https://khanfahad.com/about',
     type: 'profile',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Fahad Bin Islam Khan, Criminal Justice Researcher and Ph.D. Student, John Jay College of Criminal Justice, CUNY',
+      },
+    ],
   },
   alternates: {
     canonical: 'https://khanfahad.com/about',

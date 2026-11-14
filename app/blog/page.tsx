@@ -32,6 +32,14 @@ export const metadata: Metadata = {
       'Academic commentary on U.S. drug policy, criminal justice reform, policing, and sentencing disparities by a Ph.D. researcher at John Jay College of Criminal Justice, CUNY.',
     url: 'https://khanfahad.com/blog',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Fahad Bin Islam Khan, Criminal Justice Researcher and Ph.D. Student, John Jay College of Criminal Justice, CUNY',
+      },
+    ],
   },
   robots: {
     index: true,

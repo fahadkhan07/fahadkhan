@@ -29,6 +29,14 @@ export const metadata: Metadata = {
       'Peer-reviewed publications and conference presentations on U.S. drug policy, criminal justice, and criminology by Fahad Bin Islam Khan, John Jay College of Criminal Justice.',
     url: 'https://khanfahad.com/publications',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Fahad Bin Islam Khan, Criminal Justice Researcher and Ph.D. Student, John Jay College of Criminal Justice, CUNY',
+      },
+    ],
   },
   robots: {
     index: true,

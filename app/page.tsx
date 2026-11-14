@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     description:
       'Criminal justice researcher at John Jay College of Criminal Justice, CUNY. Specializes in U.S. drug policy, marijuana legalization, sentencing disparities, and comparative criminology.',
     url: 'https://khanfahad.com',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Fahad Bin Islam Khan, Criminal Justice Researcher and Ph.D. Student, John Jay College of Criminal Justice, CUNY',
+      },
+    ],
   },
 }
 import { Button } from '@/components/ui/button'

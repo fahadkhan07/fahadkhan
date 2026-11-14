@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     title: 'Teaching | Fahad Bin Islam Khan',
     description:
       'Teaching philosophy and course experience of Fahad Bin Islam Khan, criminal justice researcher and educator.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Fahad Bin Islam Khan, Criminal Justice Researcher and Ph.D. Student, John Jay College of Criminal Justice, CUNY',
+      },
+    ],
   },
 }
 
