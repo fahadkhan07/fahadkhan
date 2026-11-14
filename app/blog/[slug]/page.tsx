@@ -8,7 +8,7 @@ import { getBlogPost, getBlogSlugs } from '@/lib/mdx'
 import { ReadingProgress } from '@/components/ReadingProgress'
 
 const SITE_URL = 'https://khanfahad.com'
-const OG_IMAGE = `${SITE_URL}/og-image.jpg`
+const OG_IMAGE = `${SITE_URL}/og-image-v2.jpg`
 
 interface Props {
   params: Promise<{ slug: string }>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       'Contact Fahad Bin Islam Khan for academic collaboration, research communication, and professional correspondence.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image-v2.jpg',
         width: 1200,
         height: 630,
         alt: 'Fahad Bin Islam Khan, Criminal Justice Researcher and Ph.D. Student, John Jay College of Criminal Justice, CUNY',

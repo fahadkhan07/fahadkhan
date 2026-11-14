@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: 'https://khanfahad.com',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image-v2.jpg',
         width: 1200,
         height: 630,
         alt: 'Fahad Bin Islam Khan, Criminal Justice Researcher and Ph.D. Student, John Jay College of Criminal Justice, CUNY',

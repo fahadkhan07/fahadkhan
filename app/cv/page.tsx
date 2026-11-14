@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       'Academic CV of Fahad Bin Islam Khan, criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image-v2.jpg',
         width: 1200,
         height: 630,
         alt: 'Fahad Bin Islam Khan, Criminal Justice Researcher and Ph.D. Student, John Jay College of Criminal Justice, CUNY',

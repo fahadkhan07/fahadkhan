@@ -86,7 +86,7 @@ export const metadata: Metadata = {
       'Fahad Bin Islam Khan is a criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY. His research examines U.S. drug policy, criminal justice systems, marijuana legalization, sentencing disparities, and comparative criminology.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image-v2.jpg',
         width: 1200,
         height: 630,
         alt: 'Fahad Bin Islam Khan, Criminal Justice Researcher and Ph.D. Student, John Jay College of Criminal Justice, CUNY',
@@ -98,7 +98,7 @@ export const metadata: Metadata = {
     title: 'Fahad Bin Islam Khan | Drug Policy and Criminal Justice Researcher',
     description:
       'Criminal justice researcher and Ph.D. student at John Jay College of Criminal Justice, CUNY. Research focuses on U.S. drug policy, criminal justice systems, and comparative criminology.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image-v2.jpg'],
   },
   verification: {
     google: 'nTCztEGTnHKxQr6MT22F8bvENOlYsGeFN0ca5hxgcKM',
@@ -140,7 +140,7 @@ const personSchema = {
   ],
   url: 'https://khanfahad.com',
   email: 'fahad.bin.islam.khan@gmail.com',
-  image: 'https://khanfahad.com/og-image.jpg',
+  image: 'https://khanfahad.com/og-image-v2.jpg',
   sameAs: [
     'https://www.linkedin.com/in/fahad-bin-islam-khan-b64282211/',
     'https://scholar.google.com/citations?user=wRjP_1wAAAAJ&hl=en',
