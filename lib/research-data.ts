@@ -59,7 +59,7 @@ export const publications: Publication[] = [
     tags: ['Environmental Criminology', 'Waste Management', 'Bangladesh', 'Legal Compliance', 'Human Rights'],
     researchGateUrl:
       'https://www.researchgate.net/publication/378207417_Legal_Compliance_of_Waste_Management_in_Tannery_Industrial_Estate_in_Bangladesh_An_Assessment_from_Environmental_Criminological_Perspective',
-    doi: '10.5281/zenodo.10049652',
+    doi: null,
     apa: 'Khan, F. B. I. and Akond, A. (2024). Legal compliance of waste management in Savar BSCIC tannery industrial estate: An assessment from environmental criminological perspective. TWIST International Multidisciplinary Journal, 19(1), 306-320. https://twistjournal.net/twist/article/view/131',
   },
 
@@ -91,7 +91,8 @@ export const publications: Publication[] = [
     monthYear: 'November 2023',
     venue: 'International Journal of Research and Innovation in Social Science',
     status: 'Full-text available',
-    abstract: null,
+    abstract:
+      'This cross-sectional study examines whether perceived racial or ethnic discrimination operates as an institutional strain associated with adolescent psychological distress and marijuana use. Using the complete-case sample from the 2023 Youth Risk Behavior Survey (N = 17,268), the study applies logistic regression and sex-stratified analyses to assess discrimination, distress, and marijuana use among U.S. high school students. Findings indicate positive associations between perceived discrimination, psychological distress, and marijuana use, while the study does not claim causal effects.',
     tags: ['Food Victimization', 'Victimology', 'Empirical Study', 'Social Science', 'Criminology'],
     researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
     doi: '10.47772/IJRISS.2023.701133',
@@ -184,11 +185,12 @@ export const publications: Publication[] = [
     monthYear: 'May 2026',
     venue: 'University of Mississippi',
     status: 'Full-text available',
-    abstract: null,
+    abstract:
+      'This cross-sectional study examines whether perceived racial or ethnic discrimination operates as an institutional strain associated with adolescent psychological distress and marijuana use. Using the complete-case sample from the 2023 Youth Risk Behavior Survey (N = 17,268), the study applies logistic regression and sex-stratified analyses to assess discrimination, distress, and marijuana use among U.S. high school students. Findings indicate positive associations between perceived discrimination, psychological distress, and marijuana use, while the study does not claim causal effects.',
     tags: ['Adolescent Substance Use', 'Racial Discrimination', 'Strain Theory', 'Marijuana', 'Youth Justice'],
-    researchGateUrl: 'https://www.researchgate.net/profile/Fahad-Bin-Islam-Khan/research',
+    researchGateUrl: 'https://www.researchgate.net/publication/413720361_Institutional_Strain_and_Substance_Coping_Analyzing_Perceived_Racial_Discrimination_as_A_Predictor_of_Adolescent_Marijuana_Use',
     doi: null,
-    apa: null,
+    apa: 'Khan, F. B. I. (2026). Institutional strain and substance coping: Analyzing perceived racial discrimination as a predictor of adolescent marijuana use (Master\'s thesis, University of Mississippi). https://egrove.olemiss.edu/etd/8839',
   },
 ]
 
