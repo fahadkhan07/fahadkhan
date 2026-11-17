@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     'criminal justice conference presentations',
     'John Jay College research',
     'CUNY criminal justice',
+    'institutional strain thesis',
+    'adolescent marijuana use research',
+    'racial discrimination and substance use',
   ],
   alternates: { canonical: 'https://khanfahad.com/publications' },
   openGraph: {
@@ -292,6 +295,31 @@ export default function PublicationsPage() {
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── THESIS SPOTLIGHT ──────────────────────────────── */}
+      <section className="section-padding bg-slate-50">
+        <div className="section-container">
+          <AnimatedSection className="mb-8">
+            <div className="gold-rule mb-6" />
+            <h2 className="heading-md text-navy-900">Thesis Research</h2>
+            <p className="text-slate-500 mt-2 text-sm">Research on institutional strain, racial discrimination, and adolescent substance use.</p>
+          </AnimatedSection>
+          <AnimatedSection className="max-w-4xl">
+            <div className="border border-slate-200 rounded-xl p-7 bg-white hover:border-navy-300 hover:shadow-sm transition-all duration-200">
+              <div className="flex flex-wrap items-center gap-2 mb-4">
+                <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-700">Master&apos;s Thesis</span>
+                <span className="text-xs text-slate-400">2026</span>
+              </div>
+              <h3 className="text-xl font-serif font-semibold text-navy-900 mb-3">Institutional Strain and Substance Coping: Analyzing Perceived Racial Discrimination as a Predictor of Adolescent Marijuana Use</h3>
+              <p className="text-sm text-slate-600 leading-relaxed mb-4">Using the 2023 Youth Risk Behavior Survey, this cross-sectional study examines associations between perceived racial discrimination, psychological distress, and marijuana use among 17,268 U.S. high school students through General Strain Theory.</p>
+              <div className="flex flex-wrap gap-2">
+                <Link href="/publications/institutional-strain" className="inline-flex items-center gap-1.5 text-xs font-medium text-navy-800 hover:text-navy-950 border border-navy-200 hover:border-navy-400 rounded-full px-3 py-1.5 bg-slate-50 transition-all">Read thesis spotlight <ExternalLink size={11} /></Link>
+                <a href="https://egrove.olemiss.edu/etd/8839" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs font-medium text-teal-700 hover:text-teal-900 border border-teal-200 hover:border-teal-400 rounded-full px-3 py-1.5 bg-teal-50 transition-all">University repository <ExternalLink size={11} /></a>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
